@@ -15,7 +15,6 @@
 - 🧠 [Deep Learning](./7_DeepLearning/) : 신경망 수식 및 개념 이론
 - 📊 [Machine Learning](./8_Machine_Learning/) : 분류/회귀, 모델 평가
 - 🔥 [Pytorch](./9_Pytorch/) : CNN, RNN, NLP 등 실전
-- 🚀 [Final Project](./10_Final_Project/) : 파이널 프로젝트 준비 
 
 ---
 ## 📚 2025 AI·SW 교육 커리큘럼 일정표
