@@ -20,15 +20,16 @@
 
 > 각 폴더는 이론 + 실습 + 과제 정리를 포함합니다.
 
-- 🐍 [Python](./1_Python/) : Python 기초, 심화
-- 🛢️ [SQL](./2_SQL/) : SQL 데이터 분석
-- 🛠️ [Git](./3_Git/) : Git 기본, GitHub 활용
-- 🧹 [CleanCode](./4_CleanCode/) : 리팩토링, 네이밍, 코드 구조
-- 🧮 [Algorithm](./5_Algorithm/) : 정렬, 탐색, DP, 구현 등
-- 🌐 [Web Service, Server](./6_Web_Service_Server) : 프론트/백 엔드 
-- 🧠 [Deep Learning](./7_DeepLearning/) : 신경망 수식 및 개념 이론
-- 📊 [Machine Learning](./8_Machine_Learning/) : 분류/회귀, 모델 평가
-- 🔥 [PyTorch](./9_PyTorch/) : CNN, RNN, NLP 등 실전
+- 🐍 [Python](./01_Python/) : Python 기초, 심화
+- 🛢️ [SQL](./02_SQL/) : SQL 데이터 분석
+- 🛠️ [Git](./03_Git/) : Git 기본, GitHub 활용
+- 🧹 [CleanCode](./04_CleanCode/) : 리팩토링, 네이밍, 코드 구조
+- 🧮 [Algorithm](./05_Algorithm/) : 정렬, 탐색, DP, 구현 등
+- 🌐 [Web Service, Server](./06_Web_Service_Server) : 프론트/백 엔드 
+- 🧠 [Deep Learning](./07_DeepLearning/) : 신경망 수식 및 개념 이론
+- 📊 [Machine Learning](./08_Machine_Learning/) : 분류/회귀, 모델 평가
+- 🔥 [PyTorch](./09_PyTorch/) : CNN, RNN, NLP 등 실전
+- 🧑‍🏫 [Special Lecture](./99_Special_Lecture/) : 인공지능 특강, 취업 특강
 
 ---
 
