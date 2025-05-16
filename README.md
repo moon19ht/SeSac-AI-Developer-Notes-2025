@@ -29,7 +29,6 @@
 - 🧠 [Deep Learning](./07_DeepLearning/) : 신경망 수식 및 개념 이론
 - 📊 [Machine Learning](./08_Machine_Learning/) : 분류/회귀, 모델 평가
 - 🔥 [PyTorch](./09_PyTorch/) : CNN, RNN, NLP 등 실전
-- 🧑‍🏫 [Special Lecture](./99_Special_Lecture/) : 인공지능 특강, 취업 특강
 
 ---
 
