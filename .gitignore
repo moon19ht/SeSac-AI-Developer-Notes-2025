@@ -172,3 +172,33 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# PyTorch 모델 저장 파일
+*.pt
+*.pth
+*.ckpt
+
+# ONNX 및 기타 내보내기 형식
+*.onnx
+*.pb
+*.tflite
+
+# 학습 로그 및 체크포인트
+lightning_logs/
+wandb/
+events.out.tfevents.*
+
+# 임시 로그 파일
+*.log
+
+# SQL 관련
+*.sql~
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.dump
+*.bak.sql
+*.log.sql
+*.tmp.sql
