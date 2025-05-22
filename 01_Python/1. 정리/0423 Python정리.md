@@ -7,15 +7,19 @@
 
 ## 📚 목차
 
-- [📌 1. 파이썬(Python)이란?](#-1-파이썬python이란)
-- [📌 2. 파이썬의 특징](#-2-파이썬의-특징)
-- [📌 3. 파이썬의 설치](#-3-파이썬의-설치)
+- [💡 1. 파이썬(Python)이란?](#-1-파이썬python이란)
+- [💡 2. 파이썬의 특징](#-2-파이썬의-특징)
+- [💡 3. 파이썬 설치](#-3-파이썬-설치)
+  - [🪟 Windows 11](#-windows-11-환경에서-python-설치-및-설정)
+  - [🍎 MacOS](#-macos-환경에서-python-설치-및-설정)
+  - [🐧 Ubuntu](#-ubuntu-환경에서-python-설치-및-설정)
+  - [🐧 Arch Linux](#-arch-linux-환경에서-python-설치-및-설정)
 - [⏭️ 다음으로는...](#️-다음으로는)
 - [다음 문서 ⏭️](./0423%20Python정리.md)
 
 ---
 
-## 📌 1. 파이썬(Python)이란?
+## 💡 1. 파이썬(Python)이란?
 
 > 파이썬은 **다양한 프로그래밍 언어** 중 하나입니다.
 > 사람의 말처럼 읽고 쓸 수 있는 **쉬운 프로그래밍 언어**입니다.  
@@ -23,29 +27,55 @@
 
 ---
 
-## 📌 2. 파이썬의 특징
+## 💡 2. 파이썬의 특징
 
-✅ **1. 쉬운 사용성과 높은 가독성**
+📌 **1. 쉬운 사용성과 높은 가독성**
 - 문법이 간결하고 직관적이라 초보자도 쉽게 배울 수 있음.
 - 들여쓰기 기반 구조로 코드 가독성이 탁월함.
   
-✅ **2. 유연한 활용성과 확장성**
+📌 **2. 유연한 활용성과 확장성**
 - 웹, 데이터 과학, 인공지능, 자동화 등 다양한 분야에 사용 가능.
 - 객체지향, 함수형 등 여러 프로그래밍 스타일 지원.
 - C/C++ 등 다른 언어와도 쉽게 연동 가능.
 
-✅ **3. 강력한 생태계와 도구 지원**
+📌 **3. 강력한 생태계와 도구 지원**
 - 방대한 표준 라이브러리와 pip 패키지 시스템.
 - TensorFlow, Pandas, Flask 등 다양한 프레임워크 제공.
 - 활발한 커뮤니티와 학습 자료가 풍부함.
 
 ---
 
-## 📌 3. 파이썬의 설치
+## 💡 1. 파이썬(Python)이란?
 
-## 🪟 Windows 11 기준
+> 파이썬은 **다양한 프로그래밍 언어** 중 하나입니다.
+> 사람의 말처럼 읽고 쓸 수 있는 **쉬운 프로그래밍 언어**입니다.  
+> 많은 사람들이 **웹 개발**, **데이터 분석**, **AI 개발**에 사용하고 있습니다.
 
-### 1. Python 설치
+---
+
+## 💡 2. 파이썬의 특징
+
+📌 **1. 쉬운 사용성과 높은 가독성**
+- 문법이 간결하고 직관적이라 초보자도 쉽게 배울 수 있음.
+- 들여쓰기 기반 구조로 코드 가독성이 탁월함.
+  
+📌 **2. 유연한 활용성과 확장성**
+- 웹, 데이터 과학, 인공지능, 자동화 등 다양한 분야에 사용 가능.
+- 객체지향, 함수형 등 여러 프로그래밍 스타일 지원.
+- C/C++ 등 다른 언어와도 쉽게 연동 가능.
+
+📌 **3. 강력한 생태계와 도구 지원**
+- 방대한 표준 라이브러리와 pip 패키지 시스템.
+- TensorFlow, Pandas, Flask 등 다양한 프레임워크 제공.
+- 활발한 커뮤니티와 학습 자료가 풍부함.
+
+---
+
+## 💡 3. 파이썬 설치
+
+## 🪟 Windows 11 환경에서 Python 설치 및 설정
+
+### 📌 1. Python 설치
 
 #### 1.1 Python 다운로드
 - 공식 사이트: [https://www.python.org/downloads/](https://www.python.org/downloads/)
@@ -74,7 +104,7 @@ py -3.10 -m venv myenv
 
 ---
 
-#### 2. PowerShell에서 가상환경 활성화
+### 📌 2. PowerShell에서 가상환경 활성화
 ```powershell
 .\myenv\Scripts\Activate.ps1
 ```
@@ -84,7 +114,7 @@ py -3.10 -m venv myenv
 
 ---
 
-### 3. Visual Studio Code 연동
+### 📌 3. Visual Studio Code 연동
 
 #### 3.1 VS Code 설치
 - 다운로드: [https://code.visualstudio.com/](https://code.visualstudio.com/)
@@ -102,7 +132,7 @@ py -3.10 -m venv myenv
 
 ---
 
-### 4. Anaconda 설치
+### 📌 4. Anaconda 설치
 
 #### 4.1 Anaconda 다운로드
 - 공식 페이지: [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distribution)
@@ -117,20 +147,20 @@ py -3.10 -m venv myenv
 conda --version
 ```
 
-### 4.4 Conda 초기화
+#### 4.4 Conda 초기화
 ```bash
 conda init
 ```
 > PowerShell, bash 등에서 `conda activate` 명령을 쓰기 위해 필요  
 > 실행 후 터미널 재시작 필수
 
-### 4.5 Anaconda Navigator 및 Jupyter 사용
+#### 4.5 Anaconda Navigator 및 Jupyter 사용
 - GUI로 환경 관리: `Anaconda Navigator` 실행
 - 노트북 실행: `jupyter notebook` 또는 Navigator 내 실행
 
 ---
 
-### 5. Conda 환경 생성 및 사용
+### 📌 5. Conda 환경 생성 및 사용
 
 ```bash
 conda create -n mycondaenv python=3.10
@@ -142,7 +172,7 @@ conda activate mycondaenv
 
 ---
 
-### 6. VS Code에서 Conda 환경 연동
+### 📌 6. VS Code에서 Conda 환경 연동
 
 1. `Anaconda Prompt`에서 `code` 명령어 사용하려면:
 ```bash
@@ -152,7 +182,7 @@ conda install -c anaconda vscode
 
 ---
 
-### 7. PATH 및 환경변수 확인
+### 📌 7. PATH 및 환경변수 확인
 
 ```bash
 where python
@@ -165,7 +195,7 @@ where conda
 
 ---
 
-### 8. 설치 완료 후 테스트
+### 📌 8. 설치 완료 후 테스트
 
 ```bash
 python -m pip install numpy pandas matplotlib
@@ -174,25 +204,117 @@ conda list
 
 ---
 
-## 🐧 Arch Linux 기준 (필자는 Arch Linux를 쓰므로 기재)
+## 🍎 MacOS 환경에서 Python 설치 및 설정
 
-### 1. 시스템 업데이트
+### 📌 1. Xcode Command Line Tools 설치
+
+```bash
+xcode-select --install
+```
+
+### 📌 2. Homebrew 설치 (이미 설치되어 있다면 생략)
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### 📌 3. Python 설치
+
+```bash
+brew install python
+```
+
+### 📌 4. 버전 확인
+
+```bash
+python3 --version
+pip3 --version
+```
+
+### 📌 5. pip 패키지 업그레이드
+
+```bash
+pip3 install --upgrade pip
+```
+
+### 📌 6. 가상환경 설정 (venv)
+
+```bash
+python3 -m venv myenv
+source myenv/bin/activate  # 가상환경 활성화
+deactivate                 # 가상환경 비활성화
+```
+
+---
+
+## 🐧 Ubuntu 환경에서 Python 설치 및 설정
+
+### 📌 1. 시스템 패키지 업데이트
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### 📌 2. Python 및 pip 설치
+
+```bash
+sudo apt install python3 python3-pip -y
+```
+
+### 📌 3. 버전 확인
+
+```bash
+python3 --version
+pip3 --version
+```
+
+### 📌 4. pip 패키지 업그레이드
+
+```bash
+pip3 install --upgrade pip
+```
+
+### 📌 5. 가상환경 설정 (venv)
+
+```bash
+sudo apt install python3-venv -y
+python3 -m venv myenv
+source myenv/bin/activate  # 가상환경 활성화
+deactivate                 # 가상환경 비활성화
+```
+
+---
+
+### 📌 6. 추천 추가 설정
+
+- Visual Studio Code 설치 및 Python 확장 설치
+- `requirements.txt`로 패키지 관리
+
+```bash
+pip3 freeze > requirements.txt
+pip3 install -r requirements.txt
+```
+---
+
+## 🐧 Arch Linux 환경에서 Python 설치 및 설정
+
+### 📌 1. 시스템 업데이트
 
 ```bash
 sudo pacman -Syu
 ```
 
-> 시스템을 최신 상태로 유지합니다.
+시스템을 최신 상태로 유지합니다.
 
 ---
 
-### 2. Python 설치
+### 📌 2. Python 설치
 
 ```bash
 sudo pacman -S python
 ```
 
-> 기본적으로 설치되는 버전은 최신 안정화 버전입니다.
+기본적으로 설치되는 버전은 최신 안정화 버전입니다.
 
 설치 후 버전 확인:
 
@@ -208,7 +330,7 @@ python3 --version
 
 ---
 
-### 3. pip 설치 및 확인
+### 📌 3. pip 설치 및 확인
 
 `pip`는 Python 패키지 관리자입니다.
 
@@ -218,7 +340,7 @@ Arch의 Python 패키지에 기본 포함되어 있어 다음과 같이 확인�
 pip --version
 ```
 
-> 만약 동작하지 않을 경우 아래 명령으로 설치:
+만약 동작하지 않을 경우 아래 명령으로 설치:
 
 ```bash
 sudo pacman -S python-pip
@@ -226,7 +348,7 @@ sudo pacman -S python-pip
 
 ---
 
-### 4. Python 버전별 설치 (옵션)
+### 📌 4. Python 버전별 설치 (옵션)
 
 특정 버전이 필요하다면 `pyenv` 사용을 추천합니다.
 
@@ -259,7 +381,7 @@ pyenv global 3.11.9
 
 ---
 
-### 5. 가상환경 설정 (venv)
+### 📌 5. 가상환경 설정 (venv)
 
 프로젝트별 독립 환경 구성을 위해 `venv` 사용:
 
@@ -276,7 +398,7 @@ deactivate
 
 ---
 
-### 6. 추가 도구 및 추천 패키지
+### 📌 6. 추가 도구 및 추천 패키지
 
 | 패키지명     | 설명                                | 설치 명령어                        |
 |--------------|-------------------------------------|------------------------------------|
@@ -285,6 +407,7 @@ deactivate
 | `black`      | 코드 포매터                         | `pip install black`                |
 | `pylint`     | 정적 분석                           | `pip install pylint`               |
 | `virtualenv` | 가상환경 생성 툴                    | `pip install virtualenv`           |
+
 
 ---
 
