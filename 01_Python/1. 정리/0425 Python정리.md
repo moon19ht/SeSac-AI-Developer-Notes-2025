@@ -7,24 +7,24 @@
 
 ## 📚 목차
 
-- [📌 1. 딕셔너리 (Dictionary)](#-1-딕셔너리-dictionary)
-- [📌 2. 튜플 (Tuple)](#-2-튜플-tuple)
-- [📌 3. 컴프리핸션 (Comprehension)](#-3-컴프리핸션-comprehension)
-- [📌 4. 제어문](#-4-제어문)
+- [💡 1. 딕셔너리 (Dictionary)](#-1-딕셔너리-dictionary)
+- [💡 2. 튜플 (Tuple)](#-2-튜플-tuple)
+- [💡 3. 컴프리핸션 (Comprehension)](#-3-컴프리핸션-comprehension)
+- [💡 4. 제어문](#-4-제어문)
 - [🔚 마무리](#-마무리)
 - [⏭️ 다음으로는...](#️-다음으로는)
 - [⏮️ 이전 문서](./0424%20Python정리.md) [다음 문서 ⏭️](./0428%20Python정리.md)
 
 ---
 
-## 📌 1. 딕셔너리 (Dictionary)
+## 💡 1. 딕셔너리 (Dictionary)
 
-### 🔹 개념
+### 📌 개념
 - **키(key)와 값(value)의 쌍**으로 이루어진 자료형
 - 순서가 없는(파이썬 3.6 이상부터는 삽입 순서 유지), **mutable(변경 가능)** 한 자료형
 - 중복된 키는 허용하지 않음
 
-### 🔹 생성 방법
+### 📌 생성 방법
 ```python
 # 기본 생성
 my_dict = {"name": "Alice", "age": 25, "city": "Seoul"}
@@ -33,7 +33,7 @@ my_dict = {"name": "Alice", "age": 25, "city": "Seoul"}
 my_dict2 = dict(name="Bob", age=30)
 ```
 
-### 🔹 주요 메서드
+### 📌 주요 메서드
 ```python
 my_dict["name"]         # 'Alice' — 키로 값 접근
 my_dict.get("age")      # 25 — 키가 없을 경우 None 반환 (예외 발생 안 함)
@@ -50,7 +50,7 @@ my_dict.update({"age": 26})  # 값 변경
 
 ---
 
-## 📌 2. 튜플 (Tuple)
+## 💡 2. 튜플 (Tuple)
 
 ### 🔹 개념
 - **순서가 있는** 자료형으로, **immutable(변경 불가능)** 한 리스트
@@ -79,7 +79,7 @@ len(t1)                 # 길이
 
 ---
 
-## 📌 3. 컴프리핸션 (Comprehension)
+## 💡 3. 컴프리핸션 (Comprehension)
 
 ### 🔹 개념
 - **간결하고 직관적인 문법으로 컬렉션 생성**
@@ -120,7 +120,7 @@ square_set = {x**2 for x in [1, 2, 2, 3, 4]}
 
 ---
 
-## 📌 4. 제어문 
+## 💡 4. 제어문 
 
 ### 제어 구조(Control Structure)
 
@@ -236,8 +236,6 @@ for i in range(5):
         continue
     print(i)
 ```
-## 
-
 
 ---
 
