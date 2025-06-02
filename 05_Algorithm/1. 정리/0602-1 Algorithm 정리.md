@@ -18,7 +18,9 @@
 
 ### 1.1. 알고리즘(Algorithms)이란?  
 
-알고리즘은 특정 문제를 해결하기 위한 명확하고 구체적인 단계들의 집합다. 컴퓨터 과학에서 알고리즘은 입력 데이터를 받아 원하는 결과를 출력하는 과정이며, 효율적인 알고리즘은 실행 시간과 자원 사용을 최소화한다.  
+알고리즘은 특정 문제를 해결하기 위한 명확하고 구체적인 단계들의 집합이다.
+
+컴퓨터 과학에서 알고리즘은 입력 데이터를 받아 원하는 결과를 출력하는 과정이며, 효율적인 알고리즘은 실행 시간과 자원 사용을 최소화한다.  
 
 ```mermaid
 flowchart TD  
@@ -51,6 +53,8 @@ flowchart TD
     C --> H[트리]  
     C --> I[그래프]  
 ```
+
+---
 
 ## 2. 변수  
 
@@ -171,6 +175,8 @@ graph TD
 + **이터러블(Iterable)**  
 : 반복 가능한 객체로, 한 번에 하나씩 원소를 반환할 수 있다.  
 
+---
+
 ## 3. 리스트
 > 파이썬은 리스트가 배열(array)을 대신한다.
 
@@ -224,6 +230,8 @@ graph TD
   
 배열에 대한 구현이 필요하지 않으므로, 관련 문제를 풀어보며 이해를 돕도록 한다.
 
+---
+
 ## 4. 리스트의 연산
 
 ### 4.1. 정수 배열에서 가장 큰 두 수를 찾기
@@ -272,3 +280,236 @@ for a in arr:
 [7]에서 가장 큰 두 값: [7]
 ```
 이 코드는 배열이 길이가 1인 경우를 고려하여, 배열을 그대로 반환하는 조건문을 추가했다. 그 외의 경우에는 배열을 순회하며 가장 큰 두 값을 찾는다.
+
+### 4.2. 회문(Palindromes) 찾기
+> 주어진 문자열이 회문이면 True, 회문이 아니면 False를 반환하라.
+> 입력: madam, 출력: True
+> 입력: tomato, 출력: False 
+
+"오디오, 기러기, 오레오" 같은 앞으로 읽어도, 뒤로 읽어도 같은 단어(회문)인지 검사하는 함수를 만들자.
+
+#### 4.2.1. 문자열의 슬라이싱을 이용하기
+
+문자열(string)은 문자의 배열로, 그 안의 개별 문자를 수정할 수는 없지만 리스트처럼 인덱싱과 슬라이싱을 할 수 있다. 문자열 슬라이싱 기능을 사용해 회문인지 간단하게 검사할 수 있다.
+
+```python
+word = "racecar"
+if word == word[::-1]:
+    print(True)
+else:
+    print(False)
+```
+
+### 4.2.2. 두 포인터(Two Pointers)를 이용한 방법
+
+배열이나 문자열에서 두 개의 포인터를 사용하는 방법을 많이 사용한다. 여기서도 두 개의 포인터를 활용하여 회문을 검사하는 방법을 구현해본다.
+
+아래 그림처럼 **두 포인터**를 문자열의 양쪽 끝에서 시작하여, 가운데로 이동하면서 문자를 비교한다. 두 문자가 다르면 그 문자열은 회문이 아니다. 만약 포인터들이 서로 교차하거나 같은 위치에 도달하면 회문이다.
+
+![두 포인터를 이용한 회문 검사](https://wikidocs.net/images/page/224878/fig-012.png)
+
+
+- 왼쪽 포인터는 문자열의 첫 번째 인덱스(`0`)에, 오른쪽 포인터는 마지막 인덱스에 위치한다.
+- 왼쪽 포인터가 오른쪽 포인터보다 작을 동안, 두 포인터가 가리키는 문자를 비교한다.
+  - 만약 두 문자가 다르면 `False`를 반환한다.
+- 반복문을 끝까지 통과하면 `True`를 반환한다.
+
+```python
+def is_palindrome(word: str) -> bool:
+    """문자열 word가 회문(palindrome)인지 검사한다.
+    Arguments:
+        word (str): 회문인지 검사할 문자열
+    Return:
+        bool: 회문이면 True, 그렇지 않으면 False를 반환
+    """
+    left: int = 0
+    right: int = len(word)-1
+    while left < right:
+        if word[left] != word[right]:
+            return False
+        left, right = left + 1, right - 1
+    return True
+
+
+# Test code
+words = ["racecar", "rotor", "tomato", "별똥별", "코끼리"]
+for word in words:
+    print(f"Is '{word}' palindrome?  {is_palindrome(word)}")
+```
+
+실행 결과
+```
+Is 'racecar' palindrome?  True
+Is 'rotor' palindrome?  True
+Is 'tomato' palindrome?  False
+Is '별똥별' palindrome?  True
+Is '코끼리' palindrome?  False
+```
+
+### 4.3. 0과 1로 구성된 배열을 정렬하기
+
+> 0과 1로 이루어진 배열이 있다. 배열 자체를 오름차순으로 정렬하라.
+>입력: [1, 0, 1, 1, 1, 1, 1, 0, 0, 0], 출력: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
+>입력: [1, 1], 출력: [1, 1]
+
+#### 4.3.1. count 메서드 이용하기
+
+- 0과 1만 있으므로, count() 메서드를 이용하여 0과 1의 개수를 센다.
+- 해당 개수만큼 0과 1을 채운다.
+
+```python
+def  bin_array_sort(arr: list[int]) -> None:  
+    arr[:] = [0] * arr.count(0) + [1] * arr.count(1)  
+
+
+# Test code 
+for arr in ([1, 0, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1]):  
+    bin_array_sort(arr)  
+    print(arr)
+```
+
+실행 결과
+```
+[0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
+[1, 1]
+```
+위와 같이 코드를 짤 때 주의할 점은, 배열 자체를 정렬하라고 했기 때문에 슬라이싱을 이용하여 원래 배열의 값을 바꿔야 한다는 것이다.
+
+> arr[:] = ...
+
+#### 4.3.2. 포인터 두 개를 이용하기
+0을 앞쪽에 놓고 1을 뒤쪽에 배치하면 되므로, 앞쪽에 있는 1과 뒤쪽에 있는 0을 찾아 서로 교환한다. 즉, 왼쪽 포인터는 오른쪽으로 이동하면서 1을 찾고, 오른쪽 포인터는 왼쪽으로 이동하면서 0을 찾는다. 각각 1과 0을 찾았고, 두 포인터가 서로 교차하지 않았다면 1과 0을 서로 교환한다.
+
+![포인터를 이용한 정렬](https://wikidocs.net/images/page/224878/fig-013.png)
+
+```python
+def bin_array_sort(arr: list[int]) -> None:
+    """0과 1로 이루어진 배열 arr를 오름차순으로 정렬한다.
+    Arguments:
+        arr (list[int]): 0과 1로 이루어진 배열
+    Return:
+        None: 배열 arr 자체를 정렬한다.
+    """
+    left: int = 0
+    right: int = len(arr) - 1
+    while left < right:
+        while left < len(arr) and arr[left] == 0:
+            left += 1
+        while right >= 0 and arr[right] == 1:
+            right -= 1
+        if left < right:
+            arr[left], arr[right] = 0, 1
+            left, right = left + 1, right - 1
+
+
+# Test code 
+for arr in ([1, 0, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1]):  
+    bin_array_sort(arr)  
+    print(arr)
+```
+
+실행 결과
+```
+[0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
+[1, 1]
+```
+
+### 4.4. 제시된 합을 가진 부분 배열 찾기 
+
+> 정렬되지 않은 양의 정수로 이루어진 배열 A가 있다. 연속된 원소를 더한 값이 제시된 값 S와 같은 부분 배열을 찾아라. (인덱스 기준은 1이다.)
+> 입력: arr = [1, 2, 3, 7, 5], s = 12, 출력: [2, 4]
+>    인덱스 2부터 4까지의 합: 2 + 3 + 7 = 12
+> 입력: arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], s = 15, 출력: [1, 5] 
+
+#### 4.4.1. 이중 반복문으로 풀기
+
+- i는 인덱스 0부터 마지막 인덱스까지 반복한다.
+  - 부분 배열의 합을 0으로 초기화한다.
+  - j는 i부터 마지막 인덱스까지 반복한다.
+    - 배열의 값을 더한다.
+    - 누적한 값이 제시된 값과 같으면 인덱스를 반환한다.
+- 반복문을 빠져나오면 답이 없으므로 -1을 반환한다.
+
+```python
+def find_sub_array(arr: list[int], s: int) -> list[int]:
+    """배열 arr에서 연속한 원소의 합이 s인 부분 배열의 인덱스를 구한다.
+    Arguments:
+        arr (list[int]): 양의 정수
+        s: 부분 배열의 합
+    Return:
+        list[int]: 부분 배열의 인덱스, 조건을 만족하는 부분 배열이 없으면 [-1]
+     """
+    for i in range(len(arr)):
+        sub_total: int = 0
+        for j in range(i, len(arr)):
+            sub_total += arr[j]
+            if sub_total == s:
+                return [i+1, j+1]
+    return [-1]
+
+
+# Test code
+sample1 = ([1, 2, 3, 7, 5], 12)
+sample2 = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15)
+for arr, s in (sample1, sample2):
+    print(find_sub_array(arr, s))
+```
+
+실행 결과
+```
+[2, 4]
+[1, 5]
+```
+
+#### 4.4.2. 포인터 두 개를 이용하기
+
+이중 반복문을 사용하지 않고 문제를 해결하려면, 두 개의 포인터를 사용하는 방법을 떠올릴 수 있다. 
+두 포인터를 사용하면 배열을 한 번만 순회하면서 필요한 조건을 만족할 수 있기 때문에, 시간 복잡도가 더 효율적인 O(n)으로 줄어든다.
+
+아래 그림은 예시로 주어진 값에서 합이 12인 부분 배열을 찾는 과정을 설명하고 있다.
+
+![두 포인터를 이용한 부분 배열 찾기](https://wikidocs.net/images/page/224917/fig-014.png)
+
+  
+- 왼쪽 포인터와 오른쪽 포인터를 설정한다.
+- 오른쪽 포인터를 오른쪽으로 이동시키며, 해당 위치의 배열 원소를 더한다.
+- 더한 값이 S보다 작으면, 오른쪽 포인터를 증가시키고 계속 값을 더한다.
+- 더한 값이 S보다 크면, S와 같거나 작아질 때까지 왼쪽 포인터가 가리키는 값을 뺀다.
+- 더한 값이 S와 같으면 [왼쪽 포인터 + 1, 오른쪽 포인터 + 1]을 반환한다.
+- 배열의 끝까지 갔는데도 S와 같은 값이 없으면 [-1]을 반환한다.
+
+```python
+def find_sub_array(arr: list[int], s: int) -> list[int]:
+    """배열 arr에서 연속한 원소의 합이 s인 부분 배열의 인덱스를 구한다.
+    Arguments:
+        arr (list[int]): 양의 정수
+        s: 부분 배열의 합
+    Return:
+        list[int]: 부분 배열의 인덱스, 조건을 만족하는 부분 배열이 없으면 [-1]
+     """
+    left: int = 0
+    sub_total: int = 0
+    for right in range(len(arr)):
+        sub_total += arr[right]
+        while left < right and sub_total > s:
+            sub_total -= arr[left]
+            left += 1
+        if sub_total == s:
+            return [left+1, right+1]
+    return [-1]
+
+
+# Test code
+sample1 = ([1, 2, 3, 7, 5], 12)
+sample2 = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 15)
+sample3 = ([1, 2, 3, 4], 0)
+for arr, s in (sample1, sample2, sample3):
+    print(find_sub_array(arr, s))
+```
+
+실행 결과
+```
+[2, 4]
+[1, 5]
+[-1]
+```
