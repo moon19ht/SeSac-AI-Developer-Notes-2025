@@ -67,9 +67,9 @@
 
 ## 📈 진행 현황
 
-- ✅ Python, SQL, Git&GitHub 과정 완료
-- 🟡 SQL 데이터베이스 모델링 심화 진행 중
-- ⏳ 알고리즘, 클린코드, PyTorch 실습 예정
+- ✅ Python, SQL, Git&GitHub, CleanCode 과정 완료
+- 🟡 Algorithm(알고리즘) 과정 진행 중
+- ⏳ Web Service, Web Server, PyTorch 실습 예정
 - 🚀 사이드 프로젝트 진행 중, 파이널 프로젝트 기획 예정
 
 ---
