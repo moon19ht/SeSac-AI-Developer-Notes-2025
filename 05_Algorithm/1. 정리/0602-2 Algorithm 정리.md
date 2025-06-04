@@ -12,35 +12,162 @@
 
 ---
 
-## 1. 연결 리스트
-연결 리스트는 데이터를 연속된 메모리 공간에 저장하지 않고, 각 데이터가 다음 데이터의 위치를 가리키는 방식으로 구성된 선형 자료 구조다. 각 데이터 단위를 노드라고 하며, 노드는 데이터를 저장하고 다음 노드를 가리키는 참조(주소)를 포함한다.
+## 1. 연결 리스트(Linked List)
 
-배열은 인덱스를 사용해 원소에 쉽게 접근할 수 있지만, 원소를 추가하거나 삭제하려면 연속된 메모리 공간을 확보하고 원소들을 이동시켜야 하므로 시간이 걸린다. 반면, 자료의 양이 정해져 있지 않거나 추가 및 삭제가 빈번할 때는 연결 리스트가 더 적합하다.
+연결 리스트는 데이터를 저장하는 노드들이 일렬로 연결된 선형 자료 구조입니다. 각 노드는 데이터와 다음 노드에 대한 참조(포인터)를 가지고 있습니다. 배열과 달리 연결 리스트는 크기가 동적으로 변할 수 있고, 데이터의 삽입/삭제가 효율적입니다.
 
-### 1.1. 단일 연결 리스트(Singly Linked List)의 구조
+### 1.1. 연결 리스트의 구조
 
-- 각 노드는 값과 다음 노드의 주소(참조)를 저장한다.
-- head는 연결 리스트의 첫 번째 노드를 가리키며, 연결 리스트에 접근하기 위한 시작점 역할을 한다.
+- **노드(Node)**: 데이터와 다음 노드를 가리키는 포인터(참조)로 구성됩니다.
+- **헤드(Head)**: 연결 리스트의 첫 번째 노드를 가리키는 포인터입니다.
+- **테일(Tail)**: 마지막 노드는 다음 노드에 대한 포인터가 `None`입니다.
 
-![단일 연결 리스트 구조](https://wikidocs.net/images/page/224937/fig-015_.png)
+### 1.2. 연결 리스트의 종류
 
-### 1.2. 연결 리스트의 특징
+- **단일 연결 리스트(Singly Linked List)**: 한 방향(다음 노드)으로만 연결됨.
+- **이중 연결 리스트(Doubly Linked List)**: 이전 노드와 다음 노드 모두를 참조.
+- **원형 연결 리스트(Circular Linked List)**: 마지막 노드가 첫 번째 노드를 가리킴.
 
-- **동적 크기** : 배열과 달리 크기가 고정되어 있지 않아, 필요에 따라 노드를 추가하거나 삭제하며 크기를 조절할 수 있다.
-- **삽입과 삭제가 쉬움** : 배열에서는 삽입/삭제 시 해당 위치 이후의 모든 요소를 이동시켜야 하지만, 연결 리스트에서는 링크만 변경하면 되므로 효율적이다.
-- **메모리 효율성**: 배열은 미리 메모리 공간을 할당해야 하지만, 연결 리스트는 필요한 만큼만 메모리를 할당하므로 메모리 낭비를 줄일 수 있다.
-
-![단일 연결 리스트의 예시](https://wikidocs.net/images/page/224937/fig-016_.png)
-
-먼저, 각 노드를 표현하는 Node 클래스를 정의한다.
+### 1.3. 파이썬으로 구현하는 단일 연결 리스트
 
 ```python
+# 노드 클래스 정의
 class Node:
     def __init__(self, data):
-        self.data = data    # data는 값을 가리키는 변수(속성, ttribute)
-        self.next = None    # next는 다음 노드를 가리키는 변수
+        self.data = data
+        self.next = None
+
+# 연결 리스트 클래스 정의
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    # 리스트 끝에 데이터 추가
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+
+    # 리스트 출력
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+# 사용 예시
+ll = LinkedList()
+ll.append(1)
+ll.append(2)
+ll.append(3)
+ll.display()  # 1 -> 2 -> 3 -> None
 ```
 
-### 1.3. 간단한 연결 리스트 만들기
+### 1.4. 연결 리스트의 주요 연산
 
-#### 1.3.1. 노드를 생성하고 연결하기
+- **삽입(append, insert)**: 원하는 위치에 노드 추가
+- **삭제(remove)**: 특정 값을 가진 노드 삭제
+- **탐색(search)**: 특정 값을 가진 노드 찾기
+- **출력(display)**: 리스트의 모든 노드 출력
+
+### 1.5. 연결 리스트의 장단점
+
+- **장점**
+  - 크기가 동적으로 변함
+  - 중간에 데이터 삽입/삭제가 빠름(포인터만 변경)
+- **단점**
+  - 임의 접근이 느림(순차 탐색 필요)
+  - 추가적인 포인터 공간 필요
+
+---
+
+## 2. 스택(Stack)
+
+스택은 데이터를 일시적으로 저장할 때 사용하는 선형 자료 구조로, **후입선출(Last-In, First-Out, LIFO)**의 특징을 가진다. 즉, 가장 나중에 삽입된 데이터가 가장 먼저 삭제된다. 스택은 한 쪽 끝에서만 데이터를 추가(push)하거나 삭제(pop)할 수 있다.
+
+### 2.1. 스택의 주요 연산
+
+- **push(item)** : 스택의 맨 위에 데이터를 추가한다.
+- **pop()** : 스택의 맨 위에 있는 데이터를 삭제하고 반환한다.
+- **peek()** : 스택의 맨 위에 있는 데이터를 삭제하지 않고 반환한다.
+- **is_empty()** : 스택이 비어 있는지 확인한다.
+
+### 2.2. 스택의 활용 예시
+
+- 함수 호출(재귀 호출) 시 호출 정보를 저장
+- 웹 브라우저의 뒤로 가기 기능
+- 괄호의 짝 검사
+- 깊이 우선 탐색(DFS) 등
+
+### 2.3. 파이썬으로 구현하는 스택
+
+파이썬에서는 리스트(list)를 이용해 간단하게 스택을 구현할 수 있다.
+
+```python
+# 리스트를 이용한 스택 구현
+stack = []
+
+# 데이터 추가 (push)
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print("스택 상태:", stack)  # [1, 2, 3]
+
+# 데이터 삭제 (pop)
+top = stack.pop()
+print("pop된 값:", top)    # 3
+print("스택 상태:", stack)  # [1, 2]
+```
+
+#### 스택 클래스 직접 구현하기
+
+```python
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("스택이 비어 있습니다.")
+        return self.items.pop()
+
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("스택이 비어 있습니다.")
+        return self.items[-1]
+
+    def size(self):
+        return len(self.items)
+
+# 사용 예시
+s = Stack()
+s.push(10)
+s.push(20)
+print(s.pop())   # 20
+print(s.peek())  # 10
+print(s.size())  # 1
+```
+
+### 2.4. 스택의 장단점
+
+- **장점**
+  - 구현이 간단하다.
+  - 데이터의 추가/삭제가 빠르다(시간복잡도 O(1)).
+- **단점**
+  - 중간에 있는 데이터에 접근이 불가능하다(맨 위에서만 접근 가능).
+
+---
+
+
