@@ -7,353 +7,167 @@
 
 ## 📚 목차  
 
-- [1. 큐](#1-큐)
-- [2. 링크드 리스트](#2-링크드-리스트)
-- [3. 이중 링크드 리스트](#3-이중-링크드-리스트)
-- [4. 재귀 호출](#4-재귀-호출)
+- [1. 연결 리스트](#1-연결-리스트)
+- [2. 스택](#2-스택)
 
 ---
 
-## 1. 큐
+## 1. 연결 리스트(Linked List)
 
-큐(Queue)는 선입선출(FIFO, First-In-First-Out) 방식의 자료구조입니다. 먼저 들어온 데이터가 먼저 나가게 됩니다. 주로 대기열, 프린터 작업 처리 등 순서가 중요한 곳에서 사용됩니다.
+연결 리스트는 데이터를 저장하는 노드들이 일렬로 연결된 선형 자료 구조입니다. 각 노드는 데이터와 다음 노드에 대한 참조(포인터)를 가지고 있습니다. 배열과 달리 연결 리스트는 크기가 동적으로 변할 수 있고, 데이터의 삽입/삭제가 효율적입니다.
 
-### 주요 연산
+### 1.1. 연결 리스트의 구조
 
-- **enqueue**: 큐의 뒤에 데이터를 추가
-- **dequeue**: 큐의 앞에서 데이터를 제거 및 반환
-- **peek**: 큐의 앞에 있는 데이터를 확인(제거하지 않음)
-- **is_empty**: 큐가 비어있는지 확인
+- **노드(Node)**: 데이터와 다음 노드를 가리키는 포인터(참조)로 구성됩니다.
+- **헤드(Head)**: 연결 리스트의 첫 번째 노드를 가리키는 포인터입니다.
+- **테일(Tail)**: 마지막 노드는 다음 노드에 대한 포인터가 `None`입니다.
 
-### 예시
+### 1.2. 연결 리스트의 종류
 
-파이썬에서는 `collections.deque`를 사용하여 큐를 쉽게 구현할 수 있습니다.
+- **단일 연결 리스트(Singly Linked List)**: 한 방향(다음 노드)으로만 연결됨.
+- **이중 연결 리스트(Doubly Linked List)**: 이전 노드와 다음 노드 모두를 참조.
+- **원형 연결 리스트(Circular Linked List)**: 마지막 노드가 첫 번째 노드를 가리킴.
 
-```python
-from collections import deque
-
-# 큐 생성
-queue = deque()
-
-# 데이터 추가 (enqueue)
-queue.append('A')
-queue.append('B')
-queue.append('C')
-
-print("큐 상태:", queue)  # 큐 상태: deque(['A', 'B', 'C'])
-
-# 데이터 제거 (dequeue)
-first = queue.popleft()
-print("제거된 데이터:", first)  # 제거된 데이터: A
-print("큐 상태:", queue)       # 큐 상태: deque(['B', 'C'])
-
-# 큐의 맨 앞 데이터 확인 (peek)
-front = queue[0]
-print("맨 앞 데이터:", front)  # 맨 앞 데이터: B
-
-# 큐가 비어있는지 확인
-print("큐가 비어있는가?", not queue)  # 큐가 비어있는가? False
-```
-
-### 활용 예시
-
-- **프린터 대기열**: 인쇄 요청이 들어온 순서대로 처리
-- **탐색 알고리즘**: BFS(너비 우선 탐색)에서 사용
-
----
-
-## 2. 링크드 리스트
-
-링크드 리스트(Linked List)는 각 요소(노드)가 데이터와 다음 노드를 가리키는 포인터(참조)로 구성된 선형 자료구조입니다. 배열과 달리 메모리상에 연속적으로 저장되지 않고, 필요에 따라 동적으로 크기를 조절할 수 있습니다. 삽입과 삭제가 빠르지만, 임의의 위치에 접근하려면 순차적으로 탐색해야 하므로 접근 속도는 느립니다.
-
-### 주요 특징
-
-- **노드(Node)**: 데이터와 다음 노드를 가리키는 포인터(`next`)로 구성
-- **동적 메모리 할당**: 크기 제한이 없고, 필요할 때마다 노드를 추가/삭제 가능
-- **중간 삽입/삭제 효율적**: 포인터만 변경하면 되므로 O(1) 시간 복잡도(삽입/삭제 위치를 알고 있을 때)
-- **임의 접근 비효율적**: 특정 위치에 접근하려면 처음부터 순차 탐색 필요(O(n))
-- **메모리 사용**: 각 노드마다 포인터를 추가로 저장하므로 배열보다 메모리 사용량이 많을 수 있음
-
-### 구조도
-
-```
-[Head] -> [A|next] -> [B|next] -> [C|next] -> None
-```
-
-### 주요 연산
-
-- **append(data)**: 리스트 끝에 데이터 추가
-- **insert(pos, data)**: 지정한 위치에 데이터 삽입
-- **delete(data)**: 지정한 데이터를 가진 노드 삭제
-- **search(data)**: 데이터 탐색
-- **print_list()**: 전체 리스트 출력
-
-### 파이썬 구현 예시
-
-파이썬에는 내장 링크드 리스트 자료구조가 없으므로, 클래스를 직접 정의하여 구현합니다.
+### 1.3. 파이썬으로 구현하는 단일 연결 리스트
 
 ```python
-```python
-# 노드 클래스 정의: 데이터와 다음 노드를 가리키는 포인터를 가짐
+# 노드 클래스 정의
 class Node:
     def __init__(self, data):
-        self.data = data      # 노드가 저장할 데이터
-        self.next = None      # 다음 노드를 가리키는 포인터
+        self.data = data
+        self.next = None
 
-# 단일 링크드 리스트 클래스 정의
+# 연결 리스트 클래스 정의
 class LinkedList:
     def __init__(self):
-        self.head = None      # 리스트의 첫 번째 노드를 가리키는 포인터
+        self.head = None
 
     # 리스트 끝에 데이터 추가
     def append(self, data):
         new_node = Node(data)
-        if not self.head:     # 리스트가 비어있으면 새 노드를 head로 지정
+        if not self.head:
             self.head = new_node
             return
-        curr = self.head
-        while curr.next:      # 마지막 노드까지 이동
-            curr = curr.next
-        curr.next = new_node  # 마지막 노드의 next에 새 노드 연결
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
 
-    # 지정한 위치(pos)에 데이터 삽입
-    def insert(self, pos, data):
-        new_node = Node(data)
-        if pos == 0:          # 맨 앞에 삽입하는 경우
-            new_node.next = self.head
-            self.head = new_node
-            return
-        curr = self.head
-        for _ in range(pos - 1):  # 삽입 위치 바로 전 노드까지 이동
-            if curr is None:
-                return            # 위치가 리스트 길이보다 크면 아무 작업도 하지 않음
-            curr = curr.next
-        new_node.next = curr.next # 새 노드의 next를 현재 노드의 next로 지정
-        curr.next = new_node      # 현재 노드의 next를 새 노드로 변경
-
-    # 지정한 데이터를 가진 노드 삭제
-    def delete(self, data):
-        curr = self.head
-        prev = None
-        while curr:
-            if curr.data == data:     # 삭제할 데이터를 찾으면
-                if prev:
-                    prev.next = curr.next  # 이전 노드의 next를 현재 노드의 next로 변경
-                else:
-                    self.head = curr.next  # 삭제할 노드가 head인 경우 head를 다음 노드로 변경
-                return
-            prev = curr
-            curr = curr.next
-
-    # 리스트 전체 출력
-    def print_list(self):
-        curr = self.head
-        while curr:
-            print(curr.data, end=' -> ')
-            curr = curr.next
-        print('None')
+    # 리스트 출력
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
 
 # 사용 예시
 ll = LinkedList()
-ll.append('A')         # 리스트: A
-ll.append('B')         # 리스트: A -> B
-ll.append('C')         # 리스트: A -> B -> C
-ll.insert(1, 'D')      # 1번째 위치에 'D' 삽입: A -> D -> B -> C
-ll.print_list()        # 출력: A -> D -> B -> C -> None
-ll.delete('B')         # 'B' 삭제: A -> D -> C
-ll.print_list()        # 출력: A -> D -> C -> None
+ll.append(1)
+ll.append(2)
+ll.append(3)
+ll.display()  # 1 -> 2 -> 3 -> None
 ```
 
+### 1.4. 연결 리스트의 주요 연산
 
-### 활용 예시
+- **삽입(append, insert)**: 원하는 위치에 노드 추가
+- **삭제(remove)**: 특정 값을 가진 노드 삭제
+- **탐색(search)**: 특정 값을 가진 노드 찾기
+- **출력(display)**: 리스트의 모든 노드 출력
 
-- **메모리 관리**: 동적으로 크기가 변하는 데이터 저장
-- **실시간 데이터 처리**: 음악 재생 목록, 작업 스케줄러 등
-- **스택, 큐 등 다른 자료구조의 기반**: 링크드 리스트로 스택, 큐 구현 가능
+### 1.5. 연결 리스트의 장단점
+
+- **장점**
+  - 크기가 동적으로 변함
+  - 중간에 데이터 삽입/삭제가 빠름(포인터만 변경)
+- **단점**
+  - 임의 접근이 느림(순차 탐색 필요)
+  - 추가적인 포인터 공간 필요
 
 ---
 
-## 3. 이중 링크드 리스트
+## 2. 스택(Stack)
 
-이중 링크드 리스트(Doubly Linked List)는 각 노드가 데이터와 함께 두 개의 포인터(참조)를 가지는 자료구조입니다. 하나는 이전 노드를, 다른 하나는 다음 노드를 가리킵니다. 이를 통해 양방향으로 리스트를 탐색할 수 있어, 단일 링크드 리스트보다 삽입과 삭제가 더 유연합니다.
+스택은 데이터를 일시적으로 저장할 때 사용하는 선형 자료 구조로, **후입선출(Last-In, First-Out, LIFO)**의 특징을 가진다. 즉, 가장 나중에 삽입된 데이터가 가장 먼저 삭제된다. 스택은 한 쪽 끝에서만 데이터를 추가(push)하거나 삭제(pop)할 수 있다.
 
-### 주요 특징
+### 2.1. 스택의 주요 연산
 
-- **양방향 연결**: 각 노드는 `prev`(이전 노드)와 `next`(다음 노드)를 참조
-- **양방향 탐색**: 앞/뒤로 자유롭게 이동 가능
-- **중간 삽입/삭제 용이**: 노드의 포인터만 적절히 변경하면 O(1) 시간에 삽입/삭제 가능(노드 위치를 알고 있을 때)
-- **메모리 사용 증가**: 각 노드가 두 개의 포인터를 저장하므로 단일 링크드 리스트보다 메모리 사용량이 많음
+- **push(item)** : 스택의 맨 위에 데이터를 추가한다.
+- **pop()** : 스택의 맨 위에 있는 데이터를 삭제하고 반환한다.
+- **peek()** : 스택의 맨 위에 있는 데이터를 삭제하지 않고 반환한다.
+- **is_empty()** : 스택이 비어 있는지 확인한다.
 
-### 구조도
+### 2.2. 스택의 활용 예시
 
-```
-None <- [A|prev|next] <-> [B|prev|next] <-> [C|prev|next] -> None
-```
+- 함수 호출(재귀 호출) 시 호출 정보를 저장
+- 웹 브라우저의 뒤로 가기 기능
+- 괄호의 짝 검사
+- 깊이 우선 탐색(DFS) 등
 
-### 주요 연산
+### 2.3. 파이썬으로 구현하는 스택
 
-- **append(data)**: 리스트 끝에 데이터 추가
-- **insert(pos, data)**: 지정한 위치에 데이터 삽입
-- **delete(data)**: 지정한 데이터를 가진 노드 삭제
-- **print_forward()**: 앞에서 뒤로 리스트 출력
-- **print_backward()**: 뒤에서 앞으로 리스트 출력
-
-### 파이썬 구현 예시
+파이썬에서는 리스트(list)를 이용해 간단하게 스택을 구현할 수 있다.
 
 ```python
-# 노드 클래스 정의: 데이터, 이전 노드(prev), 다음 노드(next) 포인터를 가짐
-class Node:
-    def __init__(self, data):
-        self.data = data      # 노드가 저장할 데이터
-        self.prev = None      # 이전 노드를 가리키는 포인터
-        self.next = None      # 다음 노드를 가리키는 포인터
+# 리스트를 이용한 스택 구현
+stack = []
 
-# 이중 링크드 리스트 클래스 정의
-class DoublyLinkedList:
+# 데이터 추가 (push)
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print("스택 상태:", stack)  # [1, 2, 3]
+
+# 데이터 삭제 (pop)
+top = stack.pop()
+print("pop된 값:", top)    # 3
+print("스택 상태:", stack)  # [1, 2]
+```
+
+#### 스택 클래스 직접 구현하기
+
+```python
+class Stack:
     def __init__(self):
-        self.head = None      # 리스트의 첫 번째 노드를 가리키는 포인터
+        self.items = []
 
-    # 리스트 끝에 데이터 추가
-    def append(self, data):
-        new_node = Node(data)
-        if not self.head:     # 리스트가 비어있으면 새 노드를 head로 지정
-            self.head = new_node
-            return
-        curr = self.head
-        while curr.next:      # 마지막 노드까지 이동
-            curr = curr.next
-        curr.next = new_node  # 마지막 노드의 next에 새 노드 연결
-        new_node.prev = curr  # 새 노드의 prev를 마지막 노드로 지정
+    def is_empty(self):
+        return len(self.items) == 0
 
-    # 지정한 위치(pos)에 데이터 삽입
-    def insert(self, pos, data):
-        new_node = Node(data)
-        if pos == 0:          # 맨 앞에 삽입하는 경우
-            new_node.next = self.head
-            if self.head:
-                self.head.prev = new_node
-            self.head = new_node
-            return
-        curr = self.head
-        for _ in range(pos - 1):  # 삽입 위치 바로 전 노드까지 이동
-            if curr is None:
-                return            # 위치가 리스트 길이보다 크면 아무 작업도 하지 않음
-            curr = curr.next
-        if curr is None:
-            return
-        new_node.next = curr.next # 새 노드의 next를 현재 노드의 next로 지정
-        new_node.prev = curr      # 새 노드의 prev를 현재 노드로 지정
-        if curr.next:
-            curr.next.prev = new_node  # 다음 노드의 prev를 새 노드로 변경
-        curr.next = new_node      # 현재 노드의 next를 새 노드로 변경
+    def push(self, item):
+        self.items.append(item)
 
-    # 지정한 데이터를 가진 노드 삭제
-    def delete(self, data):
-        curr = self.head
-        while curr:
-            if curr.data == data:     # 삭제할 데이터를 찾으면
-                if curr.prev:
-                    curr.prev.next = curr.next  # 이전 노드의 next를 현재 노드의 next로 변경
-                else:
-                    self.head = curr.next       # 삭제할 노드가 head인 경우 head를 다음 노드로 변경
-                if curr.next:
-                    curr.next.prev = curr.prev  # 다음 노드의 prev를 현재 노드의 prev로 변경
-                return
-            curr = curr.next
+    def pop(self):
+        if self.is_empty():
+            raise IndexError("스택이 비어 있습니다.")
+        return self.items.pop()
 
-    # 앞에서 뒤로 리스트 출력
-    def print_forward(self):
-        curr = self.head
-        while curr:
-            print(curr.data, end=' <-> ')
-            last = curr
-            curr = curr.next
-        print('None')
+    def peek(self):
+        if self.is_empty():
+            raise IndexError("스택이 비어 있습니다.")
+        return self.items[-1]
 
-    # 뒤에서 앞으로 리스트 출력
-    def print_backward(self):
-        curr = self.head
-        if not curr:
-            print('None')
-            return
-        while curr.next:   # 마지막 노드까지 이동
-            curr = curr.next
-        while curr:
-            print(curr.data, end=' <-> ')
-            curr = curr.prev
-        print('None')
+    def size(self):
+        return len(self.items)
 
 # 사용 예시
-dll = DoublyLinkedList()
-dll.append('A')         # 리스트: A
-dll.append('B')         # 리스트: A <-> B
-dll.append('C')         # 리스트: A <-> B <-> C
-dll.insert(1, 'D')      # 1번째 위치에 'D' 삽입: A <-> D <-> B <-> C
-dll.print_forward()     # 출력: A <-> D <-> B <-> C <-> None
-dll.delete('B')         # 'B' 삭제: A <-> D <-> C
-dll.print_forward()     # 출력: A <-> D <-> C <-> None
-dll.print_backward()    # 출력: C <-> D <-> A <-> None
+s = Stack()
+s.push(10)
+s.push(20)
+print(s.pop())   # 20
+print(s.peek())  # 10
+print(s.size())  # 1
 ```
 
-### 활용 예시
+### 2.4. 스택의 장단점
 
-- **브라우저 방문 기록**: 앞/뒤로 이동
-- **텍스트 에디터의 undo/redo 기능**
-- **양방향 탐색이 필요한 자료구조**: LRU 캐시 등
+- **장점**
+  - 구현이 간단하다.
+  - 데이터의 추가/삭제가 빠르다(시간복잡도 O(1)).
+- **단점**
+  - 중간에 있는 데이터에 접근이 불가능하다(맨 위에서만 접근 가능).
 
 ---
 
-## 4. 재귀 호출
-
-재귀 호출(Recursion)은 함수가 자기 자신을 직접 또는 간접적으로 호출하는 프로그래밍 기법입니다. 복잡한 문제를 동일한 형태의 더 작은 문제로 나누어 해결할 때 자주 사용됩니다.
-
-### 기본 구조
-
-```python
-def recursive():
-    # 종료 조건(베이스 케이스)이 반드시 필요
-    if 종료조건:
-        return
-    # 자기 자신을 호출
-    recursive()
-```
-
-### 예시: 팩토리얼 계산
-
-```python
-def factorial(n):
-    if n == 0:
-        return 1
-    return n * factorial(n - 1)
-
-print(factorial(5))  # 출력: 120
-```
-
-### 의도치 않은 재귀 호출의 문제
-
-아래처럼 서로가 서로를 계속 호출하면 종료되지 않고, 스택 오버플로우가 발생할 수 있습니다.
-
-```python
-def A():
-    B()
-
-def B():
-    A()
-
-A()  # 무한 반복 → RecursionError 발생
-```
-
-> **주의:** 재귀 함수에는 반드시 종료 조건(베이스 케이스)이 필요합니다. 종료 조건이 없으면 함수 호출이 무한히 반복되어 프로그램이 비정상 종료됩니다.
-
-### 장점
-
-- 코드를 간결하게 작성할 수 있음
-- 트리 구조 탐색, 분할 정복(퀵정렬, 병합정렬 등)에서 유용
-
-### 단점
-
-- 반복문에 비해 메모리 사용량이 많고, 속도가 느릴 수 있음
-- 호출이 깊어지면 스택 오버플로우 발생 가능
-
----
 
