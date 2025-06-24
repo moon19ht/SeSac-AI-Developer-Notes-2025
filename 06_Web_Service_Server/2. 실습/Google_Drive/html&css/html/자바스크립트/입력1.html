@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    x : <input type="text" id="x"> <br/>
+    y : <input type="text" id="y"> <br/>
+    result : <input type="text" id="result"> <br/>
+
+    <button type="button" onclick="goAdd()" >더하기</button>
+    <button type="button" onclick="goSub()" >빼기</button>
+    <button type="button" onclick="goMul()" >곱하기</button>
+    <button type="button" onclick="goDiv()" >나누기</button>
+</body>
+</html>
+
+<script>
+
+    function goAdd()
+    {
+        //alert("호출");
+        //1.id가 x인 input 태그로 부터 값을 읽어온다
+        //input태그는 값이 value, 그밖의 태그는 innerHTML이다
+        
+        var x = document.getElementById("x").value; 
+        var y = document.getElementById("y").value; 
+
+        //2.연산
+        var result = parseInt(x) + parseInt(y);
+
+        //3.출력하기 
+        document.getElementById("result").value = result;
+    } 
+
+    function goSub()
+    {
+        var x = document.getElementById("x").value; 
+        var y = document.getElementById("y").value; 
+
+        var result = parseInt(x) - parseInt(y);
+        document.getElementById("result").value = result;
+    } 
+
+    function goMul()
+    {
+        var x = document.getElementById("x").value; 
+        var y = document.getElementById("y").value; 
+
+        var result = parseInt(x) * parseInt(y);
+        document.getElementById("result").value = result;
+    }
+
+    function goDiv()
+    {
+        var x = document.getElementById("x").value; 
+        var y = document.getElementById("y").value; 
+
+        var result = parseInt(x) / parseInt(y);
+        document.getElementById("result").value = result;
+    }
+
+</script>
+
+

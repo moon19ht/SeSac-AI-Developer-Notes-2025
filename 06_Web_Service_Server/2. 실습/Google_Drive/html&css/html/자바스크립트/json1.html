@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //json방식  {키1:값, 키2:값2, ....}
+    var person={"name":"홍길동", "age":12, "phone":"010-0000-0000"};
+
+    console.log( person["name"] );
+    console.log( person["age"] );
+    console.log( person["phone"] );
+    
+    console.log( person.name );
+    console.log( person.age );
+    console.log( person.phone );
+   
+    //키에 "", '', 안해도 된다. 
+    var student = {"name":"임꺽정", "kor":90, eng:80, mat:90}
+    student["total"] = student.kor + student.eng + student.mat; 
+
+    console.log(student.name, student.kor, student.eng, student.mat, student.total);
+
+    var stList = [
+        {name:"홍길동", kor:90, eng:80, mat:70},
+        {name:"조승연", kor:80, eng:70, mat:80},
+        {name:"조미연", kor:80, eng:60, mat:80},
+        {name:"임꺽정", kor:60, eng:50, mat:90},
+        {name:"장길산", kor:50, eng:60, mat:100},
+        {name:"유재석", kor:60, eng:70, mat:90},
+    ]
+
+    console.log( stList[0]["name"] );
+    console.log( stList[0].name   );
+    
+    //홍길동   240  80
+    //총점과 평균구하고 
+    for(a in stList)
+    {
+        stList[a]["total"]= stList[a]["kor"]+stList[a]["eng"]+stList[a]["mat"];
+        stList[a]["avg"] = stList[a]["total"]/3
+    }
+
+    //출력
+    for(a in stList)
+    {
+        console.log( stList[a]["name"], stList[a]["total"], stList[a]["avg"])
+    }
+
+    for(item of stList)
+    {
+        item["total"]= item["kor"]+item["eng"] + item["mat"];
+        item["avg"] = item["total"]/3
+    }
+
+    //출력
+    for(a of stList)
+    {
+        console.log( a["name"], a["total"], a["avg"])
+    }
+
+    for(o of stList){
+        o["total"] = o["kor"]+o["eng"]+o["mat"];
+        o["avg"]   = o["total"]/3;
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

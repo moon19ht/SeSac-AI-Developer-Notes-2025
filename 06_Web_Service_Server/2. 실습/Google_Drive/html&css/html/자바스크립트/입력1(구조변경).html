@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    x : <input type="text" id="x"> <br/>
+    y : <input type="text" id="y"> <br/>
+    result : <input type="text" id="result"> <br/>
+
+    <button type="button" onclick="goCalc('1')" >더하기</button>
+    <button type="button" onclick="goCalc('2')" >빼기</button>
+    <button type="button" onclick="goCalc('3')" >곱하기</button>
+    <button type="button" onclick="goCalc('4')" >나누기</button>
+</body>
+</html>
+
+<script>
+    function goCalc(sel)
+    {
+        var x = document.getElementById("x").value; 
+        var y = document.getElementById("y").value; 
+        var result=0;
+        if(sel=="1")
+            result = parseInt(x) + parseInt(y);
+        else if(sel=="2")
+            result = parseInt(x) - parseInt(y);
+        else if(sel=="3")
+            result = parseInt(x) * parseInt(y);
+        else if(sel=="4")
+            result = parseInt(x) / parseInt(y);
+
+        //3.출력하기 
+        document.getElementById("result").value = result;
+    } 
+
+    /*
+    x :  0
+    y :  0
+    원점입니다
+    x==0 y==0 원점 
+    x==0 y!=0 y축 
+    x!=0 y==0 y축
+    x>0  y>0  1사분면 
+    x>0  y<0  2사분면 
+    x<0  y<0  3사분면
+    x<0  y>0  4사분면 
+    */
+</script>
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    이름 : <input type="text" id="name"><br/>
+    국어 : <input type="text" id="kor"><br/>
+    영어 : <input type="text" id="eng"><br/>
+    수학 : <input type="text" id="mat"><br/>
+    총점 : <input type="text" id="total"><br/>
+    평균 : <input type="text" id="avg"><br/>
+    <span id="result"></span><br/>
+    <button type="button" onclick="goConfirm()">확인</button>
+</body>
+</html>
+
+<script>
+    function goConfirm()
+    {
+        var name = document.getElementById("name").value;
+        var kor = document.getElementById("kor").value;
+        var eng = document.getElementById("eng").value;
+        var mat = document.getElementById("mat").value;
+        
+        var total = parseInt(kor) + parseInt(eng) + parseInt(mat);
+        var avg = total/3;
+        
+        document.getElementById("total").value=total; 
+        document.getElementById("avg").value=avg; 
+
+        var result = `${name}님의 총점은 ${total} 평균은 ${avg} 입니다`;
+        document.getElementById("result").innerHTML
+                   ="<h1 style='color:blue'>"+result+"<h1>"; 
+    }
+
+    /*문제: 주급 구하기
+
+    이름 : 홍길동
+    시간당단가 : 10000 
+    근무시간 : 20 
+
+    홍길동님의 주급은 200000원 입니다
+
+    */
+</script>
+
+
+
+
+
+
+
+

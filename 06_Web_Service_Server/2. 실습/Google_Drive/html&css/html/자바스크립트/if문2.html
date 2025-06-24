@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    x : <input type="text" id="x"> <br/>
+    <button type="button" onclick="goConfirm()">확인</button>
+</body>
+</html>
+
+<script>
+    function goConfirm()
+    {
+        var x = document.getElementById("x").value;
+        //2의 배수이거나 5의 배수인지 물어본다
+        // || or 둘중 하나만 참일경우 참이 되는 경우 
+        //x에 2를 입력하거나 5를 입력 10을 입력해도 된다. 
+        if(parseInt(x)%2==0 || parseInt(x)%5==0)
+        {
+            alert("2의 배수 또는 5의 배수입니다.");
+        }
+        else
+        {
+            alert("2의 배수나 5의 배수가 아닙니다.");
+        }
+        /*
+           논리연산자 - 수행결과가  true 또는 false이다 
+
+            && (and)  양쪽다 참이어야 결과값이 참이다 
+            || (or)  둘중 하나만 참이면 결과가 참이다
+            !         참일때 거짓으로 거짓일때 참으로 
+        */ 
+    }
+
+    /*연도 :윤년 
+
+    2022 -> 4의 배수이면서 100의 배수가 아니어야 한다 그리고 400의 배수면 윤년이다 
+
+    2000 -> 400의 배수 윤년
+    2004 -> 윤년
+    1000 -> 윤년아님 
+    */
+</script>
+

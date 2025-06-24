@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    form태그안에 input 태그를 두어서 사용자로부터 정보를 입력받아 서버로 보내는 
+    역할을 담당한다. form태그가 안맞거나 없으면 서버로 정보를 보낼 수 없다. 
+    에러 -  form태그에 정보를 담아 보낼때 실수를 많이 한다. 
+    보통 하나의 웹페이지에 하나의 form 태그를 두는게 일반적이다. 
+    여러개 둘수있긴한데 가급적 하나만 보내자
+   
+    input태그의name속성=값1&input태그의name속성2=값2&input태그의name속성3=값3
+    name속성을 키로 하고 value속성에 값이 저장된다. 
+    username=홍길동&userage=23&address=서울시
+
+    form태그안에 있어야 서버로 정보를 보낸다.
+    
+    각 태그를 식별하는 속성값이 3개가 있다. id name class 가 있다. 
+    input 태그류만-서버로 정보를 전송할 수 있는 태그들만 name속성을 갖는다 
+    table, div, p, h ... id랑 class만 갖는다 
+    </pre>
+    
+    <form>
+        이름 : <input type="text" name="username"> <br/>
+        나이 : <input type="text" name="userage" > <br/>
+        주소 : <input type="text" name="address" > <br/>
+
+        <!-- name이 같을때 하나의 그룹으로 여겨진다. -->
+        성별 :  <input type="radio" name="gender" value="M" checked>남자 &nbsp;
+                <input type="radio" name="gender" value="F">여자 <br/>
+
+        연령대 :    
+            <input type="radio" name="age" value="1">10대 &nbsp;     
+            <input type="radio" name="age" value="2">20대 &nbsp;
+            <input type="radio" name="age" value="3" checked>30대 &nbsp;
+            <input type="radio" name="age" value="4">40대 &nbsp;
+            <input type="radio" name="age" value="5">50대 <br/>
+
+        흥미로운분야 :
+        <input type="checkbox" name="interest" value="1">html&nbsp;
+        <input type="checkbox" name="interest" value="2">css&nbsp;
+        <input type="checkbox" name="interest" value="3">javascript&nbsp;
+        <input type="checkbox" name="interest" value="4">java&nbsp;
+        <input type="checkbox" name="interest" value="5">bootstrap<br/>
+        
+        <input type="submit" value="보내기"/>
+        <button>보내기2</button> 
+    </form>
+</body>
+</html>
+
+

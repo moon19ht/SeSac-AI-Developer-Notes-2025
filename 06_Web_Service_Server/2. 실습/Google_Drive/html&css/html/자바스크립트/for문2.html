@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    console.log("1~10까지 출력");
+    for(i=1; i<=10; i++)
+    {
+        console.log("i=", i);
+    }
+
+    console.log("1~10까지 홀수만 출력");
+    for(i=1; i<=10; i+=2)
+    {
+        console.log("i=", i);
+    }
+
+    //문제1
+    console.log("1~10까지 짝수만 출력");
+    for(i=2; i<=10; i+=2)
+    {
+        console.log("i=", i);
+    }
+
+    //문제2
+    console.log("1~100까지중에서 3의 배수만 출력");
+    for(i=3; i<=100; i+=3)
+    {
+        console.log("i=", i);
+    }
+
+    //문제3
+    console.log("100~0 중에서 10의 배수만 역순으로 출력");
+    for(i=100; i>0; i-=10)
+    {
+        console.log("i=", i);
+    }
+
+    //응용 1~100까지 중에서 3의 배수가 몇개인지?
+    var cnt=0;
+    for(i=1; i<=100; i++)
+    {
+        if( i%3==0)
+            cnt++; 
+    } 
+    console.log("3의 배수의 개수 : ", cnt);
+
+    //응용1. 1~1000 까지 중에서 2의 배수 또는 5의 배수의 개수 세기
+    cnt =0;
+    for(i=1; i<=1000; i++)
+    {
+        if( i%2==0 || i%5==0)
+            cnt++; 
+    } 
+    console.log("배수의 개수 : ", cnt);
+
+    //응용2. 1~2000 년 사이에 윤년의 개수 구하기
+    //( 4의 배수이면서 100의 배수가아니거나 400의배수) 
+    cnt =0;
+    for(i=1; i<=2000; i++)
+    {
+        if( i%4==0 && i%100!=0  || i%400==0)
+            cnt++; 
+    } 
+    console.log("윤년의 개수 : ", cnt);
+
+
+</script>
+
+
+
+
+
+
+
+

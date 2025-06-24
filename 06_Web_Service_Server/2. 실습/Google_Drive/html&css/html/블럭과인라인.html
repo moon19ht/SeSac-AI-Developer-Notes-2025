@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 클래스는 여러개의 태그가 같이 공유가능하다 */
+        .city
+        {
+            color:blueviolet;
+            padding:10px 10px 10px 10px; 
+            border:1 solid gray;
+            background-color: rgb(204, 204, 241);
+        }
+
+        /* id속성은 하나의 파일에서 한번만 쓸 수 있다.
+        자바스크립트에서 객체 접근할때 문제가 된다. */
+        #mytype
+        {
+            color:aqua;
+            padding:10px 10px 10px 10px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- id 속성이 css 입장에서는 중복되어도 된다. 
+    자바스크립트라는 언어가 있다. 자바스크립트를 통해서 p태그의 내용을 바꾸거나 
+    p태그의 내용을 읽어오거나 자바스크립트 입장에서 id중복 못씀-->
+    
+    <p id="mytype">아이디는 공유가 안된다고?</p>
+    <p id="mytype">아침</p>
+
+    <p class="city">공복에</p>
+    <div class="city">우유를 한잔</div>
+
+    아침 공복에 <span style="color:chartreuse">우유</span>를 한잔
+</body>
+</html>

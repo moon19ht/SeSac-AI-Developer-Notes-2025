@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="name">홍길동</span>
+
+    <button type="button" onclick="changeColor('1')">파란색바꾸기</button>
+    <button type="button" onclick="changeColor('2')">빨간색바꾸기</button>
+    <button type="button" onclick="changeColor('3')">노란색바꾸기</button>
+    <button type="button" onclick="changeColor('4')">초록색바꾸기</button>
+    <button type="button" onclick="changeColor('5')">검은색바꾸기</button>
+</body>
+</html>
+
+<script>
+    function changeColor(sel)
+    {
+        //함수에 변수를 두고 이 변수를 파라미터, 인자, 아규먼트, 매개변수라고도 부른다 
+        //매개변수를 잘쓰면 함수를 하나만 만들어서 여러번 사용이 가능하다 
+        //객체에 대한 기본 접근은 
+        var name = document.getElementById("name");
+        if(sel=="1")
+        {
+            name.style.color = "#0000ff";
+        }
+        else if(sel=="2")
+            name.style.color = "#ff0000";
+        else if(sel=="3")
+            name.style.color = "#00ffff";
+        else if(sel=="4")
+            name.style.color = "#00ff00";
+        else if(sel=="5")
+            name.style.color = "#000000";    
+    }
+</script>

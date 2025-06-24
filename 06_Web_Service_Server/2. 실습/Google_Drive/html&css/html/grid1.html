@@ -1,0 +1,46 @@
+/*격자 모양의 레이아웃을 표현하기 위한 기능
+Flex는 한방향의 레이아웃을 지원하지만 Grid는 가로,세로 양방향의 레이아웃을 지원한다.
+페이지의 전체적인 구조를 잡는데 상당히 편리함*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+	    display: grid;
+        border:1px solid green;
+
+        grid-template-columns: 200px 200px 500px;
+        /* grid-template-columns: 1fr 1fr 1fr */
+        /* grid-template-columns: repeat(3, 1fr) */
+        /* grid-template-columns: 200px 1fr */
+        /* grid-template-columns: 100px 200px auto */
+
+        grid-template-rows: 200px 200px 500px;
+        /* grid-template-rows: 1fr 1fr 1fr */
+        /* grid-template-rows: repeat(3, 1fr) */
+        /* grid-template-rows: 200px 1fr */
+        /* grid-template-rows: 100px 200px auto */
+
+    }
+    .item{
+        border:1px solid red;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+    </div>
+</body>
+</html>

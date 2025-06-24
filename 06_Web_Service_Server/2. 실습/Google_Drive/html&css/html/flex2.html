@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+ /*div 태그 - width 를 지정하지 않으면 화면 전체 너비를 차지한다 
+ Flex 아이템들은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지 
+ 마치 inline 요소들 처럼요. height는 컨테이너의 높이만큼 늘어납니다.
+ height가 알아서 늘어나는 특징은 컬럼 레이아웃을 만들 때 아주 편리하겠네요~
+*/
+.container {
+    border:1px solid blue;
+    display:flex;  /* 기본 내용만큼만 차지한다 */
+    flex-direction: row; /*배치가 기본은 row 인데 수정이 가능하다 */
+	/*flex-direction: column; 
+    flex-direction: row-reverse; 
+	flex-direction: column-reverse; */
+
+    flex-wrap: wrap; /*nowrap, wrap, wrap-reverse 컨테이너가 더 이상 아이템들을 한 줄에 담을 여유 공간이 없을 때
+아이템 줄바꿈을 어떻게 할지 결정하는 속성*/
+
+    flex-flow:row wrap; /*: flex-direction과 flex-wrap을 한꺼번에 지정할 수 있는 단축 속성*/
+    
+    /*정렬: justify는 메인축 방향으로 정렬 align은 수직축(오뎅을 뜯어내는) 방향으로 정렬*/
+    justify-content: flex-start;
+	/* justify-content: flex-end; */
+	/* justify-content: center; */
+	 justify-content: space-between;  /*아이템들의 사이(between)에 균일한 간격을 만들어 줍니다.*/
+	justify-content: space-around; /*아이템들의 둘레에 균일한 간격을 만들어 줍니다.*/
+	justify-content: space-evenly;  /*
+    아이템들의 사이와 양 끝에 균일한 간격을 만들어 줍니다.
+     주의! IE와 엣지(Edge)에서는 지원되지 않음*/
+
+     align-items: stretch;
+	/* align-items: flex-start; */
+	/* align-items: flex-end; */
+	/* align-items: center; */
+	/* align-items: baseline; */
+
+    justify-content: center;    
+    align-items: center;
+}
+.item{
+    width:200px;
+    border:1px solid red;
+    background-color: aqua;
+   
+    flex-basis: auto; /* 기본값 */
+	/* flex-basis: 0; */
+	flex-basis: 30%; 
+	/* flex-basis: 300px; */
+	/* flex-basis: 10rem; */ /*rem : rem은 루트 글꼴 크기에 비례하여 상대적으로 바뀌는 단위*/
+	/* flex-basis: content; */
+
+    flex-grow: 1;
+    /*flex-grow에 들어가는 숫자의 의미는, 아이템들의 flex-basis를 제외한 여백 부분을 flex-grow에 지정된 숫자의 비율로 나누어 가진다*/
+}
+</style>
+<body>
+    <h1>플렉스란</h1>
+    <p>Flexible Box, Flexbox라고 부르기도 합니다. Flex는 레이아웃 배치 전용 기능으로 고안되었음</p>
+
+    <div class="container">
+        <div class="item" >flex1</div>
+        <div class="item" >flex2<br/>flex2<br/>flex2<br/></div>
+        <div class="item" >flex3</div>
+    </div>
+
+</body>
+</html>

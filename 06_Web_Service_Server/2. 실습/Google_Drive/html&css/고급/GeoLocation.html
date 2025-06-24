@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>HTML은 GPS없이도 위치를 보장합니다</h1>
+    <p>좌표를 확인하세요</p>
+
+    <button onclick="getLocation()">좌표확인</button>
+
+    <div id="demo"></div>
+
+
+    <script>
+        const x = document.getElementById("demo");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          x.innerHTML = "위도: " + position.coords.latitude +
+          "<br>경도: " + position.coords.longitude;
+        }
+        </script>
+</body>
+</html>

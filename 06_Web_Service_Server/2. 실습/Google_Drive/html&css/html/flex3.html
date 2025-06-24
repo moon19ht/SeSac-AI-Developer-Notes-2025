@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+ /*div 태그 - width 를 지정하지 않으면 화면 전체 너비를 차지한다 
+ Flex 아이템들은 가로 방향으로 배치되고, 자신이 가진 내용물의 width 만큼만 차지 
+ 마치 inline 요소들 처럼요. height는 컨테이너의 높이만큼 늘어납니다.
+ height가 알아서 늘어나는 특징은 컬럼 레이아웃을 만들 때 아주 편리하겠네요~
+*/
+.container {
+	display: flex;
+}
+.item:nth-child(1) {
+	flex-shrink: 0;
+	width: 100px; /*고정크기를 지킨다*/
+  
+    border : 1px solid red 
+}
+.item:nth-child(2) {
+	flex-grow: 1;
+    border : 1px solid red 
+}
+</style>
+<body>
+  
+    <div class="container">
+        <div class="item">aaa</div>
+        <div class="item" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sunt.</div>
+       
+    </div>
+
+</body>
+</html>

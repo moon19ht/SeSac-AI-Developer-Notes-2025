@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align:center; 
+            border:1px solid blue;
+        }
+
+        h2{
+            text-align:left; 
+            border:1px solid blue;
+        }
+
+        h3{
+            text-align:right; 
+            border:1px solid blue;
+        }
+
+        h4{
+            text-align:justify; 
+            border:1px solid blue;
+        }
+
+        p{
+            /*text-align-last:center;*/
+        }
+
+        p.direct{
+
+            direction: rtl; /*text-align하고 같이 쓰면 충돌난다*/
+            /*unicode-bidi: bidi-override;*/
+        }
+
+        p.one{
+            text-decoration-line:line-through;
+            text-decoration-color:rgb(128, 0, 0);
+        }
+
+        p.uppercase{
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>문자열정렬</h1>
+    <h2>문자열정렬</h2>
+    <h3>문자열정렬</h3>
+    <h4>균등</h4>
+    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+
+    <p>I like star. red star</p>
+    <p class="direct">I like star. red star</p>
+    <p class="one">I like star. red star</p>
+    <p class="uppercase">I like star. red star</p>
+    
+</body>
+</html>
+
+
+
+
+

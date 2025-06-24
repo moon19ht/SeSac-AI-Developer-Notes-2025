@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    단 : <input type="text" id="dan">&nbsp;&nbsp; 
+    <button type="button" onclick="goGugu()">확인</button>
+    <br/>
+    <span id="result"></span>
+</body>
+</html>
+
+<script>
+    function goGugu()
+    {
+        var dan=parseInt(document.getElementById("dan").value);
+        var result="";
+        
+        for(i=1; i<=9; i++)
+        {
+            result = result + `${dan} X ${i} = ${dan*i}<br/>`;
+        }
+
+        document.getElementById("result").innerHTML=result;
+    }
+</script>
+
+
+<!-- 단위환산   파운드 => kg   kg => 파운드 -->

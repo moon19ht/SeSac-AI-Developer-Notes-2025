@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="name">홍길동</span>
+
+    <button type="button" onclick="changeColor1()">파란색바꾸기</button>
+    <button type="button" onclick="changeColor2()">빨간색바꾸기</button>
+    <button type="button" onclick="changeColor3()">노란색바꾸기</button>
+    <button type="button" onclick="changeColor4()">초록색바꾸기</button>
+    <button type="button" onclick="changeColor5()">검은색바꾸기</button>
+</body>
+</html>
+
+<script>
+    function changeColor1()
+    {
+        //객체에 대한 기본 접근은 
+        var name = document.getElementById("name");
+        name.style.color = "#0000ff";
+    }
+
+    function changeColor2()
+    {
+        //객체에 대한 기본 접근은 
+        var name = document.getElementById("name");
+        name.style.color = "#ff0000";
+    }
+
+    function changeColor3()
+    {
+        //객체에 대한 기본 접근은 
+        var name = document.getElementById("name");
+        name.style.color = "#00ffff";
+    }
+
+    function changeColor4()
+    {
+        //객체에 대한 기본 접근은 
+        var name = document.getElementById("name");
+        name.style.color = "#00ff00";
+    }
+
+    function changeColor5()
+    {
+        //객체에 대한 기본 접근은 
+        var name = document.getElementById("name");
+        name.style.color = "#000000";
+    }
+</script>

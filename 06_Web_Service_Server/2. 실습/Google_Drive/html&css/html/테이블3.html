@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td{
+            border:1px solid gray;
+            border-collapse: collapse;
+            padding:20px 10px 20px 10px; /*top right bottom left*/
+        }
+        th{
+            border:1px solid gray;
+            background-color: gray;
+        }
+        
+        tr:nth-child(odd) {
+         background-color: #D6EEEE;
+        }
+
+        td:nth-child(odd) {
+         background-color: #D6EEEE;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table header</h2>
+    <table style="width:500px">
+        <tr>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+            <th>일</th>
+        </tr>
+        <tr>
+            <td>html</td>
+            <td>css</td>
+            <td>bootsrap</td>
+            <td>java</td>
+            <td>javscript</td>
+            <td>jquery</td>
+            <td>ajax</td>
+        </tr>
+    </table>
+
+    <h2>수직헤더</h2>
+    <table>
+        <tr>
+            <th>이름</th>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <th>나이</th>
+            <td>23</td>
+        </tr>
+        <tr>
+            <th>전화번호</th>
+            <td>010-0000-0000</td>
+        </tr>
+        
+    </table>
+</body>
+</html>

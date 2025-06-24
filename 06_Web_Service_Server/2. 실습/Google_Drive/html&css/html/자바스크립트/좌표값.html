@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    좌표값  y:<input type="text" id="y"> &nbsp; 
+    x:<input type="text" id="x"> &nbsp;
+    <button type="button" onclick="goConfirm()">확인</button>
+    <span id="result"></span>
+    <br/> 
+</body>
+</html>
+
+<script>
+    function goConfirm()
+    {
+        var x = parseInt(document.getElementById("x").value);
+        var y = parseInt(document.getElementById("y").value);
+        var result="";
+        if( "0"==0) //자동으로 한쪽을 타입을 맞춘다 
+        {
+            console.log("같다")
+        }
+        else 
+        {
+            console.log("다르다")
+        }
+
+        if( "0"===0)  //서로 타입이 다르다 
+        {
+            console.log("같다")
+        }
+        else 
+        {
+            console.log("다르다")
+        }
+
+        if (x===0 && y===0)
+            result=`${x}, ${y}는 원점입니다.`;
+        else if (x===0 && y!==0)
+            result=`${x}, ${y}는 y축입니다.`;  
+        else if (x!==0 && y===0)
+            result=`${x}, ${y}는 x축입니다.`;
+        else if (x>0 && y>0)
+            result=`${x}, ${y}는 1사분면입니다.`;
+        else if (x>0 && y<0)
+            result=`${x}, ${y}는 2사분면입니다.`;
+        else if (x<0 && y<0)
+            result=`${x}, ${y}는 3사분면입니다.`;
+        else if (x<0 && y>0)  
+            result=`${x}, ${y}는 4사분면입니다.`;
+
+        document.getElementById("result").innerHTML=result;
+    }
+</script>

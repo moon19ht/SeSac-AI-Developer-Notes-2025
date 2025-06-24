@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Bar Chart</title>
+</head>
+<body>
+
+    <canvas id="barChart" width="400" height="300" style="border:1px solid #ccc;"></canvas>
+    <script>
+        // 캔버스 요소와 2D 컨텍스트 가져오기
+        var canvas = document.getElementById('barChart');
+        var ctx = canvas.getContext('2d');
+
+        // 데이터
+        var data = [30, 90, 150, 100, 50];
+        // 바 차트 그리기
+        drawBarChart(data);
+
+        function drawBarChart(data) {
+            // 바 차트 속성 설정
+            var barWidth = 50;
+            var barSpacing = 20;
+            var startX = 20;
+            var startY = canvas.height - 20;
+            var maxValue = Math.max.apply(null, data);
+            for (var i = 0; i < data.length; i++) {
+                var barHeight = (data[i] / maxValue) * (canvas.height - 40);
+                ctx.fillStyle = getRandomColor();
+                ctx.fillRect(startX, startY - barHeight, barWidth, barHeight);
+                startX += barWidth + barSpacing;
+            }
+        }
+        
+        function getRandomColor() {// 랜덤 색상 생성
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
