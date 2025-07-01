@@ -1,0 +1,35 @@
+# requirements.txt for Python virtual environment
+# MySQL
+mysqlclient>=2.2.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.25.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Deep Learning
+tensorflow>=2.13.0
+keras>=2.13.0
+
+# Django
+Django>=4.2.0
+
+# Pytorch
+# (Official pip installation as below, CUDA version may require separate install)
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Python Programming Utilities
+requests>=2.31.0         # HTTP requests
+beautifulsoup4>=4.12.0   # Web scraping
+openpyxl>=3.1.2          # Excel file handling
+pillow>=10.0.0           # Image processing
+python-dotenv>=1.0.0     # .env file support
+pytest>=7.4.0            # Testing framework
+
+# Additional packages for data analysis and practice
+jupyterlab>=4.0.0
+notebook>=7.0.0
