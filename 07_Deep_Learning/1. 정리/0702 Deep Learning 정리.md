@@ -11,3 +11,7 @@
 
 ## Seaborn(https://seaborn.pydata.org/index.html)
 
+## CSV 파일 읽기
+
+## 모델별 pandas 설정정
+
