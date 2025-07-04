@@ -211,17 +211,23 @@
    - 데이터 구조와 알고리즘 구현
    - 객체지향 프로그래밍 심화
    - 파일 처리 및 예외 처리
+ 
 <br>
+
 2. **데이터베이스 전문성**
    - 복잡한 SQL 쿼리 작성
    - 데이터베이스 설계 및 정규화
    - Python-DB 연동 프로그래밍
+
 <br>
+
 3. **웹 개발 역량**
    - Frontend: HTML/CSS/JavaScript
    - Backend: Django 프레임워크
    - RESTful API 설계 및 구현
+
 <br>
+
 4. **AI/ML 실무 능력**
    - 딥러닝 모델 설계 및 구현
    - PyTorch를 활용한 실전 프로젝트
