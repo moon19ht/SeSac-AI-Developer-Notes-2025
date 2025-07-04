@@ -33,3 +33,6 @@ pytest>=7.4.0            # Testing framework
 # Additional packages for data analysis and practice
 jupyterlab>=4.0.0
 notebook>=7.0.0
+
+# Korean NLP
+konlpy>=0.6.0
