@@ -35,7 +35,7 @@
 - **Python**: NumPy, Pandas, Matplotlib, Scikit-learn
 - **Deep Learning**: PyTorch, TensorFlow/Keras
 - **Web**: Django, Flask, HTML/CSS/JavaScript
-- **Database**: MySQL, SQLite
+- **Database**: MySQL
 
 ### **Tools & Environment**
 - **Version Control**: Git, GitHub
@@ -114,8 +114,8 @@
 ### 🌐 [Web Service, Server](./06_Web_Service_Server/)
 **풀스택 웹 개발**
 - 📝 **정리**: 웹 개발 기초부터 서버 구축까지 6개 정리
-- 💻 **Frontend**: HTML/CSS/JavaScript, jQuery, AJAX
-- 🖥️ **Backend**: Django 프로젝트 (blog, guestbook 앱)
+- 💻 **Frontend**: HTML/CSS/JavaScript
+- 🖥️ **Backend**: Django 프로젝트
 - 📚 **Docs**: Django 프로그래밍 가이드
 
 ### 🧠 [Deep Learning](./07_Deep_Learning/)
