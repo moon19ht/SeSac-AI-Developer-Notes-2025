@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-s2%ft8*o4)#vu@y9jnz2h(28mq15pi=s02o4+m&7j(6t5c%$=^"
+SECRET_KEY = "django-insecure-=(lhtns0^4!%w^$s!mca0d)f)+91e=a+dymuv9dl%72#ko!i-z"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,13 +29,10 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-#guestbook - 폴더명
-#apps - 파일명 
-#GuestbookConfig - 클래스명 
+
 INSTALLED_APPS = [
-    #사용자가 만든 앱을 등록과정을 거쳐야 한다 
     "blog.apps.BlogConfig",
-    #"guestbook.apps.GuestbookConfig",
+    "score.apps.ScoreConfig",
     
     "django.contrib.admin",
     "django.contrib.auth",
@@ -45,9 +42,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-#해킹 csrf :정상적으로 사용자가 로그인을 해놓고 로그아웃 안하고 감 
-#이걸 가지고 다른 사이트로 납치해서 해킹하는 방법 
-#postman 프로그램에서 csrf값이 없다고 안받아준다 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -60,14 +54,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "config.urls"
 
-#html파일을 들 위치 치정 
-import os  #os라이브러리-윈도우 os제어 라이브러리  
-# os.path.join  c:/django_workspace1 "/" + templates
+import os
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [   os.path.join(BASE_DIR, 'templates') ],
-
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -96,7 +87,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mydb',
-        'USER': 'root',
+        'USER': 'user01',
         'PASSWORD':'1234',
         'HOST':'localhost',
         'PORT':'3306'
