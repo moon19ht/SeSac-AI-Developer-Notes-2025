@@ -39,7 +39,7 @@
 
 ### **Tools & Environment**
 - **Version Control**: Git, GitHub
-- **IDE**: VSCode, Jupyter Notebook
+- **IDE**: VSCode, Cursor, Jupyter Notebook
 - **Collaboration**: GitHub Projects, Issues
 
 ---
@@ -84,14 +84,14 @@
 
 ### 🐍 [Python](./01_Python/)
 **Python 기초 및 심화**
-- 📝 **정리**: 15개의 일별 학습 정리 노트
-- 💻 **실습**: 자료구조, 객체지향, 파일 처리 등 14개 실습
-- 📋 **과제**: 8개의 종합 과제 프로젝트
+- 📝 **정리**: 일별 학습 정리 노트
+- 💻 **실습**: 자료구조, 객체지향, 파일 처리 등 실습
+- 📋 **과제**: 종합 과제 프로젝트
 - 📊 **데이터**: CSV, 텍스트 파일 처리 실습 데이터
 
 ### 🛢️ [SQL](./02_SQL/)
 **데이터베이스 설계 및 쿼리 최적화**
-- 📝 **정리**: SQL 기초부터 고급 쿼리까지 6개 정리
+- 📝 **정리**: SQL 기초부터 고급 쿼리까지 정리
 - 💻 **실습**: MySQL 연동, 커넥션 풀, 성적처리 시스템 구현
 - 📋 **과제**: 복잡한 JOIN, 서브쿼리 활용 과제
 - 🔧 **프로젝트**: Python-MySQL 연동 성적관리 시스템
@@ -107,35 +107,33 @@
 
 ### 🧮 [Algorithm](./05_Algorithm/)
 **알고리즘 문제 해결 능력 강화**
-- 📝 **정리**: 정렬, 탐색, DP 등 핵심 알고리즘 6개 정리
-- 💻 **실습**: 백준, 프로그래머스 문제 풀이 (12개 노트북)
+- 📝 **정리**: 정렬, 탐색, DP 등 핵심 알고리즘 정리
+- 💻 **실습**: 백준, 프로그래머스 문제 풀이
 - 🎯 **주요 주제**: 시간복잡도 분석, 최적화 기법
 
 ### 🌐 [Web Service, Server](./06_Web_Service_Server/)
 **풀스택 웹 개발**
-- 📝 **정리**: 웹 개발 기초부터 서버 구축까지 6개 정리
+- 📝 **정리**: 웹 개발 기초부터 서버 구축까지지 정리
 - 💻 **Frontend**: HTML/CSS/JavaScript
 - 🖥️ **Backend**: Django 프로젝트
 - 📚 **Docs**: Django 프로그래밍 가이드
 
 ### 🧠 [Deep Learning](./07_Deep_Learning/)
 **딥러닝 이론 및 구현**
-- 📝 **정리**: 신경망 기초부터 고급 아키텍처까지 8개 정리
+- 📝 **정리**: 신경망 기초부터 고급 아키텍처까지 정리
 - 💻 **실습**: TensorFlow/Keras를 활용한 모델 구현
-- 📋 **과제**: 실제 데이터셋을 활용한 딥러닝 프로젝트
 - 📊 **데이터**: iris, auto-mpg 등 다양한 데이터셋
 
 ### 📊 [Machine Learning](./08_Machine_Learning/)
 **머신러닝 알고리즘 및 응용**
 - 📝 **정리**: ML 알고리즘 총정리 및 모델 평가 기법
 - 💻 **실습**: 분류, 회귀, 클러스터링 실습
-- 📋 **과제**: 실무 데이터 분석 프로젝트
+- 📊 **데이터**: 꽃 이미지, MNIST, 동물 이미지 등 다양한 데이터셋
 
 ### 🔥 [PyTorch](./09_Pytorch/)
 **PyTorch를 활용한 딥러닝 실전**
-- 📝 **정리**: 30개의 일별 상세 학습 정리
+- 📝 **정리**: 일별 상세 학습 정리
 - 💻 **실습**: CNN, RNN, Transformer 구현
-- 📋 **과제**: 컴퓨터 비전, NLP 프로젝트
 - 🎯 **주요 프로젝트**: 이미지 분류, 텍스트 생성, GAN
 
 ---
@@ -163,7 +161,7 @@
 
 <br>
 
-### 4. 📈 **데이터 분석 프로젝트**
+### 4. 📈 **데이터 분석 프로젝트** (예정)
 - Pandas, NumPy를 활용한 데이터 전처리
 - Matplotlib, Seaborn을 통한 시각화
 - 머신러닝 모델을 활용한 예측 분석
@@ -245,7 +243,7 @@
 1. PyTorch 고급 기법 학습 및 프로젝트 적용
 2. 개인 AI 프로젝트 포트폴리오 구축
 3. 오픈소스 프로젝트 기여
-4. 기술 블로그 운영 시작
+4. 기술 Next.JS 기반 블로그 운영 시작
 
 ---
 
@@ -254,6 +252,8 @@
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/moon19ht)
+[![Blog](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white)](https://moon19ht.github.io)
+
 
 </div>
 
