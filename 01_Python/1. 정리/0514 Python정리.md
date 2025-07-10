@@ -10,8 +10,6 @@
 - [📌 1. 정규표현식 (Regular Expression)](#-1-정규표현식-regular-expression)
 - [📌 2. 가상환경 (Virtual Environment)](#-2-가상환경-virtual-environment)
 - [🔚 마무리](#-마무리)
-- [⏭️ 다음으로는...](#️-다음으로는)
-- [⏮️ 이전 문서](./0513%20Python정리.md) [다음 문서 ⏭️](./0514%20Python정리.md)
 
 ---
 
@@ -147,13 +145,3 @@ my_project/
 
 - 정규표현식은 문자열 파싱, 검증, 스크래핑에 매우 유용
 - 가상환경은 협업 시 필수! `venv` 또는 `.venv` 폴더는 **`.gitignore`에 반드시 포함**
-
----
-
-## ⏭️ 다음으로는...
-
-- SQL 기초, MySQL 등 ... 
-
----
-
-[⏮️ 이전 문서](./0513%20Python정리.md) [다음 문서 ⏭️](./0514%20Python정리.md)

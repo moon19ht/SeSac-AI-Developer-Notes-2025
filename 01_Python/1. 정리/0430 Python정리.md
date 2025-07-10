@@ -7,37 +7,15 @@
 
 ## 📚 목차
 
-
-- [🐍 파이썬(Python) 기초 개념 설명서](#-파이썬python-기초-개념-설명서)
-        - [🗓️ 2025.04.30](#️-20250430)
-        - [📝 Writer : Moon19ht](#-writer--moon19ht)
-  - [📚 목차](#-목차)
-  - [📌 1. `zip()` 함수](#-1-zip-함수)
-    - [📌 문법](#-문법)
-    - [📌 예시](#-예시)
-  - [📌 2. `dict()` 함수](#-2-dict-함수)
-    - [✅ 문법](#-문법-1)
-    - [✅ 예시](#-예시-1)
-  - [📌 3. 순차 검색 (선형 검색, Sequential Search)](#-3-순차-검색-선형-검색-sequential-search)
-    - [예시](#예시)
-    - [시간 복잡도](#시간-복잡도)
-  - [📌 4. 색인 순차 검색 (Indexed Sequential Search)](#-4-색인-순차-검색-indexed-sequential-search)
-  - [📌 5. 이분 검색 (Binary Search)](#-5-이분-검색-binary-search)
-    - [예시](#예시-1)
-  - [📌 6. 해시 검색 (Hash Search)](#-6-해시-검색-hash-search)
-    - [파이썬에서는?](#파이썬에서는)
-  - [📌 7. 정렬 (Sorting)](#-7-정렬-sorting)
-    - [주요 정렬 알고리즘](#주요-정렬-알고리즘)
-  - [✅ 선택 정렬 (Selection Sort)](#-선택-정렬-selection-sort)
-    - [예시: 오름차순 정렬](#예시-오름차순-정렬)
-      - [초기 리스트](#초기-리스트)
-      - [1회전](#1회전)
-      - [2회전](#2회전)
-      - [3회전](#3회전)
-      - [4회전](#4회전)
-    - [코드 예시](#코드-예시)
-  - [🔚 마무리](#-마무리)
-  - [⏭️ 다음으로는...](#️-다음으로는)
+- [📌 1. `zip()` 함수](#-1-zip-함수)
+- [📌 2. `dict()` 함수](#-2-dict-함수)
+- [📌 3. 순차 검색 (선형 검색, Sequential Search)](#-3-순차-검색-선형-검색-sequential-search)
+- [📌 4. 색인 순차 검색 (Indexed Sequential Search)](#-4-색인-순차-검색-indexed-sequential-search)
+- [📌 5. 이분 검색 (Binary Search)](#-5-이분-검색-binary-search)
+- [📌 6. 해시 검색 (Hash Search)](#-6-해시-검색-hash-search)
+- [📌 7. 정렬 (Sorting)](#-7-정렬-sorting)
+- [✅ 선택 정렬 (Selection Sort)](#-선택-정렬-selection-sort)
+- [🔚 마무리](#-마무리)
 
 ---
 
@@ -234,11 +212,3 @@ def selection_sort(arr):
 | 이분 검색     | ✅         | O(log n)     | 빠름, 정렬 필수                        |
 | 해시 검색     | ❌         | O(1)         | 매우 빠름, 충돌 처리 필요              |
 | 선택 정렬     | ❌         | O(n²)        | 구현 쉬움, 느림                        |
-
----
-
-## ⏭️ 다음으로는...
-- 
----
-
-[⏮️ 이전 문서](./0429%20Python정리.md) [다음 문서 ⏭️](./0502%20Python정리.md)

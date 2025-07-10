@@ -14,8 +14,6 @@
   - [🍎 MacOS](#-macos-환경에서-python-설치-및-설정)
   - [🐧 Ubuntu](#-ubuntu-환경에서-python-설치-및-설정)
   - [🐧 Arch Linux](#-arch-linux-환경에서-python-설치-및-설정)
-- [⏭️ 다음으로는...](#️-다음으로는)
-- [다음 문서 ⏭️](./0423%20Python정리.md)
 
 ---
 
@@ -407,8 +405,3 @@ deactivate
 | `black`      | 코드 포매터                         | `pip install black`                |
 | `pylint`     | 정적 분석                           | `pip install pylint`               |
 | `virtualenv` | 가상환경 생성 툴                    | `pip install virtualenv`           |
-
-
----
-
-[다음 문서 ⏭️](./0423%20Python정리.md)

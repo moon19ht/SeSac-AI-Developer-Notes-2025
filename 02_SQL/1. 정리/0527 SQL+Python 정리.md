@@ -7,20 +7,10 @@
 
 ## 📚 목차
 
-- [🧩 파이썬(Python) 심화; SQL 연결](#-파이썬python-심화-sql-연결)
-        - [🗓️ 2025.05.27](#️-20250527)
-        - [📝 Writer : Moon19ht](#-writer--moon19ht)
-  - [📚 목차](#-목차)
-- [Python과 SQL 연동 가이드 (예제 포함)](#python과-sql-연동-가이드-예제-포함)
-  - [1. pymysql로 MySQL 연결](#1-pymysql로-mysql-연결)
-    - [예제: 간단한 SELECT 쿼리](#예제-간단한-select-쿼리)
-  - [2. SQLAlchemy로 ORM 연결](#2-sqlalchemy로-orm-연결)
-    - [예제: 사용자 정보 추가 및 조회](#예제-사용자-정보-추가-및-조회)
-  - [3. SQLAlchemy 커넥션 풀](#3-sqlalchemy-커넥션-풀)
-    - [예제: 풀 옵션 설정](#예제-풀-옵션-설정)
-  - [4. Python 연산자 중복 (Operator Overloading)](#4-python-연산자-중복-operator-overloading)
-    - [예제: 벡터 클래스](#예제-벡터-클래스)
-  - [참고](#참고)
+- [1. pymysql로 MySQL 연결](#1-pymysql로-mysql-연결)
+- [2. SQLAlchemy로 ORM 연결](#2-sqlalchemy로-orm-연결)
+- [3. SQLAlchemy 커넥션 풀](#3-sqlalchemy-커넥션-풀)
+- [4. Python 연산자 중복 (Operator Overloading)](#4-python-연산자-중복-operator-overloading)
 
 ---
 
