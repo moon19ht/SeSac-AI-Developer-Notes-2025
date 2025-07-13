@@ -1,115 +1,136 @@
-# HTML이란
+# HTML 기초 정리
 
-HTML : Hyper <span style="color:red">Text</span> Markup Language  
-html version 5  
-MS사가 문서가 너무 길면 드레그 해서 보기 쉽지 않음  
-문서중간에  링크를 두고 클릭하면 특정위치로 이동을 한다.  
+## 목차
 
-색상    정수를 저장하는데 필요한 공간이 4byte 임  
-       red - 1byte           양의정수 1byte  0000 0000   1111 1111  
-       green - 1byte                        0 ~ 255  
-       blue - 1byte                         0~ff  
-       
-       0이면 빛이 없다.        1 1 1 1      rgb(0~255, 0~255, 0~255)
-                            1byte 는 투명도  
-       255,255,255 - white    #ff0000  rgb(255,0,0)
+1. [HTML 개요](#1-html-개요)
+2. [웹 시스템의 기본 구조](#2-웹-시스템의-기본-구조)
+3. [form 태그와 정보 전달](#3-form-태그와-정보-전달)
+4. [HTML 기본 구조](#4-html-기본-구조)
+5. [HTML 주요 태그](#5-html-주요-태그)
+6. [시맨틱 태그](#시맨틱-태그)
+7. [HTML 문서 예시](#html-문서-예시)
+8. [참고 자료](#참고-자료)
 
 ---
 
-# form 태그
+## 1. HTML 개요
 
-form 태그  
-서버 - 서비스를 제공하는 측, 하드웨어일수도 소프트웨어일수도 있다
-클라이언트 - 서비스를 받는 측, 하드웨어일수도 소프트웨어일수도 있다
+- **HTML**(HyperText Markup Language): 웹 문서의 구조를 정의하는 마크업 언어
+- **HTML5**: 최신 표준, 다양한 멀티미디어 지원, 시맨틱 태그 도입
+- **하이퍼텍스트**: 문서 내에서 다른 문서나 위치로 이동할 수 있는 링크 제공
+- **링크 예시**: `<a href="#section">이동</a>`
+- **색상 표현**
+    - RGB: `rgb(255,0,0)` (빨강)
+    - HEX: `#ff0000` (빨강)
+    - 1byte(0~255)씩 R, G, B, (A: 투명도)
 
-서버용 컴퓨터일경우에는 hw 자체의 능력이 뛰어나다  
-개인 PC도 서버로 사용할 수 있다. 이때 접속할 수 있는 클라이언트가
-몇명 안된다.
+---
 
-웹서버 - 클라이언트의 요청에서 의해서 정적웹페이지를  
-        찾아서 클라이언트에게 보내는 역할을 하는 프로그램  
-        정적웹페이지(html, css, javscript,이미지)
-        미리 문서를 다 만들어놓아야 한다  
-        회원가입,게시판등은-불가능
-        아파치, 웹투비, nginx 등이 있다   
-WAS(Web Application Server 와스) - 클라이언트가 보내는  
-        정보를 받아서 디비에 넣거나 또는 디비로부터 데이터를  
-        읽어서 새로운 html페이지를 만들어서 클라이언트에게  
-        전송한다.  
-web + was 총칭 웹서버라고 부르기도 한다  
-        파이썬은 별도의 was프로그램이 없고 내부에 파이썬  
-        자체가 was를 만들수 있는 라이브러리를 제공한다.
-        장고,플라스크, fastapi 등등 + nginx와 함께 배포
-웹클라이언트 - 브라우저  
+## 2. 웹 시스템의 기본 구조
 
-html - 보여지는 무서의 골격담당  
-form 태그 -> 사용자의 입력값을 서버로 전달한다. => 이 정보를 받는 거는 프로그래밍 언어  
-                                             java(jsp), c(php), python, nodejs, asp  
-하나의 html 페이지에 폼태그는 보통 하나만 둔다.  
-<form>
-......
+- **서버**: 서비스를 제공하는 컴퓨터(하드웨어/소프트웨어)
+- **클라이언트**: 서비스를 요청하는 컴퓨터(브라우저 등)
+- **웹서버**: 정적 웹페이지(html, css, js, 이미지 등) 제공 (예: Apache, Nginx)
+- **WAS(Web Application Server)**: 동적 웹페이지(데이터베이스 연동, 사용자별 맞춤 페이지 등) 제공 (예: Django, Flask, Node.js)
+- **정적/동적 웹페이지**
+    - 정적: 미리 만들어진 파일 그대로 제공
+    - 동적: 요청에 따라 서버에서 새로 생성
+- **웹 클라이언트**: 브라우저(Chrome, Edge, Firefox 등)
+
+---
+
+## 3. form 태그와 정보 전달
+
+- **form 태그**: 사용자 입력값을 서버로 전달하는 역할
+- **기본 구조**
+  ```html
+  <form action="/submit" method="post">
+    ...
+  </form>
+  ```
+- **action**: 데이터를 전송할 서버의 URL
+- **method**: 전송 방식 (get, post)
+
+### GET 방식
+- URL에 데이터가 노출됨 (예: `?name=kim&age=20`)
+- 전송 데이터 용량 제한(2048byte 내외)
+- 보안에 취약, 단순 조회/검색에 적합
+- 예시: `http://example.com/search?query=python`
+
+### POST 방식
+- 데이터가 HTTP body에 담겨 전송됨
+- 대용량 데이터, 파일 첨부 가능
+- 보안이 상대적으로 우수(그래도 암호화 필요)
+- 예시: 로그인, 회원가입, 파일 업로드 등
+
+---
+
+## 4. input 태그와 다양한 입력 방식
+
+- **input type="text"**: 한 줄 텍스트 입력
+- **input type="password"**: 비밀번호 입력(입력값 숨김)
+- **input type="radio"**: 여러 옵션 중 하나만 선택
+- **input type="checkbox"**: 여러 옵션 중 복수 선택 가능
+- **input type="reset"**: 폼 입력값 초기화
+- **input type="submit"**: 폼 데이터 서버로 전송
+- **input type="button"**: 클릭 이벤트만 발생(자바스크립트와 연동)
+- **textarea**: 여러 줄 텍스트 입력
+- **select**: 드롭다운 리스트
+- **button**: 다양한 용도(기본 submit, type 지정 가능)
+
+### 예시
+```html
+<form action="/login" method="post">
+  <input type="text" name="userid" value="littleconan">
+  <input type="password" name="password" value="1234">
+  <input type="submit" value="로그인">
 </form>
+```
 
-<form>
-......
+---
+
+## 5. name, id, class, value, hidden 속성
+
+- **name**: 서버로 전송되는 데이터의 key(필수)
+- **id**: 자바스크립트/스타일에서 요소 식별용(고유)
+- **class**: 여러 요소에 공통 스타일/동작 적용
+- **value**: 입력값, 서버로 전송되는 실제 데이터
+- **hidden**: 사용자에게 보이지 않지만 서버로 값 전송
+
+### 예시
+```html
+<input type="hidden" name="token" value="abc123">
+```
+
+---
+
+## 6. 정보 전달과 HTML의 한계
+
+- HTML 자체는 정보를 저장하지 못함(상태 유지 불가)
+- 페이지 이동 시 get/post로만 정보 전달, 이후 정보는 사라짐
+- 여러 페이지에서 정보를 유지하려면 서버 세션, 쿠키, 로컬스토리지 등 활용 필요
+- 중요한 정보, 파일 등은 반드시 post 방식 사용 권장
+
+---
+
+## 7. 실무 팁
+
+- form 태그는 한 페이지에 하나만 두는 것이 일반적(중첩 불가)
+- input의 name 속성은 반드시 지정(서버에서 데이터 수신 가능)
+- GET 방식은 검색, 조회 등 노출되어도 무방한 데이터에만 사용
+- POST 방식은 로그인, 회원가입, 파일 업로드 등 민감한 데이터에 사용
+- input, button, select 등은 label 태그와 함께 사용하면 접근성 향상
+
+---
+
+## 8. 참고 예시
+
+```html
+<form action="/register" method="post">
+  <label for="username">아이디</label>
+  <input type="text" id="username" name="username">
+  <label for="pw">비밀번호</label>
+  <input type="password" id="pw" name="password">
+  <input type="submit" value="회원가입">
 </form>
-
-서버로 정보를 전송하는 방법이 크게 두가지가 있다  
-서버와 클라이언트간에 정보를 주고 받을때 우선 선발대가 간다.  
-head 정보와 구체적인 정보인 body로 나누어져서 간다.  
-1. get  
-head만 보낸다. 브라우저마다 다른다, 2048 byte 이내의 정보를 보낸다  
-누구나 이 정보를 볼수있어서 보안에 취약, 한글의 경우는 전송시 자기들 멋대로 문자를  
-바꿔서 전송을 한다. 인코딩 작업을 해서 보내야 안깨진다.  
-특정 웹페이지에 접근할 수 있는 정보가 url 다 드러난다.  
-링크를 보내면 바로 그 페이지로 이동이 가능하다  
-http://www.daum.net/news/enter/2025062001  
-http://www.daum.net?news=enter&id=2025062001  
-
-2.post
-head와 body가 간다.  
-로그온 http://www.daum.net/login.do?userid=littleconan&password=1234  
-이런 경우에는 get으로 보내면 안되고  
-post 방식으로 head http://www.daum.net/login.do
-            body  userid=littleconan 
-                  password=1234  
-무제한으로 보내는게 가능하지만, 파일첨부 20~30mb정도  
-파일전송이나 비교적 중요한정보들은 post방식으로 보낸다  
-
-form 태그의 주요 속성  
-    action = "" 서버에서 이 요청을 받아서 처리해야할 웹페이지  
-                아무것도 안주면 나를 도로 불러온다  
-    method = "get" 또는 "post"  
-                전송방식을 지정한다  
-        
-input type="text"  한줄정보 보낼때  
-input type="password" 패스워드 보낼때  
-input type="radio" 한번에 하나만 선택가능  
-input type="checkbox" 한번에 여러개 선택가능  
-input type="reset"  form태그안에 있는 input태그에 입력된 값들을 전부 초기화한다
-input type="submit" 서버로 정보를 무조건 전송한다.  
-                   서버로 정보를 전송하기 전에 에러체크를 하려고 할때 불가능  
-                   보통은 테스트할때 죽어도 정보를 보내야 할때  
-input type="button"  클릭이벤트만 발생  
-textarea - 여러줄 보내고자 할때  
-select - 리스트 선택사항을 보내고자 할때  
-<input type="button" value="누르기">  <button type="button">누르기</button>
-<button>누르기</button>   input type="submit" 과 동일  
-
-태그에 접근해서 값을 읽고 쓰려면 3가지 속성이 있다  
-id, name, class  
-name 속성이 서버로 정보를 전송하는데 사용된다. id와 class는 서버와 관계없이  
-name속성이 키가 되고  
-value속성이 값이 되어 서버에 전달된다.  
-<input type="text" name="userid" value="littleconan">  
-<input type="password" name="password" value="1234">  
-
-userid=littleconan&password=1234  
-
-
-hidden 태그 - 정보를 숨겨서 서버로 보내길 원함  
-
-html 은 정보 저장을 못함
-a.html -> b.html 정보를 보내면  
-get이던 post이던 정보전달하면 끝  
-html페이지에 숨김 정보를 갖고 다니면서 써야할때가 있다 
+``` 
