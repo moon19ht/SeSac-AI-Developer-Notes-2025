@@ -34,7 +34,7 @@
 ### **Languages & Frameworks**
 - **Python**: NumPy, Pandas, Matplotlib, Scikit-learn
 - **Deep Learning**: PyTorch, TensorFlow/Keras
-- **Web**: Django, Flask, HTML/CSS/JavaScript
+- **Web**: Django, HTML/CSS/JavaScript
 - **Database**: MySQL
 
 ### **Tools & Environment**
@@ -55,18 +55,18 @@
   - [📚 목차](#-목차)
   - [📂 프로젝트 구성](#-프로젝트-구성)
     - [🐍 Python](#-python)
-    - [🛢️ SQL](#️-sql)
-    - [🛠️ Git](#️-git)
-    - [🧹 CleanCode](#-cleancode)
+    - [🗄️ MySQL](#️-mysql)
+    - [🛠️ Git & Clean Code](#️-git--clean-code)
     - [🧮 Algorithm](#-algorithm)
-    - [🌐 Web Service, Server](#-web-service-server)
-    - [🧠 Deep Learning](#-deep-learning)
-    - [📊 Machine Learning](#-machine-learning)
+    - [🌐 HTML/CSS/JavaScript](#-htmlcssjavascript)
+    - [⚡ Django](#-django)
+    - [🧠 Machine & Deep Learning](#-machine--deep-learning)
     - [🔥 PyTorch](#-pytorch)
+    - [📦 기타](#-기타)
   - [⭐ 주요 프로젝트 \& 성과](#-주요-프로젝트--성과)
     - [1. 📊 **성적 관리 시스템** (Python + MySQL)](#1--성적-관리-시스템-python--mysql)
     - [2. 🌐 **Django 블로그 웹 애플리케이션**](#2--django-블로그-웹-애플리케이션)
-    - [3. 🤖 **딥러닝 프로젝트** (진행 중)](#3--딥러닝-프로젝트-진행-중)
+    - [3. 🤖 **머신러닝 & 딥러닝 프로젝트**](#3--머신러닝--딥러닝-프로젝트)
     - [4. 📈 **데이터 분석 프로젝트**](#4--데이터-분석-프로젝트)
   - [🗓️ 교육 커리큘럼 일정표](#️-교육-커리큘럼-일정표)
   - [📖 학습 기록](#-학습-기록)
@@ -84,57 +84,69 @@
 
 ### 🐍 [Python](./01_Python/)
 **Python 기초 및 심화**
-- 📝 **정리**: 일별 학습 정리 노트
-- 💻 **실습**: 자료구조, 객체지향, 파일 처리 등 실습
-- 📋 **과제**: 종합 과제 프로젝트
-- 📊 **데이터**: CSV, 텍스트 파일 처리 실습 데이터
+- 📝 **정리**: 일별 학습 정리 노트 (`md/`)
+- 💻 **실습**: 자료구조, 객체지향, 파일 처리 등 실습 (`ipynb/`)
+- 📋 **과제**: 종합 과제 프로젝트 (`ipynb/homework/`)
+- 📊 **데이터**: CSV, 텍스트 파일 처리 실습 데이터 (`ipynb/데이터파일/`)
 
-### 🛢️ [SQL](./02_SQL/)
+### 🗄️ [MySQL](./02_MySQL/)
 **데이터베이스 설계 및 쿼리 최적화**
-- 📝 **정리**: SQL 기초부터 고급 쿼리까지 정리
-- 💻 **실습**: MySQL 연동, 커넥션 풀, 성적처리 시스템 구현
-- 📋 **과제**: 복잡한 JOIN, 서브쿼리 활용 과제
+- 📝 **정리**: SQL 기초부터 고급 쿼리까지 정리 (`md/`)
+- 💻 **실습**: MySQL 연동, 커넥션 풀, 성적처리 시스템 구현 (`ipynb/`)
+- 📋 **과제**: 복잡한 JOIN, 서브쿼리 활용 과제 (`sql/homework/`)
 - 🔧 **프로젝트**: Python-MySQL 연동 성적관리 시스템
+- 📊 **데이터**: 플레이어 데이터, 월드 데이터 등 실습용 SQL 파일 (`sql/`)
 
-### 🛠️ [Git](./03_Git/)
-**버전 관리 및 협업**
-- 📝 **정리**: Git 기본 명령어, GitHub 협업 전략
+### 🛠️ [Git & Clean Code](./03_Git_and_Clean_Code/)
+**버전 관리 및 코드 품질 향상**
+- 📝 **정리**: Git 기본 명령어, GitHub 협업 전략 (`md/`)
+- 💻 **실습**: 클린 코드 원칙, 리팩토링 기법 (`ipynb/`)
+- 🧹 **주요 주제**: 리플렉션, 연산자 중복, 반복자 패턴 구현
 
-### 🧹 [CleanCode](./04_CleanCode/)
-**코드 품질 향상**
-- 📝 **정리**: 클린 코드 원칙 및 리팩토링 기법
-- 💻 **실습**: 리플렉션, 연산자 중복, 반복자 패턴 구현
-
-### 🧮 [Algorithm](./05_Algorithm/)
+### 🧮 [Algorithm](./04_Algorithm/)
 **알고리즘 문제 해결 능력 강화**
-- 📝 **정리**: 정렬, 탐색, DP 등 핵심 알고리즘 정리
-- 💻 **실습**: 백준, 프로그래머스 문제 풀이
+- 📝 **정리**: 정렬, 탐색, DP 등 핵심 알고리즘 정리 (`md/`)
+- 💻 **실습**: 백준, 프로그래머스 문제 풀이 (`ipynb/`)
 - 🎯 **주요 주제**: 시간복잡도 분석, 최적화 기법
 
-### 🌐 [Web Service, Server](./06_Web_Service_Server/)
-**풀스택 웹 개발**
-- 📝 **정리**: 웹 개발 기초부터 서버 구축까지지 정리
-- 💻 **Frontend**: HTML/CSS/JavaScript
-- 🖥️ **Backend**: Django 프로젝트
-- 📚 **Docs**: Django 프로그래밍 가이드
+### 🌐 [HTML/CSS/JavaScript](./05_HTML_CSS_JS/)
+**프론트엔드 웹 개발 기초**
+- 📝 **정리**: 웹 개발 기초 이론 (`md/`)
+- 💻 **HTML**: 기본 마크업, 미디어 처리 (`HTML/`)
+- 🎨 **CSS**: 스타일링, 레이아웃, 애니메이션 (`CSS/`)
+- ⚡ **JavaScript**: DOM 조작, 이벤트 처리, 비동기 프로그래밍 (`JS/`)
 
-### 🧠 [Deep Learning](./07_Deep_Learning/)
-**딥러닝 이론 및 구현**
-- 📝 **정리**: 신경망 기초부터 고급 아키텍처까지 정리
-- 💻 **실습**: TensorFlow/Keras를 활용한 모델 구현
-- 📊 **데이터**: iris, auto-mpg 등 다양한 데이터셋
+### ⚡ [Django](./06_DJango/)
+**Django 풀스택 웹 개발**
+- 📝 **정리**: Django 프로그래밍 가이드 (`md/`)
+- 🖥️ **Backend**: 다양한 Django 프로젝트 구현 (`backend/`)
+  - `myhome1/`: 블로그 및 성적 관리 시스템
+  - `myhome2/`: 기본 Django 프로젝트 구조
+  - `mysite1/`: 블로그, 방명록, 성적관리 통합 시스템
+- 🎯 **주요 기능**: CRUD, 템플릿 엔진, 관리자 페이지
 
-### 📊 [Machine Learning](./08_Machine_Learning/)
-**머신러닝 알고리즘 및 응용**
-- 📝 **정리**: ML 알고리즘 총정리 및 모델 평가 기법
-- 💻 **실습**: 분류, 회귀, 클러스터링 실습
-- 📊 **데이터**: 꽃 이미지, MNIST, 동물 이미지 등 다양한 데이터셋
+### 🧠 [Machine & Deep Learning](./07_Machine_Deep_Learning/)
+**머신러닝 및 딥러닝 통합 학습**
+- 📝 **정리**: ML/DL 이론 및 실습 정리 (`md/`)
+- 💻 **실습**: 분류, 회귀, 클러스터링 등 (`ipynb/`)
+- 📊 **데이터**: 다양한 실습 데이터셋 (`data/`)
+  - CSV 데이터: iris, auto-mpg, crab 등
+  - 이미지 데이터: 동물, 꽃, MNIST, Fashion-MNIST
+  - NPY/NPZ 형태의 전처리된 데이터
+- 🎯 **주요 주제**: 모델 평가, 하이퍼파라미터 튜닝, 전이학습
 
-### 🔥 [PyTorch](./09_Pytorch/)
+### 🔥 [PyTorch](./08_Pytorch/)
 **PyTorch를 활용한 딥러닝 실전**
-- 📝 **정리**: 일별 상세 학습 정리
-- 💻 **실습**: CNN, RNN, Transformer 구현
+- 📝 **정리**: 25개 파일의 상세한 일별 학습 정리 (`md/`)
+- 💻 **실습**: CNN, RNN, Transformer 구현 (`ipynb/`)
 - 🎯 **주요 프로젝트**: 이미지 분류, 텍스트 생성, GAN
+- 📊 **데이터**: 실습용 데이터셋 (`data/`)
+
+### 📦 [기타](./09_etc/)
+**추가 학습 자료 및 프로젝트**
+- 📊 **데이터**: 추가 실습 데이터 (`data/`)
+- 📝 **문서**: 기타 학습 자료 (`docs/`)
+- 💡 **정리**: 기타 주제별 학습 정리 (`md/`)
 
 ---
 
@@ -144,27 +156,25 @@
 - Python과 MySQL을 연동한 CRUD 시스템 구현
 - 커넥션 풀을 활용한 DB 성능 최적화
 - OOP 원칙을 적용한 모듈화 설계
-
-<br>
+- 📁 **위치**: `02_MySQL/ipynb/`
 
 ### 2. 🌐 **Django 블로그 웹 애플리케이션**
 - Django를 활용한 풀스택 웹 개발
 - 사용자 인증, 게시판 CRUD 기능 구현
-- RESTful API 설계
+- 방명록 시스템 및 성적 관리 시스템 통합
+- 📁 **위치**: `06_DJango/backend/`
 
-<br>
-
-### 3. 🤖 **딥러닝 프로젝트** (진행 중)
+### 3. 🤖 **머신러닝 & 딥러닝 프로젝트**
 - PyTorch를 활용한 이미지 분류 모델 구현
 - 전이학습을 통한 모델 성능 개선
-- 실시간 예측 서비스 구축 예정
+- 꽃 이미지 분류 (5종류), 동물 이미지 분류 등
+- 📁 **위치**: `07_Machine_Deep_Learning/`, `08_Pytorch/`
 
-<br>
-
-### 4. 📈 **데이터 분석 프로젝트** (예정)
+### 4. 📈 **데이터 분석 프로젝트**
 - Pandas, NumPy를 활용한 데이터 전처리
 - Matplotlib, Seaborn을 통한 시각화
 - 머신러닝 모델을 활용한 예측 분석
+- 📁 **위치**: `07_Machine_Deep_Learning/ipynb/ML/`
 
 ---
 
@@ -209,41 +219,36 @@
    - 데이터 구조와 알고리즘 구현
    - 객체지향 프로그래밍 심화
    - 파일 처리 및 예외 처리
- 
-<br>
 
 2. **데이터베이스 전문성**
-   - 복잡한 SQL 쿼리 작성
+   - MySQL 기초부터 고급 쿼리까지
    - 데이터베이스 설계 및 정규화
-   - Python-DB 연동 프로그래밍
-
-<br>
+   - Python-MySQL 연동 프로그래밍
 
 3. **웹 개발 역량**
    - Frontend: HTML/CSS/JavaScript
    - Backend: Django 프레임워크
-   - RESTful API 설계 및 구현
-
-<br>
+   - 블로그, 방명록, 성적관리 시스템 구현
 
 4. **AI/ML 실무 능력**
-   - 딥러닝 모델 설계 및 구현
-   - PyTorch를 활용한 실전 프로젝트
-   - 모델 최적화 및 배포
+   - 머신러닝 모델 설계 및 구현
+   - PyTorch 딥러닝
+   - 이미지 분류, 텍스트 처리 프로젝트
 
 ---
 
 ## 📈 진행 현황
 
-- ✅ **완료**: Python, SQL, Git&GitHub, CleanCode, Algorithm, Web Service/Server
-- 🔄 **진행 중**: Deep Learning, Machine Learning, PyTorch
+- ✅ **완료**: Python, MySQL, Git&Clean Code, Algorithm, HTML/CSS/JS, Django
+- ✅ **완료**: Machine Learning, Deep Learning, PyTorch 기초
+- 🔄 **진행 중**: PyTorch 고급 기법 및 프로젝트 적용
 - 📅 **예정**: 파이널 프로젝트 (AI 기반 실무 프로젝트)
 
 ### 🎯 향후 계획
 1. PyTorch 고급 기법 학습 및 프로젝트 적용
 2. 개인 AI 프로젝트 포트폴리오 구축
 3. 오픈소스 프로젝트 기여
-4. 기술 Next.JS 기반 블로그 운영 시작
+4. 기술 블로그 운영 시작
 
 ---
 
@@ -253,7 +258,6 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/moon19ht)
 [![Blog](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white)](https://moon19ht.github.io)
-
 
 </div>
 
