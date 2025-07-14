@@ -15,9 +15,8 @@
 6. [DataFrame API 활용](#dataframe-api-활용)
 7. [조건부 데이터 검색](#조건부-데이터-검색)
 8. [통계 함수 활용](#통계-함수-활용)
-9.  [실습 예제](#실습-예제)
-10. [문제 풀이](#문제-풀이)
-11. [핵심 요약](#핵심-요약)
+9. [실습 예제](#실습-예제)
+10. [핵심 요약](#핵심-요약)
 
 ---
 
@@ -417,35 +416,6 @@ condition_data = data[np.logical_and(data['variety'] == 'Setosa',
 print(f"조건을 만족하는 데이터 개수: {len(condition_data)}")
 print(condition_data)
 ```
-
----
-
-## 문제 풀이
-
-### 문제 1
-CSV 파일을 읽으려고 합니다. 폴더 구조가 다음과 같을 때 경로를 틀리게 지정한 것은?
-
-```
-pandas_workspace/
-  └── uni_10/
-      ├── exam.py
-      └── data/
-          └── iris.csv
-```
-
-① `data = pd.read_csv("/pandas_workspace/uni_10/data/iris.csv")`
-② `data = pd.read_csv(r"c:\pandas_workspace\uni_10\data\iris.csv")`
-③ `data = pd.read_csv("c:\pandas_workspace\uni_10\data\iris.csv")`
-④ `data = pd.read_csv(".\\data\\iris.csv")`
-
-**정답: ③**
-
-**해설**: 경로 지정 시 역슬래시(`\`) 처리 문제입니다. 
-- 역슬래시를 사용할 때는 `\\` 두 개를 겹쳐 쓰거나 
-- 문자열 앞에 `r`을 붙여서 원시 문자열로 만들어야 합니다.
-- 또는 슬래시(`/`)를 사용하는 것이 안전합니다.
-
-**난이도**: 1 (아주 어려움)
 
 ---
 
