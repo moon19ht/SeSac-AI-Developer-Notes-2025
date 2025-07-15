@@ -1,10 +1,13 @@
 # requirements.txt for Python virtual environment
-# Last updated: 2025-07-08
+# Last updated: 2025-07-15
 
-# MySQL
-mysqlclient>=2.2.0
+# Database
+pymysql>=1.1.0              # MySQL connection (pure Python, high compatibility)
+mysqlclient>=2.2.0          # MySQL C API (may fail on some systems, optional)
+sqlalchemy>=2.0.0           # SQL ORM
+pymongo>=4.6.0              # MongoDB driver
 
-# Machine Learning
+# Machine Learning Core
 scikit-learn>=1.5.0
 pandas>=2.2.0
 numpy>=1.26.0
@@ -13,43 +16,86 @@ seaborn>=0.13.0
 scipy>=1.13.0
 ipython>=8.18.0
 imageio>=2.34.0
-graphviz>=0.20.0
+graphviz>=0.20.0            # Requires system binary: apt/brew install graphviz
 joblib>=1.3.0
 xgboost>=2.1.0
+mglearn>=0.2.0              # Tutorial package (optional)
 
-# Deep Learning
-tensorflow>=2.15.0
-keras>=3.0.0
-
-# Django
-Django>=5.0.0
-djangorestframework>=3.14.0  # For API development
-
-# Pytorch
-# (Official pip installation as below, CUDA version may require separate install)
+# Deep Learning (TensorFlow & PyTorch)
+tensorflow>=2.15.0          # CPU version
+keras>=3.0.0                # Works with TensorFlow 2.15+
 torch>=2.0.0
 torchvision>=0.15.0
 torchaudio>=2.0.0
 
-# Python Programming Utilities
-requests>=2.32.0         # HTTP requests
-beautifulsoup4>=4.12.0   # Web scraping
-openpyxl>=3.1.5          # Excel file handling
-pillow>=10.3.0           # Image processing
-python-dotenv>=1.0.0     # .env file support
-pytest>=8.0.0            # Testing framework
-lxml>=5.2.0              # XML/HTML parsing
+# Web Development & APIs
+Django>=5.0.0
+djangorestframework>=3.14.0
+flask>=3.0.0
+fastapi>=0.104.0
+streamlit>=1.29.0
 
-# Additional packages for data analysis and practice
+# Data Visualization
+plotly>=5.17.0
+bokeh>=3.3.0
+altair>=5.2.0
+
+# Web Scraping & Automation
+requests>=2.32.0
+beautifulsoup4>=4.12.0
+urllib3>=2.1.0
+selenium>=4.15.0
+
+# File Processing
+openpyxl>=3.1.5
+xlrd>=2.0.0
+xlsxwriter>=3.1.0
+pillow>=10.3.0
+pypdf2>=3.0.0
+
+# Computer Vision
+opencv-python>=4.8.0        # Avoid installing both pip + conda versions
+
+# Natural Language Processing
+nltk>=3.8.0
+spacy>=3.7.0
+transformers>=4.35.0
+wordcloud>=1.9.0
+
+# Korean NLP (Java Runtime Required)
+konlpy>=0.6.0               # Requires Java (JAVA_HOME)
+jpype1>=1.5.0               # For KoNLPy (binds Python <-> Java)
+
+# Development Tools
+python-dotenv>=1.0.0
+pytest>=8.0.0
+lxml>=5.2.0
+click>=8.1.0
+tqdm>=4.66.0
+
+# Jupyter & Notebooks
 jupyterlab>=4.2.0
 notebook>=7.2.0
-ipywidgets>=8.1.0        # Interactive widgets for Jupyter
+ipywidgets>=8.1.0
+nbconvert>=7.12.0
 
-# Korean NLP
-konlpy>=0.6.0
-jpype1>=1.5.0            # Required for KoNLPy Java integration
+# Async & Concurrency
+aiohttp>=3.9.0
+# asyncio is built-in with Python 3.11 and above
 
-# Optional: GPU support (uncomment if using CUDA)
+# API & Auth
+pyjwt>=2.8.0
+passlib>=1.7.4
+bcrypt>=4.1.0
+
+# Cloud & Deployment
+gunicorn>=21.2.0
+uvicorn>=0.24.0
+boto3>=1.34.0
+redis>=5.0.0
+
+# Optional: GPU Support (commented by default)
 # tensorflow-gpu>=2.15.0
-# torch-audio>=2.3.0+cu121
-# torch-vision>=0.18.0+cu121
+# torch>=2.0.0+cu121
+# torchvision>=0.15.0+cu121
+# torchaudio>=2.0.0+cu121
