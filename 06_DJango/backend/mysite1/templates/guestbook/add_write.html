@@ -26,16 +26,16 @@
             btnSend = document.querySelector("#btnSend");
             btnSend.addEventListener("click", ()=>{
                 x = document.querySelector("#x").value;
-                //쓸데없는 좌우공백을 제거한다 
+                // 쓸데없는 좌우공백을 제거한다 
                 if( x.trim() ==""){
                     alert("x 값을 입력하세요");
                     document.querySelector("#x").focus();
                     return false; 
                 }
 
-                //폼개체를 가져와서 폼객체를 통해접근가능하다
-                var frm = document.myform;  //도큐먼트.폼이름 
-                                            //document.forms[0]
+                // 폼개체를 가져와서 폼객체를 통해접근가능하다
+                var frm = document.myform;  // document.form_name 
+                                            // document.forms[0]
                 if( frm.y.value.trim()=="")
                 {
                     alert("y값을 입력하세요");
@@ -52,7 +52,7 @@
 
                 frm.action="/guestbook/add_save";
                 frm.method="post";
-                frm.submit(); //서버로 전송하기 
+                frm.submit(); // 서버로 전송하기 
             })
         }
     </script>

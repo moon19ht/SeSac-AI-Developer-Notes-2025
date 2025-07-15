@@ -1,24 +1,22 @@
 from django.db import models
 
-# Create your models here.
-#반드시 models.Model울 상속받아야 한다.
-#id필드는 자동으로 만든다. 
-#ORM - 객체지향식 디비 접근 - 쿼리 만들기 싫음 
-#ORM - 테이블이 너무 많고 join 이 많거나 서브쿼리가 많을때는 
-#      시간이 많이 걸리고 어려울수도 있다.
-#      테이블이 10개미만의 경우의 프로젝트 생성시 좋다 
-# Spring Entity 에 대응되는것이 Model클래스다 
-# 이 모델기반의 테이블을 만들고 싶으면 setting.py파일에 
-# INSTALLED_APPS = [
-#   'blog.apps.BoardConfig', 앱등록을 해야 한다. 
-# 파일자체는 앱을 구축하면 자동으로 만들어준다. 
+"""
+Django 모델 생성 가이드
+- 반드시 models.Model을 상속받아야 함
+- id 필드는 자동으로 생성됨
+- ORM(Object-Relational Mapping): 객체지향식 데이터베이스 접근 방식
+  장점: SQL 쿼리 작성 불필요
+  단점: 복잡한 JOIN이나 서브쿼리가 많을 때 성능 저하 가능
+  권장: 테이블 10개 미만의 소규모 프로젝트에 적합
+- Spring의 Entity 클래스와 동일한 역할
+- 모델 기반 테이블 생성을 위해서는 settings.py의 INSTALLED_APPS에 앱 등록 필요
+  예: 'blog.apps.BlogConfig'
 
-# html -> form -> name="userid"  => views.py 
-# userid = request.POST.get("userid")
-# username = request.POST.get("username")
-# 이 노가다 작업대신에 forms.py파일을 만든다. 
-#장고가 html =>직렬화 => forms의 변수에 값을 넣어준다 
-#write.html forms.py파일 만들어서 디비 등록까지 
+Django Forms 활용
+- HTML form의 name 속성값을 views.py에서 개별적으로 처리하는 대신
+  forms.py 파일을 생성하여 자동 직렬화 처리
+- HTML → 직렬화 → forms 변수에 자동 매핑
+"""
 class Blog(models.Model):
     title = models.CharField("제목", max_length=200) 
     contents = models.TextField("내용") 

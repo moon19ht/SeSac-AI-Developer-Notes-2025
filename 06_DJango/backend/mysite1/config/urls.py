@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include 
-#from blog import views
+# from blog import views
 
 
 urlpatterns = [
@@ -25,7 +25,7 @@ urlpatterns = [
     path("blog/", include("blog.urls")),
     path("score/", include("score.urls")),
     path("guestbook/", include("guestbook.urls"))
-    #path("blog/", views.index)
-    #path함수가 url http://127.0.0.1:8000/blog 
-    #--> blog/views.py파일의 index함수를 연동
+    # path("blog/", views.index)
+    # path함수가 url http://127.0.0.1:8000/blog 
+    # --> blog/views.py파일의 index함수를 연동
 ]

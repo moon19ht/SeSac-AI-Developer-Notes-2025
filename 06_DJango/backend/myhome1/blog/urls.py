@@ -15,12 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-#각각의 url.py파일은 views.py파일과 연동을 해야 한다. 
+# 각각의 url.py파일은 views.py파일과 연동을 해야 한다. 
 from django.contrib import admin
 from django.urls import path
 from . import views 
 
-app_name="blog"  #########반드시 해줘야 한다 
+app_name="blog"  # 반드시 해줘야 한다 
 
 urlpatterns = [
     path("", views.index),   # blog/ 호출된다.  

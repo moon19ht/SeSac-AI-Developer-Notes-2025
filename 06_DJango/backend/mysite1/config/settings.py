@@ -29,13 +29,13 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-#guestbook - 폴더명
-#apps - 파일명 
-#GuestbookConfig - 클래스명 
+# guestbook - 폴더명
+# apps - 파일명 
+# GuestbookConfig - 클래스명 
 INSTALLED_APPS = [
-    #사용자가 만든 앱을 등록과정을 거쳐야 한다 
+    # 사용자가 만든 앱을 등록과정을 거쳐야 한다 
     "blog.apps.BlogConfig",
-    "score.apps.ScoreConfig", #등록을 해줘야 makemigration이나 migrate가 작동된다. 
+    "score.apps.ScoreConfig", # 등록을 해줘야 makemigration이나 migrate가 작동된다. 
     #"guestbook.apps.GuestbookConfig",
     
     "django.contrib.admin",
@@ -46,9 +46,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-#해킹 csrf :정상적으로 사용자가 로그인을 해놓고 로그아웃 안하고 감 
-#이걸 가지고 다른 사이트로 납치해서 해킹하는 방법 
-#postman 프로그램에서 csrf값이 없다고 안받아준다 
+# 해킹 csrf :정상적으로 사용자가 로그인을 해놓고 로그아웃 안하고 감 
+# 이걸 가지고 다른 사이트로 납치해서 해킹하는 방법 
+# postman 프로그램에서 csrf값이 없다고 안받아준다 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -61,8 +61,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "config.urls"
 
-#html파일을 들 위치 치정 
-import os  #os라이브러리-윈도우 os제어 라이브러리  
+# html파일을 들 위치 치정 
+import os  # os 라이브러리-윈도우 os제어 라이브러리  
 # os.path.join  c:/django_workspace1 "/" + templates
 TEMPLATES = [
     {
