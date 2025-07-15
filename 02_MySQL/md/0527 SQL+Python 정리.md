@@ -7,10 +7,10 @@
 
 ## 📚 목차
 
-- [1. pymysql로 MySQL 연결](#1-pymysql로-mysql-연결)
-- [2. SQLAlchemy로 ORM 연결](#2-sqlalchemy로-orm-연결)
-- [3. SQLAlchemy 커넥션 풀](#3-sqlalchemy-커넥션-풀)
-- [4. Python 연산자 중복 (Operator Overloading)](#4-python-연산자-중복-operator-overloading)
+1. [pymysql로 MySQL 연결](#pymysql로-mysql-연결)
+2. [SQLAlchemy로 ORM 연결](#sqlalchemy로-orm-연결)
+3. [SQLAlchemy 커넥션 풀](#sqlalchemy-커넥션-풀)
+4. [Python 연산자 중복 (Operator Overloading)](#python-연산자-중복-operator-overloading)
 
 ---
 
