@@ -1,28 +1,36 @@
-# Jupyter Notebook files
+# Force GitHub to recognize Jupyter Notebooks as primary language
 *.ipynb linguist-language=Jupyter-Notebook
 *.ipynb linguist-detectable=true
 
 # Python files
 *.py linguist-language=Python
 
-# SQL files
+# SQL files  
 *.sql linguist-language=SQL
 
 # Markdown files
 *.md linguist-language=Markdown
 
+# Exclude HTML files completely from language detection
+*.html linguist-vendored=true
+*.htm linguist-vendored=true
+
 # Exclude data files and other non-code files from language statistics
-*.csv linguist-vendored
-*.txt linguist-vendored
-*.bin linguist-vendored
-data/* linguist-vendored
+*.csv linguist-vendored=true
+*.txt linguist-vendored=true
+*.bin linguist-vendored=true
+*.json linguist-vendored=true
+data/* linguist-vendored=true
 
-# Exclude generated or vendor files
-docs/* linguist-documentation
-99_etc/* linguist-documentation
+# Exclude Full Stack frontend files (likely causing HTML dominance)
+05_Full_Stack/* linguist-vendored=true
+05_Full_Stack/**/* linguist-vendored=true
 
-# Exclude 05_Full_Stack folder
-05_Full_Stack/* linguist-vendored
+# Exclude documentation and misc files
+docs/* linguist-documentation=true
+99_etc/* linguist-documentation=true
 
-# HTML files
-*.html linguist-vendored
+# Exclude any build or dist folders
+**/node_modules/* linguist-vendored=true
+**/dist/* linguist-vendored=true
+**/build/* linguist-vendored=true
