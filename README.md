@@ -56,17 +56,24 @@
   - [📂 프로젝트 구성](#-프로젝트-구성)
     - [🐍 Python](#-python)
     - [🗄️ MySQL](#️-mysql)
-    - [🛠️ Git & Clean Code](#️-git--clean-code)
+    - [🛠️ Git \& Clean Code](#️-git--clean-code)
     - [🧮 Algorithm](#-algorithm)
-    - [🌐 HTML/CSS/JavaScript](#-htmlcssjavascript)
-    - [⚡ Django](#-django)
-    - [🧠 Machine & Deep Learning](#-machine--deep-learning)
+    - [🌐 Full Stack Development](#-full-stack-development)
+    - [🧠 Machine Learning](#-machine-learning)
+    - [🧠 Deep Learning](#-deep-learning)
     - [🔥 PyTorch](#-pytorch)
     - [📦 기타](#-기타)
+  - [🔧 환경 설정 및 설치](#-환경-설정-및-설치)
+    - [📋 요구사항](#-요구사항)
+    - [🐍 Conda 환경 설정 (권장)](#-conda-환경-설정-권장)
+    - [🚀 pip 가상환경 설정 (대안)](#-pip-가상환경-설정-대안)
+    - [⚠️ 주의사항](#️-주의사항)
+    - [📦 주요 패키지 목록](#-주요-패키지-목록)
+    - [🧪 설치 확인](#-설치-확인)
   - [⭐ 주요 프로젝트 \& 성과](#-주요-프로젝트--성과)
     - [1. 📊 **성적 관리 시스템** (Python + MySQL)](#1--성적-관리-시스템-python--mysql)
-    - [2. 🌐 **Django 블로그 웹 애플리케이션**](#2--django-블로그-웹-애플리케이션)
-    - [3. 🤖 **머신러닝 & 딥러닝 프로젝트**](#3--머신러닝--딥러닝-프로젝트)
+    - [2. 🌐 **풀스택 웹 애플리케이션**](#2--풀스택-웹-애플리케이션)
+    - [3. 🤖 **머신러닝 \& 딥러닝 프로젝트**](#3--머신러닝--딥러닝-프로젝트)
     - [4. 📈 **데이터 분석 프로젝트**](#4--데이터-분석-프로젝트)
   - [🗓️ 교육 커리큘럼 일정표](#️-교육-커리큘럼-일정표)
   - [📖 학습 기록](#-학습-기록)
@@ -109,44 +116,125 @@
 - 💻 **실습**: 백준, 프로그래머스 문제 풀이 (`ipynb/`)
 - 🎯 **주요 주제**: 시간복잡도 분석, 최적화 기법
 
-### 🌐 [HTML/CSS/JavaScript](./05_HTML_CSS_JS/)
-**프론트엔드 웹 개발 기초**
-- 📝 **정리**: 웹 개발 기초 이론 (`md/`)
-- 💻 **HTML**: 기본 마크업, 미디어 처리 (`HTML/`)
-- 🎨 **CSS**: 스타일링, 레이아웃, 애니메이션 (`CSS/`)
-- ⚡ **JavaScript**: DOM 조작, 이벤트 처리, 비동기 프로그래밍 (`JS/`)
+### 🌐 [Full Stack Development](./05_Full_Stack/)
+**풀스택 웹 개발**
+- �️ **Backend**: 서버 사이드 개발 (`backend/`)
+- 🎨 **Frontend**: 클라이언트 사이드 개발 (`frontend/`)
+- � **주요 기술**: HTML/CSS/JavaScript, Django, Flask
+- 🔧 **통합 프로젝트**: 전체적인 웹 애플리케이션 구현
 
-### ⚡ [Django](./06_DJango/)
-**Django 풀스택 웹 개발**
-- 📝 **정리**: Django 프로그래밍 가이드 (`md/`)
-- 🖥️ **Backend**: 다양한 Django 프로젝트 구현 (`backend/`)
-  - `myhome1/`: 블로그 및 성적 관리 시스템
-  - `myhome2/`: 기본 Django 프로젝트 구조
-  - `mysite1/`: 블로그, 방명록, 성적관리 통합 시스템
-- 🎯 **주요 기능**: CRUD, 템플릿 엔진, 관리자 페이지
-
-### 🧠 [Machine & Deep Learning](./07_Machine_Deep_Learning/)
-**머신러닝 및 딥러닝 통합 학습**
-- 📝 **정리**: ML/DL 이론 및 실습 정리 (`md/`)
-- 💻 **실습**: 분류, 회귀, 클러스터링 등 (`ipynb/`)
+### 🧠 [Machine Learning](./06_Machine_Learning/)
+**머신러닝 기초 및 응용**
+- 📝 **정리**: ML 이론 및 알고리즘 정리 (`md/`)
+- � **실습**: 분류, 회귀, 클러스터링 등 (`ipynb/`)
 - 📊 **데이터**: 다양한 실습 데이터셋 (`data/`)
-  - CSV 데이터: iris, auto-mpg, crab 등
-  - 이미지 데이터: 동물, 꽃, MNIST, Fashion-MNIST
-  - NPY/NPZ 형태의 전처리된 데이터
-- 🎯 **주요 주제**: 모델 평가, 하이퍼파라미터 튜닝, 전이학습
+  - CSV 데이터: iris, auto-mpg, titanic 등
+  - 정형 데이터 분석 및 전처리 실습
+- 🎯 **주요 주제**: 모델 평가, 하이퍼파라미터 튜닝, 특성 공학
 
-### 🔥 [PyTorch](./08_Pytorch/)
+### 🧠 [Deep Learning](./07_Deep_Learning/)
+**딥러닝 이론 및 실습**
+- 📝 **정리**: 딥러닝 이론 및 수학적 기초 (`md/`)
+- 💻 **실습**: 신경망 구조, 활성화 함수, 최적화 등 (`ipynb/`)
+- 📊 **데이터**: 딥러닝 실습용 데이터셋 (`data/`)
+  - 이미지 데이터: MNIST, CIFAR-10, Fashion-MNIST
+  - NPY/NPZ 형태의 전처리된 데이터
+- 🎯 **주요 주제**: 역전파, 정규화, 배치 정규화
+
+### 🔥 [PyTorch](./08_PyTorch/)
 **PyTorch를 활용한 딥러닝 실전**
-- 📝 **정리**: 25개 파일의 상세한 일별 학습 정리 (`md/`)
+- 📝 **정리**: PyTorch 상세 학습 정리 (`md/`)
 - 💻 **실습**: CNN, RNN, Transformer 구현 (`ipynb/`)
 - 🎯 **주요 프로젝트**: 이미지 분류, 텍스트 생성, GAN
 - 📊 **데이터**: 실습용 데이터셋 (`data/`)
 
-### 📦 [기타](./09_etc/)
+### 📦 [기타](./99_etc/)
 **추가 학습 자료 및 프로젝트**
 - 📊 **데이터**: 추가 실습 데이터 (`data/`)
 - 📝 **문서**: 기타 학습 자료 (`docs/`)
 - 💡 **정리**: 기타 주제별 학습 정리 (`md/`)
+
+---
+
+## 🔧 환경 설정 및 설치
+
+### 📋 요구사항
+- **Python**: 3.11 이상
+- **Java**: 11 이상 (KoNLPy 사용 시 필요)
+- **Git**: 버전 관리
+- **시스템 의존성**: graphviz (그래프 시각화)
+
+### 🐍 Conda 환경 설정 (권장)
+
+Conda를 사용한 가상환경 설정이 가장 안정적입니다:
+
+```bash
+# 1. Conda 환경 생성 및 활성화
+conda env create -f enviroment.yml
+conda activate sesac_ai
+
+# 2. 시스템 의존성 설치 (선택사항)
+# Ubuntu/Debian:
+sudo apt-get install graphviz
+
+# macOS:
+brew install graphviz
+
+# Windows: https://graphviz.org/download/ 에서 설치
+```
+
+### 🚀 pip 가상환경 설정 (대안)
+
+pip를 사용한 가상환경 설정:
+
+```bash
+# 1. 가상환경 생성 및 활성화
+python -m venv sesac_ai
+# Windows:
+sesac_ai\Scripts\activate
+# macOS/Linux:
+source sesac_ai/bin/activate
+
+# 2. 패키지 설치
+pip install -r requirements.txt
+
+# 3. 시스템 의존성 설치 (위와 동일)
+```
+
+### ⚠️ 주의사항
+
+1. **MySQL 설정**: MySQL 서버가 설치되어 있어야 합니다
+2. **JAVA_HOME**: KoNLPy 사용 시 Java 환경변수 설정 필요
+3. **GPU 지원**: CUDA 환경에서 PyTorch GPU 버전을 사용하려면:
+   ```bash
+   # requirements.txt에서 해당 라인 주석 해제
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+   ```
+
+### 📦 주요 패키지 목록
+
+| 카테고리         | 주요 패키지                             |
+| ---------------- | --------------------------------------- |
+| **머신러닝**     | scikit-learn, pandas, numpy, matplotlib |
+| **딥러닝**       | torch, tensorflow, keras                |
+| **웹개발**       | django, fastapi                  |
+| **데이터베이스** | pymysql, sqlalchemy                     |
+| **시각화**       | seaborn, plotly, bokeh                  |
+| **NLP**          | nltk, spacy, transformers, konlpy       |
+
+### 🧪 설치 확인
+
+```python
+# 주요 패키지 import 테스트
+import torch
+import tensorflow as tf
+import pandas as pd
+import numpy as np
+import sklearn
+import django
+
+print("✅ 모든 패키지가 정상적으로 설치되었습니다!")
+```
 
 ---
 
@@ -158,23 +246,25 @@
 - OOP 원칙을 적용한 모듈화 설계
 - 📁 **위치**: `02_MySQL/ipynb/`
 
-### 2. 🌐 **Django 블로그 웹 애플리케이션**
-- Django를 활용한 풀스택 웹 개발
+### 2. 🌐 **풀스택 웹 애플리케이션**
+- Django를 활용한 백엔드 개발
+- HTML/CSS/JavaScript 프론트엔드 구현
 - 사용자 인증, 게시판 CRUD 기능 구현
 - 방명록 시스템 및 성적 관리 시스템 통합
-- 📁 **위치**: `06_DJango/backend/`
+- 📁 **위치**: `05_Full_Stack/backend/`
 
 ### 3. 🤖 **머신러닝 & 딥러닝 프로젝트**
 - PyTorch를 활용한 이미지 분류 모델 구현
 - 전이학습을 통한 모델 성능 개선
 - 꽃 이미지 분류 (5종류), 동물 이미지 분류 등
-- 📁 **위치**: `07_Machine_Deep_Learning/`, `08_Pytorch/`
+- CNN, RNN, Transformer 아키텍처 구현
+- 📁 **위치**: `06_Machine_Learning/`, `07_Deep_Learning/`, `08_PyTorch/`
 
 ### 4. 📈 **데이터 분석 프로젝트**
 - Pandas, NumPy를 활용한 데이터 전처리
 - Matplotlib, Seaborn을 통한 시각화
 - 머신러닝 모델을 활용한 예측 분석
-- 📁 **위치**: `07_Machine_Deep_Learning/ipynb/ML/`
+- 📁 **위치**: `06_Machine_Learning/ipynb/`
 
 ---
 
@@ -227,28 +317,30 @@
 
 3. **웹 개발 역량**
    - Frontend: HTML/CSS/JavaScript
-   - Backend: Django 프레임워크
+   - Backend: Django, Flask 프레임워크
+   - 풀스택 웹 애플리케이션 구현
    - 블로그, 방명록, 성적관리 시스템 구현
 
 4. **AI/ML 실무 능력**
    - 머신러닝 모델 설계 및 구현
-   - PyTorch 딥러닝
+   - PyTorch 딥러닝 프레임워크 활용
    - 이미지 분류, 텍스트 처리 프로젝트
+   - CNN, RNN, Transformer 아키텍처 구현
 
 ---
 
 ## 📈 진행 현황
 
-- ✅ **완료**: Python, MySQL, Git&Clean Code, Algorithm, HTML/CSS/JS, Django
-- ✅ **완료**: Machine Learning, Deep Learning, PyTorch 기초
-- 🔄 **진행 중**: PyTorch 고급 기법 및 프로젝트 적용
-- 📅 **예정**: 파이널 프로젝트 (AI 기반 실무 프로젝트)
+- ✅ **완료**: Python, MySQL, Git&Clean Code, Algorithm, Full Stack Web Development
+- ✅ **완료**: Machine Learning, Deep Learning, PyTorch 기초 및 고급
+- 🔄 **진행 중**: 파이널 프로젝트 및 포트폴리오 구축
+- 📅 **예정**: 취업 준비 및 개인 프로젝트 확장
 
 ### 🎯 향후 계획
-1. PyTorch 고급 기법 학습 및 프로젝트 적용
-2. 개인 AI 프로젝트 포트폴리오 구축
-3. 오픈소스 프로젝트 기여
-4. 기술 블로그 운영 시작
+1. **파이널 프로젝트** 완성 및 발표 준비
+2. **개인 AI 프로젝트** 포트폴리오 구축
+3. **오픈소스 프로젝트** 기여 및 협업 경험
+4. **기술 블로그** 운영 및 지식 공유
 
 ---
 
