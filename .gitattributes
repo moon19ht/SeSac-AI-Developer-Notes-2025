@@ -1,0 +1,25 @@
+# Jupyter Notebook files
+*.ipynb linguist-language=Jupyter-Notebook
+*.ipynb linguist-detectable=true
+
+# Python files
+*.py linguist-language=Python
+
+# SQL files
+*.sql linguist-language=SQL
+
+# Markdown files
+*.md linguist-language=Markdown
+
+# Exclude data files and other non-code files from language statistics
+*.csv linguist-vendored
+*.txt linguist-vendored
+*.bin linguist-vendored
+data/* linguist-vendored
+
+# Exclude generated or vendor files
+docs/* linguist-documentation
+99_etc/* linguist-documentation
+
+# Exclude 05_Full_Stack folder
+05_Full_Stack/* linguist-vendored
