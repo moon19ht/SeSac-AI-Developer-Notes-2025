@@ -23,3 +23,6 @@ docs/* linguist-documentation
 
 # Exclude 05_Full_Stack folder
 05_Full_Stack/* linguist-vendored
+
+# HTML files
+*.html linguist-vendored
