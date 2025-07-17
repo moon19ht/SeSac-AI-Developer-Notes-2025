@@ -6,6 +6,7 @@ pymysql>=1.1.0              # MySQL connection (pure Python, high compatibility)
 mysqlclient>=2.2.0          # MySQL C API (may fail on some systems, optional)
 sqlalchemy>=2.0.0           # SQL ORM
 pymongo>=4.6.0              # MongoDB driver
+DBUtils>=3.0.0              # MySQL connection pooling
 
 # Machine Learning Core
 scikit-learn>=1.5.0

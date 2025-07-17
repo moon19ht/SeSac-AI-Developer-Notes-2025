@@ -116,3 +116,4 @@ dependencies:
 
       # Database (pip only)
       - pymongo>=4.6.0
+      - DBUtils>=3.0.0
