@@ -104,6 +104,7 @@ dependencies:
       # File Processing (pip only)
       - xlsxwriter>=3.1.0
       - pypdf2>=3.0.0
+      - pillow>=10.3.0
 
       # Natural Language Processing (pip only)
       - konlpy>=0.6.0
