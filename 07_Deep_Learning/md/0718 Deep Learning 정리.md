@@ -1,4 +1,4 @@
-# 🧠 Deep Learning 이론론
+# 🧠 Deep Learning 이론
 
 ##### 🗓️ 2025.07.18
 ##### 📝 Writer : Moon19ht
