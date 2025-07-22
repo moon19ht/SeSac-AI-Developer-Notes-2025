@@ -1,4 +1,4 @@
-# 🧠 Deep Learning 이론
+# 🧠 Deep Learning 정리
 
 ##### 🗓️ 2025.07.18
 ##### 📝 Writer : Moon19ht
@@ -7,13 +7,13 @@
 
 ## 📚 목차
 
-1. [🎯 딥러닝 기본 개념](#1-딥러닝-기본-개념)
-2. [📊 데이터 전처리](#2-데이터-전처리)
-3. [🌸 이진 분류 (Binary Classification)](#3-이진-분류-binary-classification)
-4. [🗂️ 다중 분류 (Multi-class Classification)](#4-다중-분류-multi-class-classification)
-5. [🏠 회귀 문제 (Regression)](#5-회귀-문제-regression)
-6. [📈 모델 평가 및 최적화](#6-모델-평가-및-최적화)
-7. [💡 실무 적용 가이드](#7-실무-적용-가이드)
+1. [딥러닝 기본 개념](#1-딥러닝-기본-개념)
+2. [데이터 전처리](#2-데이터-전처리)
+3. [이진 분류 (Binary Classification)](#3-이진-분류-binary-classification)
+4. [다중 분류 (Multi-class Classification)](#4-다중-분류-multi-class-classification)
+5. [회귀 문제 (Regression)](#5-회귀-문제-regression)
+6. [모델 평가 및 최적화](#6-모델-평가-및-최적화)
+7. [실무 적용 가이드](#7-실무-적용-가이드)
 
 ---
 
