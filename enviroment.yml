@@ -146,6 +146,9 @@ dependencies:
       - kaggle>=1.5.12
       - kagglehub>=0.1.0
 
+      # === FILE DOWNLOAD TOOLS ===
+      - gdown>=4.7.0  # Google Drive file downloader
+
       # === WINDOWS-COMPATIBLE ALTERNATIVES ===
       # Note: gunicorn (Linux WSGI) replaced with uvicorn (cross-platform ASGI)
       # Note: redis-py can be installed separately if Redis server is needed

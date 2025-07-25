@@ -127,6 +127,7 @@ redis>=4.5.0                # Redis Python client (server installation separate)
 # === DATA SOURCES & APIs ===
 kaggle>=1.5.12              # For Kaggle API access
 kagglehub>=0.1.0
+gdown>=4.7.0                # Google Drive download utility
 
 # === WINDOWS-SPECIFIC INSTALLATION NOTES ===
 #

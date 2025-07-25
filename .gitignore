@@ -215,6 +215,8 @@ events.out.tfevents.*
 *.npy
 *.npz
 *.mat
+*.bin
+*.keras
 
 # Video files
 *.mp4
@@ -256,5 +258,7 @@ events.out.tfevents.*
 cats_and_dogs/
 cats_and_dogs_small/
 flowers/
+flowers_renamed/
+flowers_small/
 GarbageClassification/
 aclimdb/
