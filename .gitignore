@@ -173,26 +173,25 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-
-# PyTorch 모델 저장 파일
+# PyTorch model files
 *.pt
 *.pth
 *.ckpt
 
-# ONNX 및 기타 내보내기 형식
+# ONNX and other export formats
 *.onnx
 *.pb
 *.tflite
 
-# 학습 로그 및 체크포인트
+# Training logs and checkpoints
 lightning_logs/
 wandb/
 events.out.tfevents.*
 
-# 임시 로그 파일
+# Temporary log files
 *.log
 
-# SQL 관련
+# SQL related
 *.sql~
 *.sqlite
 *.sqlite3
@@ -203,5 +202,59 @@ events.out.tfevents.*
 *.log.sql
 *.tmp.sql
 
-# vscode 설정
+# Data files
+# *.csv
+*.tsv
+*.json
+*.jsonl
+*.parquet
+*.h5
+*.hdf5
+*.pickle
+*.pkl
+*.npy
+*.npz
+*.mat
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+
+# Audio files
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+*.wma
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.rar
+*.7z
+*.gz
+*.bz2
+
+# Binary data files
+# *.bin
+*.dat
+*.raw
+
+# VSCode settings
 .vscode/
+
+# Exclude large datasets
+cats_and_dogs/
+cats_and_dogs_small/
+flowers/
+GarbageClassification/
+aclimdb/
