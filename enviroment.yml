@@ -78,12 +78,29 @@ dependencies:
   - boto3>=1.34.0
   - redis>=5.0.0
 
+  # Data Processing (High Performance)
+  - pyarrow>=14.0.0
+  - polars>=0.20.0
+
+  # Utility Libraries
+  - python-dateutil>=2.8.2
+  - pytz>=2023.3
+
   - pip:
       # Database
       - pymysql>=1.1.0  # mysqlclient replacement
 
       # Machine Learning (pip only)
       - mglearn>=0.2.0
+
+      # Hyperparameter Optimization
+      - hyperopt>=0.2.7
+      - ray[tune]>=2.8.0
+
+      # Experiment Tracking & Model Management
+      - mlflow>=2.8.0
+      - wandb>=0.16.0
+      - dvc>=3.36.0
 
       # Django & API
       - djangorestframework>=3.14.0
@@ -95,11 +112,17 @@ dependencies:
       - torchvision>=0.15.0
       - torchaudio>=2.0.0
 
+      # Deep Learning Utilities
+      - tensorboard>=2.15.0
+      - torchinfo>=1.8.0
+      - torchsummary>=1.5.1
+
       # Data Visualization (pip only)
       - altair>=5.2.0
 
       # Web Scraping & Automation
       - selenium>=4.15.0
+      - chromedriver-autoinstaller>=0.6.2
 
       # File Processing (pip only)
       - xlsxwriter>=3.1.0
@@ -111,6 +134,8 @@ dependencies:
       - jpype1>=1.5.0  # Required for konlpy, Java 11+ needed
       - transformers>=4.35.0
       - wordcloud>=1.9.0
+      - gensim>=4.3.0
+      - textblob>=0.17.1
 
       # Development Tools (pip only)
       - python-dotenv>=1.0.0

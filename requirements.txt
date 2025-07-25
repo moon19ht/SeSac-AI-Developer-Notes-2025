@@ -24,12 +24,22 @@ mglearn>=0.2.0              # Tutorial package (optional)
 optuna>=3.0.0
 pillow>=10.3.0              # Python Imaging Library
 
+# Hyperparameter Optimization & Experiment Tracking
+hyperopt>=0.2.7             # Bayesian optimization
+ray[tune]>=2.8.0            # Distributed hyperparameter tuning
+mlflow>=2.8.0               # Model lifecycle management
+wandb>=0.16.0               # Experiment tracking and visualization
+dvc>=3.36.0                 # Data version control
+
 # Deep Learning (TensorFlow & PyTorch)
 tensorflow>=2.15.0          # CPU version
 keras>=3.0.0                # Works with TensorFlow 2.15+
 torch>=2.0.0
 torchvision>=0.15.0
 torchaudio>=2.0.0
+tensorboard>=2.15.0         # TensorFlow visualization
+torchinfo>=1.8.0            # PyTorch model information
+torchsummary>=1.5.1         # PyTorch model summary
 
 # Web Development & APIs
 Django>=5.0.0
@@ -43,11 +53,16 @@ plotly>=5.17.0
 bokeh>=3.3.0
 altair>=5.2.0
 
+# Data Processing (High Performance)
+pyarrow>=14.0.0             # High performance data processing
+polars>=0.20.0              # Fast DataFrame library
+
 # Web Scraping & Automation
 requests>=2.32.0
 beautifulsoup4>=4.12.0
 urllib3>=2.1.0
 selenium>=4.15.0
+chromedriver-autoinstaller>=0.6.2  # Automatic Chrome driver installation
 
 # File Processing
 openpyxl>=3.1.5
@@ -64,6 +79,8 @@ nltk>=3.8.0
 spacy>=3.7.0
 transformers>=4.35.0
 wordcloud>=1.9.0
+gensim>=4.3.0               # Topic modeling, Word2Vec
+textblob>=0.17.1            # Sentiment analysis
 
 # Korean NLP (Java Runtime Required)
 konlpy>=0.6.0               # Requires Java (JAVA_HOME)
@@ -75,6 +92,10 @@ pytest>=8.0.0
 lxml>=5.2.0
 click>=8.1.0
 tqdm>=4.66.0
+
+# Utility Libraries
+python-dateutil>=2.8.2     # Date processing
+pytz>=2023.3               # Timezone handling
 
 # Jupyter & Notebooks
 jupyterlab>=4.2.0
