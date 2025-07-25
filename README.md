@@ -441,18 +441,18 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 
 ## 📈 진행 현황
 
-### ✅ **완료된 과정** (2025.04.23 ~ 07.25)
+### ✅ **완료된 과정** (2025.04.23 ~ 07)
 - **🐍 Python 기초 & 심화**: 13개 일별 정리 + 8개 과제 완성
 - **🗄️ MySQL & 데이터베이스**: SQL 마스터 + Python 연동 프로젝트
 - **🛠️ Git & Clean Code**: 버전 관리 + 코드 품질 향상
 - **🧮 Algorithm**: 11개 실습 + 문제 해결 능력 강화
 - **🌐 Full Stack 웹개발**: Django 다중 프로젝트 구현
 - **🧠 Machine Learning**: Scikit-learn 기반 ML 모델 구현
-- **🧠 Deep Learning**: TensorFlow/Keras CNN 이미지 분류
 
 ### 🔄 **현재 진행 중**
 - **📚 포트폴리오 정리**: GitHub 리포지터리 체계화 및 문서 개선
 - **📝 기술 문서 보완**: 99_etc/docs 가이드 시리즈 확장
+- **🧠 Deep Learning**: TensorFlow/Keras CNN 이미지 분류
 - **🔥 PyTorch 과정 준비**: 기본 구조 설정 완료, 실습 대기 중
 
 ### 📅 **향후 계획** (2025.08 ~ 09)
@@ -475,9 +475,9 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 ```
 Progress: ████████████████████░░░░ 80% 완료
 
-✅ Python (100%)     ✅ MySQL (100%)      ✅ Git&Clean Code (100%)
-✅ Algorithm (100%)  ✅ Full Stack (100%) ✅ ML (100%)
-✅ Deep Learning (100%) 🔄 PyTorch (20%)  📅 Final Project (0%)
+✅ Python (100%)     ✅ MySQL (100%)      ✅ Git & Clean Code (100%)
+✅ Algorithm (100%)  ✅ Full Stack (100%) ✅ Machine Learning (100%)
+🔄 Deep Learning (60%) 📅 PyTorch (0%)  📅 Final Project (0%)
 ```
 
 ---
