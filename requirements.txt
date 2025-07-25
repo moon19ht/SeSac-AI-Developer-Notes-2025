@@ -1,129 +1,162 @@
 # requirements.txt for Python virtual environment
-# Last updated: 2025-07-15
+# Windows-optimized version based on environment.yml
+# Last updated: 2025-07-25
 
-# Database
-pymysql>=1.1.0              # MySQL connection (pure Python, high compatibility)
-mysqlclient>=2.2.0          # MySQL C API (may fail on some systems, optional)
-sqlalchemy>=2.0.0           # SQL ORM
-pymongo>=4.6.0              # MongoDB driver
+# === DATABASE DRIVERS ===
+pymysql>=1.0.0              # MySQL connection (pure Python, cross-platform)
+mysqlclient>=2.2.0          # MySQL C API (may need Visual Studio Build Tools on Windows)
+sqlalchemy>=1.4.0           # SQL ORM
+pymongo>=4.3.0              # MongoDB driver
 DBUtils>=3.0.0              # MySQL connection pooling
 
-# Machine Learning Core
-scikit-learn>=1.5.0
-pandas>=2.2.0
-numpy>=1.26.0
-matplotlib>=3.8.0
-seaborn>=0.13.0
-scipy>=1.13.0
-ipython>=8.18.0
-imageio>=2.34.0
-graphviz>=0.20.0            # Requires system binary: apt/brew install graphviz
-joblib>=1.3.0
-xgboost>=2.1.0
-mglearn>=0.2.0              # Tutorial package (optional)
+# === MACHINE LEARNING CORE ===
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scipy>=1.10.0
+ipython>=8.12.0
+imageio>=2.28.0
+graphviz>=0.20.0            # Requires system binary installation
+joblib>=1.2.0
+xgboost>=1.7.0
+mglearn>=0.2.0              # Tutorial package
 optuna>=3.0.0
-pillow>=10.3.0              # Python Imaging Library
+pillow>=9.5.0               # Python Imaging Library
 
-# Hyperparameter Optimization & Experiment Tracking
+# === HYPERPARAMETER OPTIMIZATION & EXPERIMENT TRACKING ===
 hyperopt>=0.2.7             # Bayesian optimization
-ray[tune]>=2.8.0            # Distributed hyperparameter tuning
-mlflow>=2.8.0               # Model lifecycle management
-wandb>=0.16.0               # Experiment tracking and visualization
-dvc>=3.36.0                 # Data version control
+ray[tune]>=2.5.0            # Distributed hyperparameter tuning
+mlflow>=2.5.0               # Model lifecycle management
+wandb>=0.15.0               # Experiment tracking and visualization
+dvc>=3.0.0                  # Data version control
 
-# Deep Learning (TensorFlow & PyTorch)
-tensorflow>=2.15.0          # CPU version
-keras>=3.0.0                # Works with TensorFlow 2.15+
+# === DEEP LEARNING FRAMEWORKS ===
+# TensorFlow (CPU version - Windows optimized)
+tensorflow>=2.13.0,<2.16.0  # CPU version
+# Note: Keras is included with TensorFlow 2.13+, no separate installation needed
+
+# PyTorch (CPU version - Windows optimized)
 torch>=2.0.0
 torchvision>=0.15.0
 torchaudio>=2.0.0
-tensorboard>=2.15.0         # TensorFlow visualization
+tensorboard>=2.13.0         # TensorFlow/PyTorch visualization
 torchinfo>=1.8.0            # PyTorch model information
 torchsummary>=1.5.1         # PyTorch model summary
 
-# Web Development & APIs
-Django>=5.0.0
+# === WEB DEVELOPMENT & APIs ===
+Django>=4.2.0
 djangorestframework>=3.14.0
-flask>=3.0.0
-fastapi>=0.104.0
-streamlit>=1.29.0
+flask>=2.3.0
+fastapi>=0.100.0
+streamlit>=1.25.0
 
-# Data Visualization
-plotly>=5.17.0
-bokeh>=3.3.0
-altair>=5.2.0
+# === DATA VISUALIZATION ===
+plotly>=5.14.0
+bokeh>=3.1.0
+altair>=5.0.0
 
-# Data Processing (High Performance)
-pyarrow>=14.0.0             # High performance data processing
-polars>=0.20.0              # Fast DataFrame library
+# === ADVANCED DATA PROCESSING ===
+pyarrow>=12.0.0             # High performance data processing
+polars>=0.18.0              # Fast DataFrame library
 
-# Web Scraping & Automation
-requests>=2.32.0
-beautifulsoup4>=4.12.0
-urllib3>=2.1.0
-selenium>=4.15.0
-chromedriver-autoinstaller>=0.6.2  # Automatic Chrome driver installation
+# === WEB SCRAPING & AUTOMATION ===
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+urllib3>=1.26.0
+selenium>=4.10.0
+chromedriver-autoinstaller>=0.6.0  # Automatic Chrome driver installation
 
-# File Processing
-openpyxl>=3.1.5
+# === FILE PROCESSING ===
+openpyxl>=3.1.0
 xlrd>=2.0.0
 xlsxwriter>=3.1.0
-pillow>=10.3.0
 pypdf2>=3.0.0
 
-# Computer Vision
-opencv-python>=4.8.0        # Avoid installing both pip + conda versions
+# === COMPUTER VISION ===
+opencv-python>=4.6.0        # Cross-platform computer vision
 
-# Natural Language Processing
+# === NATURAL LANGUAGE PROCESSING ===
 nltk>=3.8.0
-spacy>=3.7.0
-transformers>=4.35.0
+spacy>=3.5.0
+transformers>=4.30.0
 wordcloud>=1.9.0
 gensim>=4.3.0               # Topic modeling, Word2Vec
 textblob>=0.17.1            # Sentiment analysis
 
-# Korean NLP (Java Runtime Required)
-konlpy>=0.6.0               # Requires Java (JAVA_HOME)
-jpype1>=1.5.0               # For KoNLPy (binds Python <-> Java)
+# === KOREAN NLP (Java Runtime Required) ===
+konlpy>=0.6.0               # Requires Java 11+ (JAVA_HOME)
+jpype1>=1.4.0               # For KoNLPy (binds Python <-> Java)
 
-# Development Tools
+# === DEVELOPMENT TOOLS ===
 python-dotenv>=1.0.0
-pytest>=8.0.0
-lxml>=5.2.0
+pytest>=7.0.0
+lxml>=4.9.0                 # Fast XML/HTML parser for BeautifulSoup
 click>=8.1.0
-tqdm>=4.66.0
+tqdm>=4.64.0
+passlib>=1.7.4
 
-# Utility Libraries
+# === UTILITY LIBRARIES ===
 python-dateutil>=2.8.2     # Date processing
 pytz>=2023.3               # Timezone handling
 
-# Jupyter & Notebooks
-jupyterlab>=4.2.0
-notebook>=7.2.0
-ipywidgets>=8.1.0
-nbconvert>=7.12.0
+# === JUPYTER & NOTEBOOKS ===
+jupyterlab>=4.0.0
+notebook>=6.5.0
+ipywidgets>=8.0.0
+nbconvert>=7.0.0
 
-# Async & Concurrency
-aiohttp>=3.9.0
-# asyncio is built-in with Python 3.11 and above
+# === ASYNC & CONCURRENCY ===
+aiohttp>=3.8.0
+# Note: asyncio is built-in with Python 3.11+
 
-# API & Auth
-pyjwt>=2.8.0
-passlib>=1.7.4
-bcrypt>=4.1.0
+# === AUTHENTICATION & SECURITY ===
+pyjwt>=2.6.0
+bcrypt>=4.0.0
 
-# Cloud & Deployment
-gunicorn>=21.2.0
-uvicorn>=0.24.0
-boto3>=1.34.0
-redis>=5.0.0
+# === CLOUD & DEPLOYMENT ===
+# Note: gunicorn is Linux-only, using Windows-compatible alternatives
+uvicorn>=0.20.0             # Cross-platform ASGI server
+waitress>=2.1.0             # Windows-compatible WSGI server (alternative to gunicorn)
+boto3>=1.26.0               # AWS SDK
 
-# Miscellaneous
-kaggle>=1.5.12  # For Kaggle API access
+# === CACHING & STORAGE ===
+redis>=4.5.0                # Redis Python client (server installation separate)
+
+# === DATA SOURCES & APIs ===
+kaggle>=1.5.12              # For Kaggle API access
 kagglehub>=0.1.0
 
-# Optional: GPU Support (commented by default)
-# tensorflow-gpu>=2.15.0
-# torch>=2.0.0+cu121
-# torchvision>=0.15.0+cu121
-# torchaudio>=2.0.0+cu121
+# === WINDOWS-SPECIFIC INSTALLATION NOTES ===
+#
+# 1. Java Runtime Required for KoNLPy:
+#    - Download and install Java 11+ from https://adoptium.net/
+#    - Set JAVA_HOME environment variable
+#
+# 2. Visual Studio Build Tools (for some packages like mysqlclient):
+#    - Install "Microsoft C++ Build Tools" if compilation errors occur
+#    - Download from: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+#
+# 3. System Dependencies:
+#    - Graphviz: Download from https://graphviz.org/download/ (for tree visualization)
+#    - Add Graphviz bin directory to PATH
+#
+# 4. Redis Server (optional):
+#    - Use Docker: docker run -d -p 6379:6379 redis:alpine
+#    - Or install Redis on WSL2
+#    - Or use Redis Cloud service
+#
+# 5. GPU Support (optional):
+#    - For TensorFlow GPU: pip install tensorflow[and-cuda]
+#    - For PyTorch GPU: Visit https://pytorch.org/get-started/locally/
+#
+# 6. Built-in Modules (no installation needed):
+#    - os, pathlib, time, random, re, warnings, collections
+#    - imghdr, datetime, pickle, shutil
+
+# === OPTIONAL GPU SUPPORT (uncomment if needed) ===
+# tensorflow[and-cuda]>=2.13.0    # TensorFlow with CUDA support
+# torch>=2.0.0+cu121              # PyTorch with CUDA 12.1
+# torchvision>=0.15.0+cu121       # TorchVision with CUDA 12.1
+# torchaudio>=2.0.0+cu121         # TorchAudio with CUDA 12.1
