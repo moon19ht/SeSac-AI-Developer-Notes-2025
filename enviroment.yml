@@ -118,3 +118,7 @@ dependencies:
       # Database (pip only)
       - pymongo>=4.6.0
       - DBUtils>=3.0.0
+
+      # Miscellaneous
+      - kaggle>=1.5.12  # For Kaggle API access
+      - kagglehub>=0.1.0

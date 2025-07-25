@@ -97,6 +97,10 @@ uvicorn>=0.24.0
 boto3>=1.34.0
 redis>=5.0.0
 
+# Miscellaneous
+kaggle>=1.5.12  # For Kaggle API access
+kagglehub>=0.1.0
+
 # Optional: GPU Support (commented by default)
 # tensorflow-gpu>=2.15.0
 # torch>=2.0.0+cu121
