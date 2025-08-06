@@ -24,6 +24,7 @@ xgboost>=1.7.0
 mglearn>=0.2.0              # Tutorial package
 optuna>=3.0.0
 pillow>=9.5.0               # Python Imaging Library
+imbalanced-learn>=0.11.0    # Handling imbalanced datasets
 
 # === HYPERPARAMETER OPTIMIZATION & EXPERIMENT TRACKING ===
 hyperopt>=0.2.7             # Bayesian optimization
