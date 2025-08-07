@@ -246,7 +246,7 @@ events.out.tfevents.*
 *.bz2
 
 # Binary data files
-# *.bin
+*.bin
 *.dat
 *.raw
 
