@@ -130,6 +130,9 @@ kaggle>=1.5.12              # For Kaggle API access
 kagglehub>=0.1.0
 gdown>=4.7.0                # Google Drive download utility
 
+# === KOREAN DATASETS & CORPORA ===
+Korpora>=1.2.0              # Korean language corpus collection (NSMC, etc.)
+
 # === WINDOWS-SPECIFIC INSTALLATION NOTES ===
 #
 # 1. Java Runtime Required for KoNLPy:

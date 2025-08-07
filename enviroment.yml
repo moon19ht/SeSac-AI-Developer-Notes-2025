@@ -147,6 +147,9 @@ dependencies:
       - kaggle>=1.5.12
       - kagglehub>=0.1.0
 
+      # === KOREAN DATASETS AND CORPORA ===
+      - Korpora>=1.2.0  # Korean language corpus collection (NSMC, etc.)
+
       # === FILE DOWNLOAD TOOLS ===
       - gdown>=4.7.0  # Google Drive file downloader
 
