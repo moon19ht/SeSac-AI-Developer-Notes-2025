@@ -50,21 +50,6 @@ def get_server_info():
         ]
     }
 
-
-# 테스트용 엔드포인트들
-@app.get("/add", tags=["test"])
-def add_query_params(x: int, y: int):
-    """쿼리 파라미터를 사용한 덧셈"""
-    return {"x": x, "y": y, "result": x + y}
-
-
-@app.get("/add2/{x}/{y}", tags=["test"])
-def add_path_params(x: int, y: int):
-    """경로 파라미터를 사용한 덧셈"""
-    return {"x": x, "y": y, "result": x + y}
-
-
-# 실행방법 
+# 실행 방법:
 # conda activate backend
-# python -m uvicorn main:app --reload 
-# http://127.0.0.1:8000/docs
+# python -m uvicorn main:app --reload --port 8000

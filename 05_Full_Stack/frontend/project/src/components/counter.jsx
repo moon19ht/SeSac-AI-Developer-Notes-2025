@@ -1,19 +1,66 @@
-import { useState } from 'react'
-
+import { useState, useCallback } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Counter() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  // 카운터 증가 함수 - useCallback으로 최적화
+  const handleIncrement = useCallback(() => {
+    setCount(prevCount => prevCount + 1);
+  }, []);
+
+  // 카운터 감소 함수 - useCallback으로 최적화
+  const handleDecrement = useCallback(() => {
+    setCount(prevCount => prevCount - 1);
+  }, []);
+
+  // 카운터 초기화 함수
+  const handleReset = useCallback(() => {
+    setCount(0);
+  }, []);
 
   return (
-    <>
-      <h1>카운터</h1>
-      <h2>{count}</h2>
-      <button type="button" onClick={()=>{ setCount(count+1)}}>증가</button>
-      <button type="button" onClick={()=>{ setCount(count-1)}}>감소</button>
-    </>
-  )
+    <div className="container mt-4">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-header text-center">
+              <h1 className="mb-0">카운터</h1>
+            </div>
+            <div className="card-body text-center">
+              <h2 className="display-4 mb-4 text-primary">{count}</h2>
+              <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button 
+                  type="button" 
+                  className="btn btn-success me-md-2"
+                  onClick={handleIncrement}
+                  aria-label="카운터 증가"
+                >
+                  증가 (+1)
+                </button>
+                <button 
+                  type="button" 
+                  className="btn btn-danger me-md-2"
+                  onClick={handleDecrement}
+                  aria-label="카운터 감소"
+                >
+                  감소 (-1)
+                </button>
+                <button 
+                  type="button" 
+                  className="btn btn-secondary"
+                  onClick={handleReset}
+                  aria-label="카운터 초기화"
+                >
+                  초기화
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Counter; 
-//파일이 다르면, 서로 못주고 받아서 파일내의 함수나 클래스를 외부로 노출시켜야
-//다른 파일에서 이걸 사용가능    
+export default Counter;

@@ -42,6 +42,9 @@ dependencies:
   - beautifulsoup4>=4.11.0
   - urllib3>=1.26.0
 
+  # Web Scraping
+  - selenium>=4.10.0
+
   # Development Tools
   - pytest>=7.0.0
   - click>=8.1.0
@@ -110,7 +113,6 @@ dependencies:
       - altair>=5.0.0
 
       # === WEB SCRAPING & AUTOMATION ===
-      - selenium>=4.10.0
       - chromedriver-autoinstaller>=0.6.0
 
       # === FILE PROCESSING ===
