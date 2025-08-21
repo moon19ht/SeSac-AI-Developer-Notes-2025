@@ -2,8 +2,9 @@
 *.ipynb linguist-language=Jupyter-Notebook
 *.ipynb linguist-detectable=true
 
-# Python files
+# Python files - ensure they are detected and counted
 *.py linguist-language=Python
+*.py linguist-detectable=true
 
 # SQL files  
 *.sql linguist-language=SQL
