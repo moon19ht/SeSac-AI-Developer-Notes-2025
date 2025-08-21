@@ -35,6 +35,8 @@
 - **Python 3.11**: NumPy, Pandas, Matplotlib, Scikit-learn, SciPy
 - **Deep Learning**: TensorFlow/Keras 2.15+, PyTorch 2.0+, OpenCV
 - **Web Development**: Django 5.0+, Flask 3.0+, FastAPI, Django REST Framework
+- **Mobile & Frontend**: React Native, Redux, JavaScript ES6+
+- **Backend & Enterprise**: Spring Boot, Java
 - **Database**: MySQL, pymysql, SQLAlchemy, MongoDB
 - **Data Visualization**: Plotly, Bokeh, Seaborn, Altair
 
@@ -133,8 +135,14 @@
   - `mysite1/`: 블로그, 방명록, 성적관리 시스템
   - `myhome1/`: 블로그 시스템
   - `myhome2/`: 기본 Django 프로젝트
-- 🔧 **주요 기능**: 사용자 인증, CRUD 작업, 템플릿 시스템
-- 🌟 **통합 프로젝트**: 전체적인 웹 애플리케이션 구현
+  - **FastAPI**: API 서버 구현 (board, score, predict 엔드포인트)
+- 📱 **Mobile Development**: React Native 앱 개발 (`React_Native/`)
+  - **Redux 상태관리**: CRUD 애플리케이션 구현
+  - **React-Redux 패턴**: 게시판 및 인증 시스템
+- ☕ **Enterprise Backend**: Spring Boot 프로젝트 (`SpringBoot/`)
+  - REST API 컨트롤러, DAO 패턴 구현
+- 🔧 **주요 기능**: 사용자 인증, CRUD 작업, 템플릿 시스템, API 설계
+- 🌟 **통합 프로젝트**: 다중 기술스택 웹 애플리케이션 구현
 
 ### 🧠 [Machine Learning](./06_Machine_Learning/)
 **머신러닝 기초 및 응용 (2025.07.01 ~ 07.16)**
@@ -163,12 +171,14 @@
 - 📈 **결과물**: confusion_matrix.png, training_history.png 등 시각화
 
 ### 🔥 [PyTorch](./08_PyTorch/)
-**PyTorch를 활용한 딥러닝 실전 (진행 중)**
-- 📝 **정리**: PyTorch 상세 학습 정리 (`md/`)
-- 💻 **실습**: CNN, RNN, Transformer 구현 예정 (`ipynb/`)
-- 🎯 **계획된 프로젝트**: 이미지 분류, 텍스트 생성, GAN
-- 📊 **데이터**: 실습용 데이터셋 준비 중 (`data/`)
-- ⚠️ **상태**: 기본 구조 설정 완료, 본격적인 실습 대기 중
+**PyTorch를 활용한 딥러닝 실전 (2025.08.18 ~ 08.19 완료)**
+- 📝 **정리**: PyTorch 상세 학습 정리 (`md/`) - 0818~0819 학습 완료
+- 💻 **실습**: CNN, 신경망 기초, 이미지 분류 구현 (`ipynb/`)
+  - 일별 실습: 0818 (4개 파일), 0819 (5개 파일) 총 9개 실습 완료
+- 🎯 **완료된 프로젝트**: Iris 분류 모델, 기본 신경망 구조 이해
+- 📊 **데이터**: 모델 저장 시스템 구축 (`data/`)
+  - iris_classifier_model.pth, iris_scaler.pkl 모델 파일
+- ✅ **상태**: 기본 실습 완료, PyTorch 기초 마스터
 
 ### 📦 [기타 자료](./99_etc/)
 **추가 학습 자료 및 완전 가이드**
@@ -351,7 +361,20 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 - **성과**: 체계적인 문제 해결 능력 및 시간복잡도 분석 역량 향상
 - 📁 **위치**: `04_Algorithm/ipynb/`
 
-### 6. 📚 **완전 가이드 문서 작성**
+### 6. 🔥 **PyTorch 딥러닝 프로젝트**
+- **기술 스택**: PyTorch 2.0+, scikit-learn, pandas, matplotlib
+- **구현 프로젝트**:
+  - **신경망 기초**: 기본 MLP 구조 및 학습 과정 이해
+  - **분류 모델**: Iris 데이터셋을 활용한 다중 클래스 분류
+  - **모델 저장/로드**: PyTorch 모델 지속성 구현
+- **기술적 성과**:
+  - PyTorch 텐서 연산 및 자동 미분 시스템 마스터
+  - 커스텀 데이터셋 및 데이터 로더 구현
+  - 모델 성능 평가 및 시각화
+- **실습 기간**: 2025.08.18 ~ 08.19 (9개 실습 파일 완성)
+- 📁 **위치**: `08_PyTorch/ipynb/`, `08_PyTorch/data/`
+
+### 7. 📚 **완전 가이드 문서 작성**
 - **Deep Learning Guide**: 115KB, 3,589라인의 초대형 딥러닝 완전 가이드
 - **Python Complete Guide**: 18KB, 483라인의 파이썬 종합 가이드
 - **SQL 시리즈**: MySQL 튜닝, 최적화, 의료정보 분석 등 전문 가이드
@@ -418,9 +441,10 @@ print(f"🧠 TensorFlow: {tf.__version__}")
      - 블로그 시스템, 방명록, 성적관리 통합 플랫폼
    - **개발 패턴**: MVC 패턴, 템플릿 시스템, ORM 활용
 
-4. **AI/ML 실무 능력 (7월 1일 ~ 7월 25일)**
+4. **AI/ML 실무 능력 (7월 1일 ~ 8월 19일)**
    - **머신러닝**: Scikit-learn 기반 분류/회귀 모델 구현
    - **딥러닝**: TensorFlow/Keras CNN 아키텍처 설계
+   - **PyTorch**: 딥러닝 프레임워크 마스터 및 모델 구현
    - **컴퓨터 비전**: 이미지 분류 프로젝트 (개/고양이, 꽃, 쓰레기)
    - **데이터 처리**: 25,000장 이미지 전처리 및 데이터 증강
    - **모델 최적화**: Optuna 하이퍼파라미터 튜닝, 교차 검증
@@ -441,19 +465,20 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 
 ## 📈 진행 현황
 
-### ✅ **완료된 과정** (2025.04.23 ~ 07)
+### ✅ **완료된 과정** (2025.04.23 ~ 08.19)
 - **🐍 Python 기초 & 심화**: 13개 일별 정리 + 8개 과제 완성
 - **🗄️ MySQL & 데이터베이스**: SQL 마스터 + Python 연동 프로젝트
 - **🛠️ Git & Clean Code**: 버전 관리 + 코드 품질 향상
 - **🧮 Algorithm**: 11개 실습 + 문제 해결 능력 강화
-- **🌐 Full Stack 웹개발**: Django 다중 프로젝트 구현
+- **🌐 Full Stack 웹개발**: Django, FastAPI, React Native, Spring Boot 멀티 플랫폼 구현
 - **🧠 Machine Learning**: Scikit-learn 기반 ML 모델 구현
+- **🧠 Deep Learning**: TensorFlow/Keras CNN 이미지 분류 프로젝트 완성
+- **🔥 PyTorch**: 딥러닝 기초 및 모델 구현 (0818~0819 완료)
 
 ### 🔄 **현재 진행 중**
-- **📚 포트폴리오 정리**: GitHub 리포지터리 체계화 및 문서 개선
-- **📝 기술 문서 보완**: 99_etc/docs 가이드 시리즈 확장
-- **🧠 Deep Learning**: TensorFlow/Keras CNN 이미지 분류
-- **🔥 PyTorch 과정 준비**: 기본 구조 설정 완료, 실습 대기 중
+- **📚 포트폴리오 완성**: GitHub 리포지터리 최종 정리 및 문서화 완료
+- **📝 기술 문서 완성**: 99_etc/docs 가이드 시리즈 완료
+- **🚀 파이널 프로젝트 준비**: 실무 프로젝트 기획 및 준비 단계
 
 ### 📅 **향후 계획** (2025.08 ~ 09)
 1. **🔥 PyTorch 딥러닝 심화**
@@ -473,11 +498,11 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 
 ### 📊 **학습 완성도**
 ```
-Progress: ████████████████████░░░░ 80% 완료
+Progress: ███████████████████████░ 95% 완료
 
-✅ Python (100%)     ✅ MySQL (100%)      ✅ Git & Clean Code (100%)
-✅ Algorithm (100%)  ✅ Full Stack (100%) ✅ Machine Learning (100%)
-🔄 Deep Learning (60%) 📅 PyTorch (0%)  📅 Final Project (0%)
+✅ Python (100%)        ✅ MySQL (100%)         ✅ Git & Clean Code (100%)
+✅ Algorithm (100%)     ✅ Full Stack (100%)    ✅ Machine Learning (100%)
+✅ Deep Learning (100%) ✅ PyTorch (100%)       🚀 Final Project (준비중)
 ```
 
 ---
