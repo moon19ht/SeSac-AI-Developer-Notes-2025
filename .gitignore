@@ -244,6 +244,7 @@ events.out.tfevents.*
 *.7z
 *.gz
 *.bz2
+*.metadata
 
 # Binary data files
 *.bin
