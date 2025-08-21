@@ -43,7 +43,7 @@
 
 ### **Tools & Environment**
 - **Version Control**: Git, GitHub
-- **IDE**: VSCode, Cursor, Jupyter Notebook, IPython
+- **IDE**: VSCode, Jupyter Notebook, IPython
 - **Package Management**: Conda, pip
 - **Web Scraping**: BeautifulSoup4, Selenium, Requests
 - **Optimization**: Optuna, XGBoost
@@ -62,7 +62,7 @@
   - [📚 목차](#-목차)
   - [📂 프로젝트 구성](#-프로젝트-구성)
     - [🐍 Python](#-python)
-    - [🗄️ SQL & Database](#️-sql--database)
+    - [🗄️ SQL \& Database](#️-sql--database)
     - [🛠️ Git \& Clean Code](#️-git--clean-code)
     - [🧮 Algorithm](#-algorithm)
     - [🌐 Full Stack Development](#-full-stack-development)
@@ -83,8 +83,9 @@
     - [3. 🤖 **딥러닝 이미지 분류 프로젝트**](#3--딥러닝-이미지-분류-프로젝트)
     - [4. 📈 **머신러닝 데이터 분석 프로젝트**](#4--머신러닝-데이터-분석-프로젝트)
     - [5. 🧮 **알고리즘 문제 해결**](#5--알고리즘-문제-해결)
-    - [6. 🔥 **PyTorch 딥러닝 프로젝트**](#6--pytorch-딥러닝-프로젝트)
-    - [7. 📚 **완전 가이드 문서 작성**](#7--완전-가이드-문서-작성)
+    - [6. 📱 **React Native \& Mobile 개발 프로젝트**](#6--react-native--mobile-개발-프로젝트)
+    - [7. 🔥 **PyTorch 딥러닝 프로젝트**](#7--pytorch-딥러닝-프로젝트)
+    - [8. 📚 **완전 가이드 문서 작성**](#8--완전-가이드-문서-작성)
   - [🗓️ 교육 커리큘럼 일정표](#️-교육-커리큘럼-일정표)
   - [📖 학습 기록](#-학습-기록)
     - [🏆 핵심 학습 성과](#-핵심-학습-성과)
@@ -332,7 +333,7 @@ print(f"🗄️ MongoDB: {pymongo.__version__}")
   - 데이터베이스 커넥션 풀을 활용한 성능 최적화
   - OOP 원칙 기반 모듈화 설계 및 예외 처리
 - **실습 내용**: `Database_Management_System.ipynb`, `Grading_System_Practice.ipynb`
-- 📁 **위치**: `02_MySQL/ipynb/`
+- 📁 **위치**: `02_SQL/ipynb/`
 
 ### 2. 🌐 **다중 풀스택 웹 애플리케이션**
 - **기술 스택**: Django 5.0+, React 19+, FastAPI, Spring Boot, HTML/CSS/JavaScript
@@ -404,7 +405,7 @@ print(f"🗄️ MongoDB: {pymongo.__version__}")
   - 커스텀 데이터셋 및 데이터 로더 구현
   - 모델 성능 평가 및 시각화
 - **실습 기간**: 2025.08.18 ~ 08.19 (9개 실습 파일 완성)
-- 📁 **위치**: `08_PyTorch/ipynb/`, `08_PyTorch/data/`
+- 📁 **위치**: `08_PyTorch/ipynb/`
 
 ### 8. 📚 **완전 가이드 문서 작성**
 - **Deep Learning Guide**: 115KB, 3,589라인의 초대형 딥러닝 완전 가이드
@@ -505,32 +506,27 @@ print(f"🗄️ MongoDB: {pymongo.__version__}")
 - **🌐 Full Stack 웹개발**: Django, FastAPI, React, React Native, Spring Boot 멀티 플랫폼 구현
 - **🧠 Machine Learning**: Scikit-learn 기반 ML 모델 구현
 - **🧠 Deep Learning**: TensorFlow/Keras CNN 이미지 분류 프로젝트 완성
-- **🔥 PyTorch**: 딥러닝 기초 및 모델 구현 (0818~0819 완료)
+- **🔥 PyTorch**: 딥러닝 기초 및 모델 구현 완료
 
 ### 🔄 **현재 진행 중**
 - **📚 포트폴리오 완성**: GitHub 리포지터리 최종 정리 및 문서화 완료
-- **📝 기술 문서 완성**: 99_etc/docs 가이드 시리즈 완료
 - **🚀 파이널 프로젝트 준비**: 실무 프로젝트 기획 및 준비 단계
 
 ### 📅 **향후 계획** (2025.08 ~ 09)
-1. **🔥 PyTorch 딥러닝 심화**
-   - CNN, RNN, Transformer 아키텍처 구현
-   - 고급 컴퓨터 비전 프로젝트
-   - 자연어 처리 및 GAN 모델 실습
 
-2. **🚀 파이널 프로젝트** (8월 27일 ~ 9월 22일)
+1. **🚀 파이널 프로젝트** (8월 27일 ~ 9월 22일)
    - 기획 → 개발 → 발표 전체 프로세스
    - 실무 수준의 AI 애플리케이션 구축
    - 팀 협업 및 프로젝트 관리 경험
 
-3. **💼 개인 포트폴리오 확장**
+2. **💼 개인 포트폴리오 확장**
    - 개인 AI 프로젝트 포트폴리오 구축
    - 기술 블로그 운영 및 지식 공유
    - 오픈소스 프로젝트 기여
 
 ### 📊 **학습 완성도**
 ```
-Progress: ███████████████████████░ 95% 완료
+Progress: ████████████████████████ 100% 완료
 
 ✅ Python (100%)        ✅ SQL (100%)           ✅ Git & Clean Code (100%)
 ✅ Algorithm (100%)     ✅ Full Stack (100%)    ✅ Machine Learning (100%)
