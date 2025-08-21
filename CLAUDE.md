@@ -20,7 +20,7 @@ This is a comprehensive educational portfolio repository documenting a 5-month i
 
 ### Finding Specific Content
 - **Python basics**: `01_Python/ipynb/0423_Python_Practice.ipynb` onwards
-- **Database work**: `02_MySQL/ipynb/` for MySQL-Python integration
+- **Database work**: `02_SQL/ipynb/` for MySQL-Python integration and `02_SQL/MongoDB/` for MongoDB
 - **Web development**: `05_Full_Stack/backend/Django/` for Django projects
 - **Machine learning**: `06_Machine_Learning/ipynb/0701~0704/` for fundamentals
 - **Deep learning**: `07_Deep_Learning/ipynb/0717/` for CNN implementations
@@ -68,7 +68,7 @@ python -c "import cv2; print('OpenCV available')"
 The repository follows a chronological learning structure with 8 main subject areas:
 
 1. **01_Python/**: Python fundamentals and advanced concepts
-2. **02_MySQL/**: Database design, SQL queries, and Python integration
+2. **02_SQL/**: Database design, SQL queries, Python integration (MySQL + MongoDB)
 3. **03_Git_and_Clean_Code/**: Version control and code quality practices
 4. **04_Algorithm/**: Algorithm problem-solving and optimization
 5. **05_Full_Stack/**: Web development (frontend + backend)
@@ -135,7 +135,7 @@ project_name/
 
 #### Key Project Types
 
-#### Django Web Applications (05_Full_Stack/backend/)
+#### Django Web Applications (05_Full_Stack/backend/Django/)
 - **mysite1/**: Multi-app integration (blog, guestbook, grade management)
   - Demonstrates Django app modularity and URL routing
   - Uses Django ORM with SQLite backend
@@ -144,6 +144,23 @@ project_name/
   - Shows Django-MySQL integration patterns
   - Implements user authentication and session management
 - **myhome2/**: Basic Django framework structure for learning
+
+#### React Applications (05_Full_Stack/React/)
+- **project/**: Modern React application with Vite
+  - Component-based architecture (board, score, counter components)
+  - React Router for navigation (home, about, nomatch pages)
+  - Bootstrap and React-Bootstrap for styling
+  - Axios for API communication with backend services
+
+#### React Native Applications (05_Full_Stack/React_Native/)
+- **Crud-Redux/**: CRUD operations with Redux state management
+- **React-Redux/**: Redux integration patterns and state management
+- **React-Redux-Crud-Master/**: Advanced CRUD with Redux architecture
+
+#### SpringBoot Application (05_Full_Stack/React_Native/SpringBoot/)
+- Java-based backend service with Maven configuration
+- RESTful API development patterns
+- Integration with frontend React Native applications
 
 #### Machine Learning Projects (06_Machine_Learning/)
 - **Supervised Learning**: Classification and regression models using scikit-learn
@@ -228,16 +245,22 @@ uvicorn FastAPI.main:app --reload
 # Access at: http://localhost:8000
 # API docs at: http://localhost:8000/docs
 
-# Organized FastAPI projects
+# Organized FastAPI projects with routers
 cd 05_Full_Stack/backend/FastAPI/backend    # Board and score APIs
 uvicorn main:app --reload --port 8000
+# Routers: /board, /score
+# Database: MySQL integration with PyMySQL
 
 cd 05_Full_Stack/backend/FastAPI/backend2   # Board and predict APIs  
 uvicorn main:app --reload --port 8001
+# Routers: /board, /predict (ML model integration)
+# Database: MySQL + ML model endpoints
 
 # Health check and API info endpoints available at:
 # GET / - Health check
 # GET /info - Server information and available endpoints
+# GET /docs - Swagger API documentation
+# GET /redoc - ReDoc API documentation
 ```
 
 ### Common Issues & Troubleshooting
@@ -258,7 +281,8 @@ pip check                    # Check for conflicts
 
 ### React Frontend Development
 ```bash
-cd 05_Full_Stack/frontend/project
+# React Vite Project
+cd 05_Full_Stack/React/project
 
 # Install dependencies
 npm install
@@ -274,6 +298,36 @@ npm run lint
 
 # Preview production build
 npm run preview
+```
+
+### React Native Development
+```bash
+# React Native projects with Redux integration
+cd 05_Full_Stack/React_Native/Crud-Redux
+npm install
+npm start  # or yarn start
+
+# Redux state management example
+cd 05_Full_Stack/React_Native/React-Redux
+npm install
+npm start
+
+# Check React Native environment
+npx react-native doctor
+```
+
+### SpringBoot Development
+```bash
+# Navigate to SpringBoot project
+cd 05_Full_Stack/React_Native/SpringBoot
+
+# Build and run with Maven
+mvn clean install
+mvn spring-boot:run
+
+# Or use Maven wrapper
+./mvnw spring-boot:run  # macOS/Linux
+mvnw.cmd spring-boot:run  # Windows
 ```
 
 ### Machine Learning Development
@@ -337,6 +391,17 @@ python manage.py test
 
 # For React projects
 npm test
+
+# Model validation and evaluation
+# TensorFlow model evaluation
+python -c "import tensorflow as tf; model = tf.keras.models.load_model('model.h5'); print(model.summary())"
+
+# PyTorch model evaluation
+python -c "import torch; model = torch.load('model.pth'); print(model)"
+
+# Check GPU availability for deep learning
+python -c "import tensorflow as tf; print('TensorFlow GPU:', tf.config.list_physical_devices('GPU'))"
+python -c "import torch; print('PyTorch CUDA:', torch.cuda.is_available())"
 ```
 
 ### Database Operations
@@ -344,8 +409,17 @@ npm test
 # MySQL connection test
 python -c "import pymysql; print('MySQL driver available')"
 
+# MongoDB connection test
+python -c "import pymongo; print('MongoDB driver available')"
+
 # Run SQL scripts
-mysql -u username -p database_name < 02_MySQL/sql/MySQL_Day_1-5.sql
+mysql -u username -p database_name < 02_SQL/sql/MySQL_Day_1-5.sql
+
+# MongoDB operations (Python files in 02_SQL/MongoDB/)
+cd 02_SQL/MongoDB
+python mongodb연동.py
+python mongodb연동2.py  # Advanced operations
+python mongodb연동3.py  # Additional MongoDB examples
 ```
 
 ## Data Management
@@ -357,7 +431,7 @@ mysql -u username -p database_name < 02_MySQL/sql/MySQL_Day_1-5.sql
   - `flowers/` - Multi-class flower classification with LICENSE.txt and CSV files
   - `flowers_renamed/` - Processed flower images with systematic naming (daisy.0.jpg, etc.)
   - `Garbageclassification/` - Environmental AI waste classification dataset (cardboard/, glass/, metal/, paper/, plastic/, trash/)
-- **Database files**: SQL scripts in `02_MySQL/sql/`
+- **Database files**: SQL scripts in `02_SQL/sql/` and MongoDB Python scripts in `02_SQL/MongoDB/`
 - **Processed data**: NPY/NPZ files for NumPy arrays
 - **Model artifacts**: 
   - `06_Machine_Learning/data/` - ML models and HTML reports
@@ -420,10 +494,11 @@ warnings.filterwarnings('ignore')
 
 ### Comprehensive Guides (99_etc/docs/)
 The repository includes extensive documentation:
-- **Deep_Learning_Guide.md**: 115KB comprehensive deep learning guide
-- **Python_Complete_Guide.md**: Complete Python reference
-- **MySQL guides**: Database optimization and tuning
-- **Web development guides**: Django and HTML/JS references
+- **Python_Complete_Guide.md**: Complete Python reference covering fundamentals to advanced topics
+
+### Additional Learning Resources (99_etc/ipynb/)
+- **Selenium_Tutorial_Integrated.ipynb**: Web automation and testing with Selenium
+- **Web_Crawing_Guide.ipynb**: Web scraping techniques and best practices
 
 ### Learning Summaries
 Each module includes daily summary files documenting:

@@ -35,9 +35,10 @@
 - **Python 3.11**: NumPy, Pandas, Matplotlib, Scikit-learn, SciPy
 - **Deep Learning**: TensorFlow/Keras 2.15+, PyTorch 2.0+, OpenCV
 - **Web Development**: Django 5.0+, Flask 3.0+, FastAPI, Django REST Framework
+- **Frontend**: React 19+, Vite, React Router, Bootstrap, Axios
 - **Mobile & Frontend**: React Native, Redux, JavaScript ES6+
 - **Backend & Enterprise**: Spring Boot, Java
-- **Database**: MySQL, pymysql, SQLAlchemy, MongoDB
+- **Database**: MySQL, pymysql, SQLAlchemy, MongoDB, pymongo, DBUtils
 - **Data Visualization**: Plotly, Bokeh, Seaborn, Altair
 
 ### **Tools & Environment**
@@ -61,14 +62,14 @@
   - [📚 목차](#-목차)
   - [📂 프로젝트 구성](#-프로젝트-구성)
     - [🐍 Python](#-python)
-    - [🗄️ MySQL](#️-mysql)
+    - [🗄️ SQL & Database](#️-sql--database)
     - [🛠️ Git \& Clean Code](#️-git--clean-code)
     - [🧮 Algorithm](#-algorithm)
     - [🌐 Full Stack Development](#-full-stack-development)
     - [🧠 Machine Learning](#-machine-learning)
     - [🧠 Deep Learning](#-deep-learning)
     - [🔥 PyTorch](#-pytorch)
-    - [📦 기타](#-기타)
+    - [📦 기타 자료](#-기타-자료)
   - [🔧 환경 설정 및 설치](#-환경-설정-및-설치)
     - [📋 요구사항](#-요구사항)
     - [🐍 Conda 환경 설정 (권장)](#-conda-환경-설정-권장)
@@ -78,16 +79,19 @@
     - [🧪 설치 확인](#-설치-확인)
   - [⭐ 주요 프로젝트 \& 성과](#-주요-프로젝트--성과)
     - [1. 📊 **성적 관리 시스템** (Python + MySQL)](#1--성적-관리-시스템-python--mysql)
-    - [2. 🌐 **풀스택 웹 애플리케이션**](#2--풀스택-웹-애플리케이션)
-    - [3. 🤖 **머신러닝 \& 딥러닝 프로젝트**](#3--머신러닝--딥러닝-프로젝트)
-    - [4. 📈 **데이터 분석 프로젝트**](#4--데이터-분석-프로젝트)
+    - [2. 🌐 **다중 풀스택 웹 애플리케이션**](#2--다중-풀스택-웹-애플리케이션)
+    - [3. 🤖 **딥러닝 이미지 분류 프로젝트**](#3--딥러닝-이미지-분류-프로젝트)
+    - [4. 📈 **머신러닝 데이터 분석 프로젝트**](#4--머신러닝-데이터-분석-프로젝트)
+    - [5. 🧮 **알고리즘 문제 해결**](#5--알고리즘-문제-해결)
+    - [6. 🔥 **PyTorch 딥러닝 프로젝트**](#6--pytorch-딥러닝-프로젝트)
+    - [7. 📚 **완전 가이드 문서 작성**](#7--완전-가이드-문서-작성)
   - [🗓️ 교육 커리큘럼 일정표](#️-교육-커리큘럼-일정표)
   - [📖 학습 기록](#-학습-기록)
     - [🏆 핵심 학습 성과](#-핵심-학습-성과)
   - [📈 진행 현황](#-진행-현황)
-    - [✅ **완료된 과정**](#-완료된-과정-20250423--0725)
+    - [✅ **완료된 과정** (2025.04.23 ~ 08.19)](#-완료된-과정-20250423--0819)
     - [🔄 **현재 진행 중**](#-현재-진행-중)
-    - [📅 **향후 계획**](#-향후-계획-202508--09)
+    - [📅 **향후 계획** (2025.08 ~ 09)](#-향후-계획-202508--09)
     - [📊 **학습 완성도**](#-학습-완성도)
   - [📫 Contact](#-contact)
   - [🏷️ License](#️-license)
@@ -106,12 +110,13 @@
 - 📊 **데이터**: CSV, 텍스트, 바이너리 파일 처리 실습 데이터 (`data/`)
 - 🎯 **주요 주제**: 클래스 설계, 가위바위보 게임, 파일 I/O, 예외 처리
 
-### 🗄️ [MySQL](./02_MySQL/)
-**데이터베이스 설계 및 쿼리 최적화 (2025.05.16 ~ 05.28)**
+### 🗄️ [SQL & Database](./02_SQL/)
+**데이터베이스 설계 및 쿼리 최적화 + NoSQL (2025.05.16 ~ 05.28)**
 - 📝 **정리**: SQL 기초부터 고급 쿼리까지 정리 (`md/`) - Day1~Day5 + SQL+Python 통합
 - 💻 **실습**: MySQL 연동, 커넥션 풀, 성적처리 시스템 구현 (`ipynb/`)
 - 📋 **과제**: 복잡한 JOIN, 서브쿼리 활용 과제 (`sql/homework/`)
 - 🔧 **프로젝트**: Python-MySQL 연동 성적관리 시스템 (CRUD, 커넥션 풀링)
+- 🍃 **MongoDB**: NoSQL 데이터베이스 연동 실습 (`MongoDB/`) - 3개 연동 파일
 - 📊 **데이터**: 플레이어 데이터, 월드 데이터, w3schools 등 실습용 SQL 파일 (`sql/`)
 
 ### 🛠️ [Git & Clean Code](./03_Git_and_Clean_Code/)
@@ -131,16 +136,22 @@
 ### 🌐 [Full Stack Development](./05_Full_Stack/)
 **풀스택 웹 개발 (2025.06.20 ~ 06.27)**
 - 🎨 **Frontend**: HTML/CSS/JavaScript 통합 실습 (`frontend/`)
-- 🖥️ **Backend**: Django 다중 프로젝트 구현 (`backend/`)
+- ⚛️ **React**: Vite 기반 모던 React 애플리케이션 (`React/project/`)
+  - 컴포넌트 기반 아키텍처 (board, score, counter)
+  - React Router, Bootstrap, Axios 통합
+- 🖥️ **Backend**: Django 다중 프로젝트 구현 (`backend/Django/`)
   - `mysite1/`: 블로그, 방명록, 성적관리 시스템
   - `myhome1/`: 블로그 시스템
   - `myhome2/`: 기본 Django 프로젝트
-  - **FastAPI**: API 서버 구현 (board, score, predict 엔드포인트)
+- 🚀 **FastAPI**: API 서버 구현 (`backend/FastAPI/`)
+  - `backend/`: board, score 엔드포인트 (MySQL 연동)
+  - `backend2/`: board, predict 엔드포인트 (ML 모델 통합)
 - 📱 **Mobile Development**: React Native 앱 개발 (`React_Native/`)
   - **Redux 상태관리**: CRUD 애플리케이션 구현
   - **React-Redux 패턴**: 게시판 및 인증 시스템
-- ☕ **Enterprise Backend**: Spring Boot 프로젝트 (`SpringBoot/`)
-  - REST API 컨트롤러, DAO 패턴 구현
+  - **Crud-Redux**: 고급 Redux 아키텍처
+- ☕ **Enterprise Backend**: Spring Boot 프로젝트 (`React_Native/SpringBoot/`)
+  - Maven 기반 Java REST API 컨트롤러, DAO 패턴 구현
 - 🔧 **주요 기능**: 사용자 인증, CRUD 작업, 템플릿 시스템, API 설계
 - 🌟 **통합 프로젝트**: 다중 기술스택 웹 애플리케이션 구현
 
@@ -162,12 +173,13 @@
   - 일별 세분화된 실습: 0717~0724 각 4개 파일까지
 - 📊 **데이터**: 딥러닝 실습용 대용량 데이터셋 (`data/`)
   - cats_and_dogs: 개/고양이 분류 프로젝트
-  - flowers: 꽃 분류 시스템
-  - Garbageclassification: 쓰레기 분류 모델
+  - flowers: 꽃 분류 시스템 + flowers_renamed (체계적 명명)
+  - Garbageclassification: 환경 AI 쓰레기 분류 모델 (6개 카테고리)
+  - aclImdb: 영화 리뷰 감성 분석, GoogleNews 벡터
 - 🎯 **주요 프로젝트**: 
   - 🐱🐶 개/고양이 이진 분류 (CNN + 데이터 증강)
-  - 🌸 꽃 종류 다중 분류
-  - ♻️ 쓰레기 분류 시스템
+  - 🌸 꽃 종류 다중 분류 (daisy, dandelion, roses, sunflowers, tulips)
+  - ♻️ 쓰레기 분류 시스템 (cardboard, glass, metal, paper, plastic, trash)
 - 📈 **결과물**: confusion_matrix.png, training_history.png 등 시각화
 
 ### 🔥 [PyTorch](./08_PyTorch/)
@@ -278,6 +290,8 @@ pip install -r requirements.txt
 | **머신러닝 핵심**  | scikit-learn, pandas, numpy, matplotlib       | 최신 안정버전 |
 | **딥러닝**         | tensorflow, keras, torch, torchvision         | 2.15+, 2.0+   |
 | **웹개발**         | django, flask, fastapi, djangorestframework   | 5.0+, 3.0+    |
+| **프론트엔드**     | react, vite, react-router-dom, bootstrap      | 19+, 최신     |
+| **모바일**         | react-native, redux, expo                     | 최신 안정버전 |
 | **데이터베이스**   | pymysql, sqlalchemy, pymongo, DBUtils         | 연결풀 지원   |
 | **시각화**         | seaborn, plotly, bokeh, altair                | 고급 차트     |
 | **웹 스크래핑**    | beautifulsoup4, selenium, requests             | 자동화 지원   |
@@ -297,12 +311,14 @@ import sklearn
 import django
 import cv2
 import pymysql
+import pymongo
 import sys
 
 print("✅ 모든 패키지가 정상적으로 설치되었습니다!")
 print(f"🐍 Python: {sys.version}")
 print(f"🔥 PyTorch: {torch.__version__}")
 print(f"🧠 TensorFlow: {tf.__version__}")
+print(f"🗄️ MongoDB: {pymongo.__version__}")
 ```
 
 ---
@@ -319,27 +335,31 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 - 📁 **위치**: `02_MySQL/ipynb/`
 
 ### 2. 🌐 **다중 풀스택 웹 애플리케이션**
-- **기술 스택**: Django 5.0+, HTML/CSS/JavaScript, SQLite
+- **기술 스택**: Django 5.0+, React 19+, FastAPI, Spring Boot, HTML/CSS/JavaScript
 - **구현된 프로젝트**:
-  - **mysite1**: 블로그 + 방명록 + 성적관리 통합 시스템
-  - **myhome1**: 개인 블로그 플랫폼
-  - **myhome2**: 기본 Django 프레임워크 구조
+  - **Django**: mysite1, myhome1, myhome2 (블로그 + 방명록 + 성적관리)
+  - **React**: Vite 기반 모던 SPA (컴포넌트 아키텍처)
+  - **FastAPI**: 2개 API 서버 (board/score, board/predict)
+  - **React Native**: Redux 기반 모바일 앱 3개
+  - **Spring Boot**: Java Maven 기반 Enterprise API
 - **핵심 기능**: 
   - 사용자 인증 및 세션 관리
   - CRUD 작업 및 템플릿 시스템
   - 다중 앱 구조 설계
-- 📁 **위치**: `05_Full_Stack/backend/`
+  - API 서버 및 모바일 앱 연동
+- 📁 **위치**: `05_Full_Stack/` (backend, React, React_Native)
 
 ### 3. 🤖 **딥러닝 이미지 분류 프로젝트**
 - **주요 프로젝트**:
   - **🐱🐶 개/고양이 분류**: CNN + 데이터 증강 기법 (180×180 RGB)
-  - **🌸 꽃 종류 분류**: 다중 클래스 분류 시스템
-  - **♻️ 쓰레기 분류**: 환경 분류 AI 모델
+  - **🌸 꽃 종류 분류**: 5개 클래스 다중 분류 (daisy, dandelion, roses, sunflowers, tulips)
+  - **♻️ 환경 AI 쓰레기 분류**: 6개 카테고리 분류 모델 (cardboard, glass, metal, paper, plastic, trash)
 - **기술적 성과**:
   - TensorFlow/Keras를 활용한 CNN 아키텍처 구현
   - 데이터 증강을 통한 과대적합 방지
   - 모델 성능 시각화 (confusion_matrix.png, training_history.png)
-- **데이터 규모**: 25,000장 → 4,000장 최적화 학습
+  - 대용량 이미지 데이터셋 전처리 및 최적화
+- **데이터 규모**: 25,000장 → 4,000장 최적화 학습, flowers_renamed 체계적 명명
 - 📁 **위치**: `07_Deep_Learning/ipynb/`, `07_Deep_Learning/data/`
 
 ### 4. 📈 **머신러닝 데이터 분석 프로젝트**
@@ -361,7 +381,19 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 - **성과**: 체계적인 문제 해결 능력 및 시간복잡도 분석 역량 향상
 - 📁 **위치**: `04_Algorithm/ipynb/`
 
-### 6. 🔥 **PyTorch 딥러닝 프로젝트**
+### 6. 📱 **React Native & Mobile 개발 프로젝트**
+- **기술 스택**: React Native, Redux, JavaScript ES6+, Expo
+- **구현 프로젝트**:
+  - **Crud-Redux**: Redux 상태관리를 통한 CRUD 애플리케이션
+  - **React-Redux**: 고급 Redux 패턴 및 인증 시스템
+  - **React-Redux-Crud-Master**: 마스터 레벨 Redux 아키텍처
+- **기술적 성과**:
+  - 모바일 앱 상태관리 마스터
+  - React Native 네비게이션 및 컴포넌트 아키텍처
+  - 비동기 데이터 처리 및 API 연동
+- 📁 **위치**: `05_Full_Stack/React_Native/`
+
+### 7. 🔥 **PyTorch 딥러닝 프로젝트**
 - **기술 스택**: PyTorch 2.0+, scikit-learn, pandas, matplotlib
 - **구현 프로젝트**:
   - **신경망 기초**: 기본 MLP 구조 및 학습 과정 이해
@@ -374,7 +406,7 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 - **실습 기간**: 2025.08.18 ~ 08.19 (9개 실습 파일 완성)
 - 📁 **위치**: `08_PyTorch/ipynb/`, `08_PyTorch/data/`
 
-### 7. 📚 **완전 가이드 문서 작성**
+### 8. 📚 **완전 가이드 문서 작성**
 - **Deep Learning Guide**: 115KB, 3,589라인의 초대형 딥러닝 완전 가이드
 - **Python Complete Guide**: 18KB, 483라인의 파이썬 종합 가이드
 - **SQL 시리즈**: MySQL 튜닝, 최적화, 의료정보 분석 등 전문 가이드
@@ -467,10 +499,10 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 
 ### ✅ **완료된 과정** (2025.04.23 ~ 08.19)
 - **🐍 Python 기초 & 심화**: 13개 일별 정리 + 8개 과제 완성
-- **🗄️ MySQL & 데이터베이스**: SQL 마스터 + Python 연동 프로젝트
+- **🗄️ SQL & Database**: MySQL + MongoDB 마스터 + Python 연동 프로젝트
 - **🛠️ Git & Clean Code**: 버전 관리 + 코드 품질 향상
 - **🧮 Algorithm**: 11개 실습 + 문제 해결 능력 강화
-- **🌐 Full Stack 웹개발**: Django, FastAPI, React Native, Spring Boot 멀티 플랫폼 구현
+- **🌐 Full Stack 웹개발**: Django, FastAPI, React, React Native, Spring Boot 멀티 플랫폼 구현
 - **🧠 Machine Learning**: Scikit-learn 기반 ML 모델 구현
 - **🧠 Deep Learning**: TensorFlow/Keras CNN 이미지 분류 프로젝트 완성
 - **🔥 PyTorch**: 딥러닝 기초 및 모델 구현 (0818~0819 완료)
@@ -500,7 +532,7 @@ print(f"🧠 TensorFlow: {tf.__version__}")
 ```
 Progress: ███████████████████████░ 95% 완료
 
-✅ Python (100%)        ✅ MySQL (100%)         ✅ Git & Clean Code (100%)
+✅ Python (100%)        ✅ SQL (100%)           ✅ Git & Clean Code (100%)
 ✅ Algorithm (100%)     ✅ Full Stack (100%)    ✅ Machine Learning (100%)
 ✅ Deep Learning (100%) ✅ PyTorch (100%)       🚀 Final Project (준비중)
 ```
